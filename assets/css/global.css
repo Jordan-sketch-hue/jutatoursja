@@ -1183,8 +1183,20 @@ body.large-text { font-size: 18px; }
   .nav-logo .logo-badge { width: 30px; height: 30px; font-size: 0.7rem; }
   .footer-grid { grid-template-columns: 1fr; }
   .form-row { grid-template-columns: 1fr; }
-  .hero { min-height: 80vh; }
-  .hero::before { display: none; }
+  .hero {
+    min-height: 80vh;
+    background-image: url('../images/jamaica-beach.jpg');
+    background-size: cover;
+    background-position: center 40%;
+  }
+  .hero::before {
+    display: block;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    background: rgba(255,255,255,0.82);
+  }
   .hero-title { font-size: clamp(2rem, 10vw, 3rem); line-height: 1.08; letter-spacing: -0.01em; }
   .hero-sub { font-size: 1rem; line-height: 1.55; }
   .hero-features { gap: 0.5rem; margin-bottom: 1.5rem; }
