@@ -354,6 +354,7 @@ p { color: var(--gray-text); line-height: 1.75; }
   color: white;
   padding: 0.75rem 0;
   font-size: 0.82rem;
+  display: none;
 }
 .trust-bar-inner {
   max-width: 1200px;
