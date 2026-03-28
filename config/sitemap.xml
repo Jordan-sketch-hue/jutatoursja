@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://jutatoursja.com/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://jutatoursja.com/airport-transfer.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://jutatoursja.com/festival-transport.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://jutatoursja.com/excursions.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://jutatoursja.com/packages.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://jutatoursja.com/about.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://jutatoursja.com/contact.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://jutatoursja.com/faq.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://jutatoursja.com/blog.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+</urlset>

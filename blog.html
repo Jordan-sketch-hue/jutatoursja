@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Jamaica travel tips, festival guides, hidden gems and accessibility travel advice from JUTA Tours JA — your island insiders." />
+  <title>Blog — JUTA Tours JA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/global.css" />
+  <style>
+    .blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.75rem;}
+    .blog-card{background:white;border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-sm);transition:transform 0.25s,box-shadow 0.25s;}
+    .blog-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-lg);}
+    .blog-img{width:100%;height:210px;object-fit:cover;display:block;}
+    .blog-body{padding:1.5rem;}
+    .blog-cat{font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:0.07em;color:var(--green);margin-bottom:0.5rem;}
+    .blog-title{font-size:1.08rem;font-weight:700;line-height:1.35;margin-bottom:0.6rem;color:var(--black);}
+    .blog-title a{color:inherit;text-decoration:none;}
+    .blog-title a:hover{color:var(--green);}
+    .blog-excerpt{font-size:0.85rem;color:var(--gray-text);line-height:1.65;margin-bottom:1rem;}
+    .blog-meta{display:flex;align-items:center;gap:0.6rem;font-size:0.78rem;color:var(--gray-text);}
+    .blog-featured{grid-column:1/-1;display:grid;grid-template-columns:1.5fr 1fr;border-radius:var(--radius-xl);overflow:hidden;box-shadow:var(--shadow-xl);}
+    .blog-featured .blog-img{height:380px;}
+    .blog-featured .blog-body{padding:2.5rem;display:flex;flex-direction:column;justify-content:center;}
+    .blog-featured .blog-title{font-size:1.5rem;}
+    @media(max-width:900px){.blog-grid{grid-template-columns:repeat(2,1fr);}.blog-featured{grid-template-columns:1fr;}.blog-featured .blog-img{height:220px;}}
+    @media(max-width:600px){.blog-grid{grid-template-columns:1fr;}.blog-featured{grid-column:auto;}}
+  </style>
+</head>
+<body>
+
+<div class="trust-bar"><div class="trust-bar-inner"><span class="trust-bar-item">📝 Island Insider Tips</span><span class="trust-bar-item">🇯🇲 Written by Jamaicans</span><span class="trust-bar-item">🌿 Real Destinations</span><span class="trust-bar-item">♿ Inclusive Travel</span></div></div>
+
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><div class="logo-badge">JT</div><span>JUTA Tours JA</span></a>
+    <ul class="nav-links">
+      <li><a href="airport-transfer.html">Airport Transfer</a></li>
+      <li><a href="festival-transport.html">Festivals</a></li>
+      <li><a href="excursions.html">Excursions</a></li>
+      <li><a href="packages.html">Packages</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="blog.html" class="active">Blog</a></li>
+    </ul>
+    <div class="nav-cta"><a href="https://wa.me/18765551234" class="nav-whatsapp" target="_blank" rel="noopener noreferrer">💬 WhatsApp</a><a href="contact.html" class="nav-book-btn">Book Now</a></div>
+    <button class="nav-hamburger" id="menuBtn" aria-label="Toggle mobile menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+  <div id="mobileMenu" class="mobile-menu">
+    <a href="airport-transfer.html">✈️ Airport Transfer</a><a href="festival-transport.html">🎶 Festival Transport</a><a href="excursions.html">🌿 Excursions</a><a href="packages.html">📦 Packages</a><a href="about.html">🙋 About</a><a href="faq.html">❓ FAQ</a><a href="blog.html">📝 Blog</a>
+    <a href="contact.html" class="mobile-book-btn">Book Your Trip</a>
+  </div>
+</nav>
+
+<main id="main-content">
+
+<section class="page-hero" style="min-height:240px;">
+  <div class="page-hero-bg" style="background-image:url('https://www.stay-caribbean.com/uploads/0000/1/2024/11/03/seven-mile-beach-negril.jpeg');" aria-hidden="true"></div>
+  <div class="container page-hero-content">
+    <nav aria-label="Breadcrumb" style="margin-bottom:1.25rem;"><ol style="display:flex;gap:0.5rem;font-size:0.82rem;color:rgba(255,255,255,0.5);"><li><a href="index.html" style="color:rgba(255,255,255,0.5);">Home</a></li><li style="color:rgba(255,255,255,0.3);">/</li><li style="color:rgba(255,255,255,0.9);">Blog</li></ol></nav>
+    <p class="section-label">Travel Journal</p>
+    <h1>Jamaica Insider Guides &amp; Tips</h1>
+    <p style="margin-top:0.75rem;max-width:520px;">Real advice from people who live here. Festivals, excursions, hidden beaches and accessible travel for every type of Jamaica visitor.</p>
+  </div>
+</section>
+
+<section class="section" style="padding-top:2.5rem;">
+  <div class="container">
+
+    <!-- SEARCH -->
+    <div class="search-bar" style="max-width:520px;margin:0 auto 3rem;">
+      <label for="blogSearch" class="sr-only">Search blog posts</label>
+      <input class="search-input" type="search" id="blogSearch" placeholder="Search articles — e.g. Negril, Sumfest, accessible…" aria-label="Search blog posts" />
+      <span class="search-icon" aria-hidden="true">🔍</span>
+    </div>
+
+    <!-- FILTER PILLS -->
+    <div class="filter-bar" style="margin-bottom:2.5rem;" role="group" aria-label="Blog category filter">
+      <button class="filter-pill active" data-filter-value="all">All</button>
+      <button class="filter-pill" data-filter-value="tips">Travel Tips</button>
+      <button class="filter-pill" data-filter-value="festivals">Festivals</button>
+      <button class="filter-pill" data-filter-value="excursions">Excursions</button>
+      <button class="filter-pill" data-filter-value="accessibility">Accessibility</button>
+      <button class="filter-pill" data-filter-value="culture">Culture</button>
+      <button class="filter-pill" data-filter-value="food">Food &amp; Drink</button>
+    </div>
+
+    <div class="blog-grid" id="blogGrid">
+
+      <!-- FEATURED post -->
+      <article class="blog-card blog-featured reveal" data-filter="tips" data-search-filter="ultimate guide first time visitors jamaica travel tips 2025">
+        <img class="blog-img" src="https://www.stay-caribbean.com/uploads/0000/1/2024/11/03/seven-mile-beach-negril.jpeg" alt="Seven Mile Beach Negril Jamaica" loading="lazy" />
+        <div class="blog-body">
+          <p class="blog-cat">✈️ Travel Tips</p>
+          <h2 class="blog-title"><a href="#">The Ultimate First-Timer's Guide to Jamaica in 2025</a></h2>
+          <p class="blog-excerpt">Everything you need to know before you land — from which airport to fly into, how to get around safely, the best beaches by vibe, what to eat, and the insider secrets no resort brochure will ever tell you.</p>
+          <div class="blog-meta">
+            <span>By Marcia Thompson</span>
+            <span>·</span>
+            <span>Jan 12, 2025</span>
+            <span>·</span>
+            <span>8 min read</span>
+          </div>
+          <a href="#" class="btn btn-primary btn-sm" style="margin-top:1.25rem;align-self:flex-start;">Read Article →</a>
+        </div>
+      </article>
+
+      <!-- Post 2 -->
+      <article class="blog-card reveal" data-filter="festivals" data-search-filter="reggae sumfest montego bay guide tips transport">
+        <img class="blog-img" src="https://www.jamaicaobserver.com/wp-content/uploads/2024/07/sumfest2024-1.jpg" alt="Reggae Sumfest concert Montego Bay Jamaica" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=600&q=80'" />
+        <div class="blog-body">
+          <p class="blog-cat">🎶 Festivals</p>
+          <h3 class="blog-title"><a href="#">Reggae Sumfest 2025: Your Complete Transport &amp; Survival Guide</a></h3>
+          <p class="blog-excerpt">Sumfest is the biggest night of the year for Jamaica. Here's how to get there safely, what to bring, and how to avoid the traffic nightmare at 3am.</p>
+          <div class="blog-meta"><span>By Andre Clarke</span><span>·</span><span>Dec 5, 2024</span><span>·</span><span>6 min read</span></div>
+        </div>
+      </article>
+
+      <!-- Post 3 -->
+      <article class="blog-card reveal reveal-delay-1" data-filter="accessibility" data-search-filter="accessible travel jamaica wheelchair disability inclusive">
+        <img class="blog-img" src="https://media-cdn.tripadvisor.com/media/photo-s/1b/e2/4f/2e/transport.jpg" alt="Accessible transport in Jamaica" loading="lazy" />
+        <div class="blog-body">
+          <p class="blog-cat">♿ Accessibility</p>
+          <h3 class="blog-title"><a href="#">Jamaica for Travellers with Disabilities: An Honest Guide</a></h3>
+          <p class="blog-excerpt">We cover the real accessibility situation in Jamaica — which sites are genuinely accessible, which aren't, and how to plan a trip that works for your needs without compromise.</p>
+          <div class="blog-meta"><span>By JUTA Tours JA</span><span>·</span><span>Nov 18, 2024</span><span>·</span><span>7 min read</span></div>
+        </div>
+      </article>
+
+      <!-- Post 4 -->
+      <article class="blog-card reveal" data-filter="excursions" data-search-filter="blue mountains coffee hike kingston sunrise jerk chicken">
+        <img class="blog-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Blue_Mountains_Jamaica.jpg/800px-Blue_Mountains_Jamaica.jpg" alt="Blue Mountains Jamaica fog and coffee" loading="lazy" />
+        <div class="blog-body">
+          <p class="blog-cat">🌿 Excursions</p>
+          <h3 class="blog-title"><a href="#">Why the Blue Mountains Should Be Your First Jamaica Day Trip</a></h3>
+          <p class="blog-excerpt">Forget the beach for one morning. Wake up at 4am, watch the sun rise over the Caribbean Sea from 7,042 feet, drink the world's best coffee, and be back at your hotel by noon.</p>
+          <div class="blog-meta"><span>By Devon Campbell</span><span>·</span><span>Oct 29, 2024</span><span>·</span><span>5 min read</span></div>
+        </div>
+      </article>
+
+      <!-- Post 5 -->
+      <article class="blog-card reveal reveal-delay-1" data-filter="food" data-search-filter="kingston food street jerk chicken food tour eating local flavours">
+        <img class="blog-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Jerk_Chicken_Jamaica.jpg/800px-Jerk_Chicken_Jamaica.jpg" alt="Jerk chicken cooking Jamaica street food" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&q=80'" />
+        <div class="blog-body">
+          <p class="blog-cat">🍖 Food &amp; Drink</p>
+          <h3 class="blog-title"><a href="#">Eat Like a Jamaican: The Kingston Street Food Guide</a></h3>
+          <p class="blog-excerpt">Jerk pork from a smoking barrel at 7am. Escovitch fish at Hellshire Beach. Rum punch at a rum bar older than your grandparents. A local's guide to eating genuinely well in Kingston.</p>
+          <div class="blog-meta"><span>By Marcia Thompson</span><span>·</span><span>Sep 14, 2024</span><span>·</span><span>6 min read</span></div>
+        </div>
+      </article>
+
+      <!-- Post 6 -->
+      <article class="blog-card reveal reveal-delay-2" data-filter="culture" data-search-filter="bob marley museum kingston trench town reggae heritage culture">
+        <img class="blog-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Bob-Marley-in-Concert_Zurich_05-30-80.jpg/800px-Bob-Marley-in-Concert_Zurich_05-30-80.jpg" alt="Bob Marley tribute Jamaica reggae culture" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=600&q=80'" />
+        <div class="blog-body">
+          <p class="blog-cat">🎵 Culture</p>
+          <h3 class="blog-title"><a href="#">Bob Marley Museum Kingston: What to Know Before You Go</a></h3>
+          <p class="blog-excerpt">The Bob Marley Museum at 56 Hope Road is one of the most meaningful stops in Kingston. Here's a full guide to visiting — what's inside, what it costs, and how to get the most from the experience.</p>
+          <div class="blog-meta"><span>By JUTA Tours JA</span><span>·</span><span>Aug 22, 2024</span><span>·</span><span>4 min read</span></div>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- NO RESULTS -->
+    <div id="noBlogResults" style="display:none;text-align:center;padding:3rem;background:var(--gray-light);border-radius:var(--radius-lg);margin-top:1.5rem;">
+      <p style="font-size:1.1rem;font-weight:600;margin-bottom:0.5rem;">No articles found</p>
+      <p style="color:var(--gray-text);font-size:0.9rem;">Try a different search term or filter category.</p>
+    </div>
+
+    <!-- NEWSLETTER -->
+    <div style="margin-top:4rem;padding:2.5rem;background:var(--black);border-radius:var(--radius-xl);text-align:center;" class="reveal">
+      <p class="section-label">Stay in the loop</p>
+      <h3 style="color:white;margin-bottom:0.5rem;">Get Jamaica travel tips delivered</h3>
+      <p style="color:rgba(255,255,255,0.65);margin-bottom:1.5rem;font-size:0.9rem;">Monthly guides, festival dates, exclusive offers and hidden-gem discoveries — straight to your inbox.</p>
+      <form style="display:flex;gap:0.75rem;max-width:420px;margin:0 auto;flex-wrap:wrap;" novalidate aria-label="Newsletter signup">
+        <input type="email" class="form-input" placeholder="Your email address" style="flex:1;min-width:220px;" required aria-label="Email for newsletter" />
+        <button type="submit" class="btn btn-gold" style="white-space:nowrap;">Subscribe</button>
+      </form>
+      <p style="font-size:0.75rem;color:rgba(255,255,255,0.4);margin-top:0.75rem;">No spam. Unsubscribe anytime.</p>
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><div class="logo-text">JUTA Tours JA 🇯🇲</div><p>Verified islandwide Jamaica travel — airport transfers, excursions, festival transport.</p><div class="footer-social"><a href="#" aria-label="Instagram">📸</a><a href="#" aria-label="Facebook">📘</a><a href="#" aria-label="TikTok">🎵</a><a href="https://wa.me/18765551234" aria-label="WhatsApp">💬</a></div></div>
+      <div><p class="footer-heading">Services</p><ul class="footer-links"><li><a href="airport-transfer.html">Airport Transfer</a></li><li><a href="festival-transport.html">Festival Transport</a></li><li><a href="excursions.html">Excursions</a></li><li><a href="packages.html">Packages</a></li></ul></div>
+      <div><p class="footer-heading">Company</p><ul class="footer-links"><li><a href="about.html">About</a></li><li><a href="faq.html">FAQ</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div><p class="footer-heading">Contact</p><ul class="footer-links"><li><a href="tel:+18765551234">+1 876-555-1234</a></li><li><a href="mailto:info@jutatoursja.com">info@jutatoursja.com</a></li><li><a href="https://wa.me/18765551234">WhatsApp 24/7</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 JUTA Tours JA. All rights reserved.</span><div class="footer-flag">🇯🇲 Made with pride in Jamaica</div></div>
+  </div>
+</footer>
+
+<div class="sticky-cta"><a href="contact.html" class="btn btn-primary btn-sm">Book Now</a><a href="https://wa.me/18765551234" class="whatsapp-pill" target="_blank" rel="noopener noreferrer">💬 WhatsApp</a></div>
+<div class="a11y-panel"><button class="a11y-trigger" id="a11yTrigger" aria-label="Accessibility settings" aria-expanded="false">♿</button><div id="a11yMenu" class="a11y-menu"><strong style="font-size:0.8rem;color:var(--gray-text);">Accessibility</strong><button id="a11yHighContrast">🌓 High contrast</button><button id="a11yLargeText">🔠 Larger text</button><button id="a11yDyslexia">📖 Dyslexia font</button><button id="a11yReset" style="color:#e53e3e;">↺ Reset</button></div></div>
+<script type="module" src="js/main.js"></script>
+<script>
+// Blog search & filter without module dependency
+(function(){
+  const searchEl=document.getElementById('blogSearch');
+  const pills=document.querySelectorAll('.filter-pill');
+  const cards=document.querySelectorAll('#blogGrid article');
+  const noResults=document.getElementById('noBlogResults');
+  let activeFilter='all';
+
+  function filterCards(){
+    const term=(searchEl?searchEl.value.trim().toLowerCase():'');
+    let visible=0;
+    cards.forEach(card=>{
+      const filterVal=card.dataset.filter||'';
+      const searchVal=(card.dataset.searchFilter||'').toLowerCase();
+      const catMatch=(activeFilter==='all'||filterVal===activeFilter);
+      const searchMatch=(!term||searchVal.includes(term)||card.textContent.toLowerCase().includes(term));
+      const show=catMatch&&searchMatch;
+      card.style.display=show?'':'none';
+      if(show)visible++;
+    });
+    if(noResults) noResults.style.display=visible===0?'block':'none';
+  }
+
+  pills.forEach(btn=>{
+    btn.addEventListener('click',function(){
+      pills.forEach(b=>b.classList.remove('active'));
+      this.classList.add('active');
+      activeFilter=this.dataset.filterValue||'all';
+      filterCards();
+    });
+  });
+
+  if(searchEl){
+    let t;
+    searchEl.addEventListener('input',function(){clearTimeout(t);t=setTimeout(filterCards,200);});
+  }
+})();
+</script>
+</body>
+</html>

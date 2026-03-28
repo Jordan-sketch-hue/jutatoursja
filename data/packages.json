@@ -1,0 +1,112 @@
+[
+  {
+    "id": "explorer",
+    "name": "Explorer Package",
+    "tagline": "The perfect first-timer bundle",
+    "price_usd": 199,
+    "icon": "✈️",
+    "color": "#009B3A",
+    "includes": [
+      "Airport pickup (Norman Manley or Sangster)",
+      "2 curated excursions of your choice",
+      "Return airport transfer",
+      "24/7 WhatsApp support",
+      "Meet & greet sign service"
+    ],
+    "duration": "Up to 7 days",
+    "best_for": ["Solo travellers", "First-time visitors", "Budget-conscious"],
+    "popular": true
+  },
+  {
+    "id": "culture",
+    "name": "Culture & Flavours Package",
+    "tagline": "Deep dive into the real Jamaica",
+    "price_usd": 245,
+    "icon": "🎵",
+    "color": "#F9B233",
+    "includes": [
+      "Bob Marley Museum guided tour",
+      "Kingston Street Food Tour",
+      "Heritage site visits (2 locations)",
+      "Local certified guide (full day)",
+      "Traditional Jamaican lunch included"
+    ],
+    "duration": "1-2 days",
+    "best_for": ["Culture seekers", "Music lovers", "Foodies"],
+    "popular": false
+  },
+  {
+    "id": "vip-escape",
+    "name": "VIP Island Escape",
+    "tagline": "Private, seamless, unforgettable",
+    "price_usd": 495,
+    "icon": "👑",
+    "color": "#111111",
+    "includes": [
+      "Private luxury vehicle full day",
+      "Priority airport fast-track coordination",
+      "Concierge itinerary service",
+      "VIP restaurant reservations",
+      "Priority booking on all excursions",
+      "Dedicated driver & personal guide"
+    ],
+    "duration": "Full day (up to 10 hrs)",
+    "best_for": ["VIP travellers", "Honeymoons", "Executive visitors"],
+    "popular": true
+  },
+  {
+    "id": "festival-weekend",
+    "name": "Festival Weekend Pass",
+    "tagline": "Live the full Jamaican festival experience",
+    "price_usd": 175,
+    "icon": "🎶",
+    "color": "#009B3A",
+    "includes": [
+      "Round-trip festival transport (2 days)",
+      "Late-night safe return guarantee",
+      "Emergency backup driver network",
+      "Pre-event pickup coordination",
+      "Multi-event route optimization"
+    ],
+    "duration": "Weekend (2 days)",
+    "best_for": ["Festival-goers", "Groups", "Nightlife lovers"],
+    "popular": false
+  },
+  {
+    "id": "digital-nomad",
+    "name": "Digital Nomad Weekly Plan",
+    "tagline": "Work, explore, repeat",
+    "price_usd": 350,
+    "icon": "💻",
+    "color": "#F9B233",
+    "includes": [
+      "Weekly dedicated driver plan (5 days)",
+      "Curated café & coworking guide",
+      "2 weekend excursion transfers",
+      "SIM card & connectivity guide",
+      "Local insider tips booklet"
+    ],
+    "duration": "7 days",
+    "best_for": ["Remote workers", "Long-stay visitors", "Creatives"],
+    "popular": false
+  },
+  {
+    "id": "romantic-escape",
+    "name": "Romantic Proposal Package",
+    "tagline": "We handle every detail — you just say yes",
+    "price_usd": 395,
+    "icon": "💍",
+    "color": "#F9B233",
+    "includes": [
+      "Surprise transport coordination",
+      "Scenic route to chosen proposal spot",
+      "Champagne & flowers on arrival",
+      "Photographer referral & coordination",
+      "Luxury vehicle with décor",
+      "Post-proposal dinner transfer"
+    ],
+    "duration": "Half day",
+    "best_for": ["Couples", "Proposals", "Anniversaries"],
+    "popular": false
+  }
+]

@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Browse Jamaica's best curated excursions — nature, culture, food tours, adventure, luxury experiences and hidden gems. Filter by parish, accessibility, price and more." />
+  <title>Excursions Jamaica — JUTA Tours JA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/global.css" />
+</head>
+<body>
+
+<div class="trust-bar"><div class="trust-bar-inner"><span class="trust-bar-item">✅ Verified Licensed Drivers</span><span class="trust-bar-item">🕐 24/7 WhatsApp Support</span><span class="trust-bar-item">♿ Accessible Options Available</span><span class="trust-bar-item">🌿 Locally Curated Experiences</span></div></div>
+
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><div class="logo-badge">JT</div><span>JUTA Tours JA</span></a>
+    <ul class="nav-links">
+      <li><a href="airport-transfer.html">Airport Transfer</a></li>
+      <li><a href="festival-transport.html">Festivals</a></li>
+      <li><a href="excursions.html" class="active">Excursions</a></li>
+      <li><a href="packages.html">Packages</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="blog.html">Blog</a></li>
+    </ul>
+    <div class="nav-cta"><a href="https://wa.me/18765551234" class="nav-whatsapp" target="_blank" rel="noopener noreferrer">💬 WhatsApp</a><a href="contact.html" class="nav-book-btn">Book Now</a></div>
+    <button class="nav-hamburger" id="menuBtn" aria-label="Toggle mobile menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+  <div id="mobileMenu" class="mobile-menu">
+    <a href="airport-transfer.html">✈️ Airport Transfer</a><a href="festival-transport.html">🎶 Festival Transport</a><a href="excursions.html">🌿 Excursions</a><a href="packages.html">📦 Packages</a><a href="about.html">🙋 About</a><a href="faq.html">❓ FAQ</a><a href="blog.html">📝 Blog</a>
+    <a href="contact.html" class="mobile-book-btn">Book Your Trip</a>
+  </div>
+</nav>
+
+<main id="main-content">
+
+<section class="page-hero">
+  <div class="page-hero-bg" style="background-image:url('https://cdn.getyourguide.com/image/format%3Dauto%2Cfit%3Dcrop%2Cgravity%3Dcenter%2Cquality%3D60%2Cwidth%3D900%2Cheight%3D600/tour_img/878f4fe39bbf42a6e806315ba5903c084a33b75a0ede1ba57431dc73d187ecfb.jpg');" aria-hidden="true"></div>
+  <div class="container page-hero-content">
+    <nav aria-label="Breadcrumb" style="margin-bottom:1.25rem;"><ol style="display:flex;gap:0.5rem;font-size:0.82rem;color:rgba(255,255,255,0.5);"><li><a href="index.html" style="color:rgba(255,255,255,0.5);">Home</a></li><li style="color:rgba(255,255,255,0.3);">/</li><li style="color:rgba(255,255,255,0.9);">Excursions</li></ol></nav>
+    <p class="section-label">Every corner of Jamaica</p>
+    <h1>Curated Excursions &amp; Tours</h1>
+    <p style="margin-top:0.75rem;max-width:560px;">Nature, culture, food tours, adventure, luxury experiences and hidden gems. Every excursion is verified, guided by locals, and designed for genuine discovery.</p>
+  </div>
+</section>
+
+<!-- SEARCH + FILTERS -->
+<section style="padding:2rem 0;background:var(--gray-light);border-bottom:1px solid var(--gray-mid);" aria-label="Search and filter excursions">
+  <div class="container">
+    <div class="search-bar" style="max-width:500px;margin-bottom:1.25rem;">
+      <span class="search-icon" aria-hidden="true">🔍</span>
+      <input class="search-input" type="search" placeholder="Search excursions — e.g. waterfall, Kingston, food..." data-search-filter aria-label="Search excursions" />
+    </div>
+    <div class="filter-bar" role="group" aria-label="Filter excursions by category">
+      <button class="filter-pill active" data-filter-value="all">All</button>
+      <button class="filter-pill" data-filter-value="nature">🌿 Nature</button>
+      <button class="filter-pill" data-filter-value="beach">🏖️ Beach</button>
+      <button class="filter-pill" data-filter-value="culture">🎵 Culture</button>
+      <button class="filter-pill" data-filter-value="food">🍽️ Food</button>
+      <button class="filter-pill" data-filter-value="adventure">⛰️ Adventure</button>
+      <button class="filter-pill" data-filter-value="luxury">👑 Luxury</button>
+      <button class="filter-pill" data-filter-value="hidden gem">💎 Hidden Gems</button>
+      <button class="filter-pill" data-filter-value="wheelchair">♿ Accessible</button>
+      <button class="filter-pill" data-filter-value="family">👪 Family</button>
+      <button class="filter-pill" data-filter-value="couples">💑 Couples</button>
+    </div>
+  </div>
+</section>
+
+<!-- EXCURSION CARDS GRID -->
+<section class="section" aria-labelledby="excursions-list-heading">
+  <div class="container">
+    <h2 class="reveal" id="excursions-list-heading" style="margin-bottom:2rem;">Jamaica's best-reviewed experiences</h2>
+    <div class="grid-3" style="gap:1.75rem;" id="excursionsGrid">
+
+      <article class="card reveal" data-filter="nature ocho rios family guided partial mobility access popular" aria-label="Dunn's River Falls Experience">
+        <div style="position:relative;overflow:hidden;">
+          <img class="card-img" src="https://cdn.getyourguide.com/image/format%3Dauto%2Cfit%3Dcrop%2Cgravity%3Dcenter%2Cquality%3D60%2Cwidth%3D900%2Cheight%3D600/tour_img/878f4fe39bbf42a6e806315ba5903c084a33b75a0ede1ba57431dc73d187ecfb.jpg" alt="Guided climb up Dunn's River Falls terraced limestone steps with clear water" loading="lazy" />
+          <span style="position:absolute;top:0.75rem;left:0.75rem;background:var(--green);color:white;font-size:0.7rem;font-weight:700;padding:0.25rem 0.65rem;border-radius:50px;text-transform:uppercase;">Popular</span>
+          <span style="position:absolute;top:0.75rem;right:0.75rem;background:rgba(0,0,0,0.55);color:white;font-size:0.75rem;padding:0.25rem 0.65rem;border-radius:50px;">3 hrs</span>
+        </div>
+        <div class="card-body">
+          <span class="card-tag green">Nature · Ocho Rios</span>
+          <h3>Dunn's River Falls</h3>
+          <p style="font-size:0.88rem;margin-bottom:0.75rem;">Climb the famous terraced waterfalls hand-in-hand with your guide. Jamaica's most iconic natural wonder — perfect for families and adventure seekers.</p>
+          <div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:0.75rem;">
+            <span class="badge badge-dark" style="font-size:0.72rem;">👪 Family</span>
+            <span class="badge" style="font-size:0.72rem;background:rgba(0,155,58,0.1);color:var(--green);">♿ Partial access</span>
+          </div>
+          <div class="stars" aria-label="Rated 4.8 out of 5">★★★★★ <span style="font-size:0.8rem;color:var(--gray-text);">4.8 (2,341)</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-top:1rem;">
+            <strong style="color:var(--green);font-size:1.1rem;">$45 <span style="font-size:0.8rem;font-weight:400;color:var(--gray-text);">/ person</span></strong>
+            <a href="contact.html?excursion=dunns-river" class="btn btn-sm btn-primary">Book Now</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card reveal reveal-delay-1" data-filter="beach negril couples sunset popular" aria-label="Seven Mile Beach Day Trip">
+        <div style="position:relative;overflow:hidden;">
+          <img class="card-img" src="https://www.stay-caribbean.com/uploads/0000/1/2024/11/03/seven-mile-beach-negril.jpeg" alt="Seven Mile Beach Negril white sand turquoise water" loading="lazy" />
+          <span style="position:absolute;top:0.75rem;left:0.75rem;background:var(--gold-dark);color:white;font-size:0.7rem;font-weight:700;padding:0.25rem 0.65rem;border-radius:50px;text-transform:uppercase;">Top Rated</span>
+          <span style="position:absolute;top:0.75rem;right:0.75rem;background:rgba(0,0,0,0.55);color:white;font-size:0.75rem;padding:0.25rem 0.65rem;border-radius:50px;">Full Day</span>
+        </div>
+        <div class="card-body">
+          <span class="card-tag green">Beach · Negril</span>
+          <h3>Seven Mile Beach Day</h3>
+          <p style="font-size:0.88rem;margin-bottom:0.75rem;">Rick's Café cliff jumping, sunset cocktails, white sand and turquoise sea. The most celebrated beach in the Caribbean.</p>
+          <div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:0.75rem;">
+            <span class="badge badge-dark" style="font-size:0.72rem;">💑 Couples</span>
+            <span class="badge" style="font-size:0.72rem;background:rgba(0,155,58,0.1);color:var(--green);">♿ Beach wheelchair available</span>
+          </div>
+          <div class="stars" aria-label="Rated 4.9 out of 5">★★★★★ <span style="font-size:0.8rem;color:var(--gray-text);">4.9 (3,102)</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-top:1rem;">
+            <strong style="color:var(--green);font-size:1.1rem;">$85 <span style="font-size:0.8rem;font-weight:400;color:var(--gray-text);">/ person</span></strong>
+            <a href="contact.html?excursion=seven-mile-beach" class="btn btn-sm btn-primary">Book Now</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card reveal reveal-delay-2" data-filter="nature romantic night unique couples popular" aria-label="Luminous Lagoon Night Tour">
+        <div style="position:relative;overflow:hidden;">
+          <img class="card-img" src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/0a/48/e0/stunning-sunset.jpg?h=500&s=1&w=900" alt="Bioluminescent lagoon glowing at night in Falmouth Jamaica" loading="lazy" />
+          <span style="position:absolute;top:0.75rem;left:0.75rem;background:#6c63ff;color:white;font-size:0.7rem;font-weight:700;padding:0.25rem 0.65rem;border-radius:50px;text-transform:uppercase;">Unique</span>
+          <span style="position:absolute;top:0.75rem;right:0.75rem;background:rgba(0,0,0,0.55);color:white;font-size:0.75rem;padding:0.25rem 0.65rem;border-radius:50px;">2 hrs · Night</span>
+        </div>
+        <div class="card-body">
+          <span class="card-tag gold">Unique · Falmouth</span>
+          <h3>Luminous Lagoon Night Tour</h3>
+          <p style="font-size:0.88rem;margin-bottom:0.75rem;">Swim through water that glows with every move. The world's largest luminous lagoon — a bucket-list experience after dark.</p>
+          <div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:0.75rem;">
+            <span class="badge badge-dark" style="font-size:0.72rem;">💑 Romantic</span>
+            <span class="badge" style="font-size:0.72rem;background:rgba(0,155,58,0.1);color:var(--green);">♿ Boat assistance</span>
+          </div>
+          <div class="stars" aria-label="Rated 4.9 out of 5">★★★★★ <span style="font-size:0.8rem;color:var(--gray-text);">4.9 (1,204)</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-top:1rem;">
+            <strong style="color:var(--green);font-size:1.1rem;">$40 <span style="font-size:0.8rem;font-weight:400;color:var(--gray-text);">/ person</span></strong>
+            <a href="contact.html?excursion=luminous-lagoon" class="btn btn-sm btn-primary">Book Now</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card reveal" data-filter="culture kingston music heritage wheelchair popular" aria-label="Bob Marley Museum & Kingston Culture Tour">
+        <div style="position:relative;overflow:hidden;">
+          <img class="card-img" src="https://media.tacdn.com/media/attractions-splice-spp-674x446/10/61/f8/06.jpg" alt="Bob Marley Museum Kingston Jamaica nine miles heritage site" loading="lazy" />
+          <span style="position:absolute;top:0.75rem;right:0.75rem;background:rgba(0,0,0,0.55);color:white;font-size:0.75rem;padding:0.25rem 0.65rem;border-radius:50px;">4 hrs</span>
+        </div>
+        <div class="card-body">
+          <span class="card-tag green">Culture · Kingston</span>
+          <h3>Bob Marley Museum Tour</h3>
+          <p style="font-size:0.88rem;margin-bottom:0.75rem;">The legendary home and recording studio of Robert Nesta Marley. Kingston cultural heritage with a certified guide and local jerk lunch.</p>
+          <div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:0.75rem;">
+            <span class="badge badge-dark" style="font-size:0.72rem;">🎵 Music</span>
+            <span class="badge" style="font-size:0.72rem;background:rgba(0,155,58,0.1);color:var(--green);">♿ Wheelchair friendly</span>
+          </div>
+          <div class="stars" aria-label="Rated 4.8 out of 5">★★★★★ <span style="font-size:0.8rem;color:var(--gray-text);">4.8 (1,567)</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-top:1rem;">
+            <strong style="color:var(--green);font-size:1.1rem;">$55 <span style="font-size:0.8rem;font-weight:400;color:var(--gray-text);">/ person</span></strong>
+            <a href="contact.html?excursion=bob-marley-museum" class="btn btn-sm btn-primary">Book Now</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card reveal reveal-delay-1" data-filter="nature hiking coffee adventure" aria-label="Blue Mountains Coffee & Hiking Tour">
+        <div style="position:relative;overflow:hidden;">
+          <img class="card-img" src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/18/21/d7/0c/wonderful-day-with-guests.jpg?h=500&s=1&w=900" alt="Blue Mountains misty peaks above the clouds Jamaica" loading="lazy" />
+          <span style="position:absolute;top:0.75rem;right:0.75rem;background:rgba(0,0,0,0.55);color:white;font-size:0.75rem;padding:0.25rem 0.65rem;border-radius:50px;">6 hrs</span>
+        </div>
+        <div class="card-body">
+          <span class="card-tag green">Nature · Blue Mountains</span>
+          <h3>Blue Mountains Coffee &amp; Hiking</h3>
+          <p style="font-size:0.88rem;margin-bottom:0.75rem;">Trek misty peaks, taste world-renowned Blue Mountain coffee at origin, and soak in panoramic views above the clouds.</p>
+          <div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:0.75rem;">
+            <span class="badge badge-dark" style="font-size:0.72rem;">⛰️ Adventure</span>
+            <span class="badge badge-dark" style="font-size:0.72rem;">☕ Coffee</span>
+          </div>
+          <div class="stars" aria-label="Rated 4.7 out of 5">★★★★☆ <span style="font-size:0.8rem;color:var(--gray-text);">4.7 (876)</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-top:1rem;">
+            <strong style="color:var(--green);font-size:1.1rem;">$95 <span style="font-size:0.8rem;font-weight:400;color:var(--gray-text);">/ person</span></strong>
+            <a href="contact.html?excursion=blue-mountains" class="btn btn-sm btn-primary">Book Now</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card reveal reveal-delay-2" data-filter="adventure family popular ocho rios" aria-label="Mystic Mountain Rainforest Adventure">
+        <div style="position:relative;overflow:hidden;">
+          <img class="card-img" src="https://media.tacdn.com/media/attractions-splice-spp-674x446/07/2b/1d/df.jpg" alt="Mystic Mountain zipline rainforest canopy Ocho Rios" loading="lazy" />
+          <span style="position:absolute;top:0.75rem;right:0.75rem;background:rgba(0,0,0,0.55);color:white;font-size:0.75rem;padding:0.25rem 0.65rem;border-radius:50px;">3 hrs</span>
+        </div>
+        <div class="card-body">
+          <span class="card-tag green">Adventure · Ocho Rios</span>
+          <h3>Mystic Mountain Rainforest</h3>
+          <p style="font-size:0.88rem;margin-bottom:0.75rem;">Bobsled, zipline, and chairlift over the rainforest canopy with sweeping views of Ocho Rios Bay — thrills for the whole family.</p>
+          <div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:0.75rem;">
+            <span class="badge badge-dark" style="font-size:0.72rem;">👪 Family</span>
+            <span class="badge" style="font-size:0.72rem;background:rgba(0,155,58,0.1);color:var(--green);">♿ Chairlift accessible</span>
+          </div>
+          <div class="stars" aria-label="Rated 4.6 out of 5">★★★★☆ <span style="font-size:0.8rem;color:var(--gray-text);">4.6 (1,123)</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-top:1rem;">
+            <strong style="color:var(--green);font-size:1.1rem;">$75 <span style="font-size:0.8rem;font-weight:400;color:var(--gray-text);">/ person</span></strong>
+            <a href="contact.html?excursion=mystic-mountain" class="btn btn-sm btn-primary">Book Now</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card reveal" data-filter="adventure couples portland hidden gem" aria-label="Rio Grande Bamboo Rafting">
+        <div style="position:relative;overflow:hidden;">
+          <img class="card-img" src="https://www.joegarzaphotography.com/images/xl/_DSC6151-copy.jpg" alt="Bamboo rafting down the scenic Rio Grande Portland Jamaica" loading="lazy" />
+          <span style="position:absolute;top:0.75rem;left:0.75rem;background:var(--gold-dark);color:white;font-size:0.7rem;font-weight:700;padding:0.25rem 0.65rem;border-radius:50px;text-transform:uppercase;">Classic</span>
+          <span style="position:absolute;top:0.75rem;right:0.75rem;background:rgba(0,0,0,0.55);color:white;font-size:0.75rem;padding:0.25rem 0.65rem;border-radius:50px;">3-4 hrs</span>
+        </div>
+        <div class="card-body">
+          <span class="card-tag green">Adventure · Portland</span>
+          <h3>Rio Grande Bamboo Rafting</h3>
+          <p style="font-size:0.88rem;margin-bottom:0.75rem;">Glide down jade-green waters on a traditional bamboo raft. A timeless Jamaican experience made famous by Errol Flynn.</p>
+          <div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:0.75rem;">
+            <span class="badge badge-dark" style="font-size:0.72rem;">💑 Romantic</span>
+          </div>
+          <div class="stars" aria-label="Rated 4.7 out of 5">★★★★☆ <span style="font-size:0.8rem;color:var(--gray-text);">4.7 (934)</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-top:1rem;">
+            <strong style="color:var(--green);font-size:1.1rem;">$80 <span style="font-size:0.8rem;font-weight:400;color:var(--gray-text);">/ raft (2 persons)</span></strong>
+            <a href="contact.html?excursion=rio-grande-rafting" class="btn btn-sm btn-primary">Book Now</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card reveal reveal-delay-1" data-filter="food culture kingston wheelchair family" aria-label="Kingston Street Food Tour">
+        <div style="position:relative;overflow:hidden;">
+          <img class="card-img" src="https://explorevia.com/files/vt/41/410755/t_montego-bay-airport-transfer-private-chauffeur-local-insights.webp" alt="Local Jamaican street food tour jerk chicken patties festival" loading="lazy" />
+          <span style="position:absolute;top:0.75rem;right:0.75rem;background:rgba(0,0,0,0.55);color:white;font-size:0.75rem;padding:0.25rem 0.65rem;border-radius:50px;">3 hrs</span>
+        </div>
+        <div class="card-body">
+          <span class="card-tag gold">Food · Kingston</span>
+          <h3>Kingston Street Food &amp; Flavours</h3>
+          <p style="font-size:0.88rem;margin-bottom:0.75rem;">8+ tasting stops — jerk chicken, festival, bammy, patties, rum cake. A passionate local guide brings every dish alive with history.</p>
+          <div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:0.75rem;">
+            <span class="badge badge-dark" style="font-size:0.72rem;">🍽️ Food</span>
+            <span class="badge" style="font-size:0.72rem;background:rgba(0,155,58,0.1);color:var(--green);">♿ Full mobility access</span>
+          </div>
+          <div class="stars" aria-label="Rated 4.8 out of 5">★★★★★ <span style="font-size:0.8rem;color:var(--gray-text);">4.8 (756)</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-top:1rem;">
+            <strong style="color:var(--green);font-size:1.1rem;">$50 <span style="font-size:0.8rem;font-weight:400;color:var(--gray-text);">/ person</span></strong>
+            <a href="contact.html?excursion=food-tour-kingston" class="btn btn-sm btn-primary">Book Now</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card reveal reveal-delay-2" data-filter="luxury couples hidden gem vip" aria-label="Pelican Bar Sunset Boat Trip">
+        <div style="position:relative;overflow:hidden;">
+          <img class="card-img" src="https://www.mbttransportservicejamaica.com/images/mbt-Drivers4.jpg" alt="Pelican Bar wooden shack sandbar Jamaica St Elizabeth offshore" loading="lazy" />
+          <span style="position:absolute;top:0.75rem;left:0.75rem;background:var(--black);color:white;font-size:0.7rem;font-weight:700;padding:0.25rem 0.65rem;border-radius:50px;text-transform:uppercase;">Hidden Gem</span>
+          <span style="position:absolute;top:0.75rem;right:0.75rem;background:rgba(0,0,0,0.55);color:white;font-size:0.75rem;padding:0.25rem 0.65rem;border-radius:50px;">5 hrs</span>
+        </div>
+        <div class="card-body">
+          <span class="card-tag gold">Luxury · St. Elizabeth</span>
+          <h3>Pelican Bar Sunset Boat Trip</h3>
+          <p style="font-size:0.88rem;margin-bottom:0.75rem;">A wooden shack on a sandbar in open water. Fresh lobster, cold rum punch, golden hour photography — unforgettable.</p>
+          <div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:0.75rem;">
+            <span class="badge badge-dark" style="font-size:0.72rem;">👑 VIP</span>
+            <span class="badge badge-dark" style="font-size:0.72rem;">💑 Couples</span>
+          </div>
+          <div class="stars" aria-label="Rated 4.9 out of 5">★★★★★ <span style="font-size:0.8rem;color:var(--gray-text);">4.9 (412)</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-top:1rem;">
+            <strong style="color:var(--green);font-size:1.1rem;">$150 <span style="font-size:0.8rem;font-weight:400;color:var(--gray-text);">/ person</span></strong>
+            <a href="contact.html?excursion=pelican-bar" class="btn btn-sm btn-primary">Book Now</a>
+          </div>
+        </div>
+      </article>
+
+    </div><!-- /grid -->
+
+    <!-- CTA to custom request -->
+    <div style="text-align:center;margin-top:3rem;padding:2.5rem;background:var(--gray-light);border-radius:var(--radius-lg);" class="reveal">
+      <h3>Don't see what you're looking for?</h3>
+      <p style="margin:0.5rem 0 1.25rem;">We curate custom experiences across all 14 parishes. Tell us your interest and we'll design something special.</p>
+      <a href="contact.html?service=custom-excursion" class="btn btn-primary btn-lg">Request Custom Excursion</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><div class="logo-text">JUTA Tours JA 🇯🇲</div><p>Verified islandwide Jamaica travel — airport transfers, excursions, festival transport.</p><div class="footer-social"><a href="#" aria-label="Instagram">📸</a><a href="#" aria-label="Facebook">📘</a><a href="#" aria-label="TikTok">🎵</a><a href="https://wa.me/18765551234" aria-label="WhatsApp">💬</a></div></div>
+      <div><p class="footer-heading">Services</p><ul class="footer-links"><li><a href="airport-transfer.html">Airport Transfer</a></li><li><a href="festival-transport.html">Festival Transport</a></li><li><a href="excursions.html">Excursions</a></li><li><a href="packages.html">Packages</a></li></ul></div>
+      <div><p class="footer-heading">Company</p><ul class="footer-links"><li><a href="about.html">About</a></li><li><a href="faq.html">FAQ</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div><p class="footer-heading">Contact</p><ul class="footer-links"><li><a href="tel:+18765551234">+1 876-555-1234</a></li><li><a href="mailto:info@jutatoursja.com">info@jutatoursja.com</a></li><li><a href="https://wa.me/18765551234">WhatsApp 24/7</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 JUTA Tours JA. All rights reserved.</span><div class="footer-flag">🇯🇲 Made with pride in Jamaica</div></div>
+  </div>
+</footer>
+
+<div class="sticky-cta"><a href="contact.html?service=excursion" class="btn btn-primary btn-sm">Book Excursion</a><a href="https://wa.me/18765551234" class="whatsapp-pill" target="_blank" rel="noopener noreferrer">💬 WhatsApp</a></div>
+<div class="a11y-panel"><button class="a11y-trigger" id="a11yTrigger" aria-label="Accessibility settings" aria-expanded="false">♿</button><div id="a11yMenu" class="a11y-menu"><strong style="font-size:0.8rem;color:var(--gray-text);">Accessibility</strong><button id="a11yHighContrast">🌓 High contrast</button><button id="a11yLargeText">🔠 Larger text</button><button id="a11yDyslexia">📖 Dyslexia font</button><button id="a11yReset" style="color:#e53e3e;">↺ Reset</button></div></div>
+<script type="module" src="js/main.js"></script>
+</body>
+</html>

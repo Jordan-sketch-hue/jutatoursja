@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Book your Jamaica trip with JUTA Tours JA — airport transfers, excursions, festival transport and custom packages. Smart booking form with WhatsApp support." />
+  <title>Contact &amp; Book — JUTA Tours JA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/global.css" />
+  <style>
+    .contact-layout{display:grid;grid-template-columns:1fr 380px;gap:3rem;align-items:start;}
+    .contact-sidebar{display:flex;flex-direction:column;gap:1.25rem;position:sticky;top:90px;}
+    .sidebar-card{background:var(--gray-light);border-radius:var(--radius-lg);padding:1.5rem;}
+    .sidebar-card h4{font-size:0.9rem;font-weight:700;margin-bottom:0.75rem;}
+    .sidebar-item{display:flex;gap:0.75rem;align-items:start;padding:0.75rem 0;border-bottom:1px solid rgba(0,0,0,0.06);font-size:0.9rem;}
+    .sidebar-item:last-child{border-bottom:none;}
+    .sidebar-icon{width:34px;height:34px;border-radius:50%;background:var(--green);display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;}
+    .step-tabs{display:flex;gap:0;margin-bottom:2rem;border-radius:var(--radius-md);overflow:hidden;border:2px solid var(--green);}
+    .step-tab{flex:1;padding:0.75rem 0.25rem;text-align:center;font-size:0.8rem;font-weight:600;background:white;color:var(--gray-text);cursor:pointer;border:none;transition:all 0.2s;}
+    .step-tab.active{background:var(--green);color:white;}
+    .form-step{display:none;animation:fadeIn 0.3s ease;}
+    .form-step.active{display:block;}
+    @keyframes fadeIn{from{opacity:0;transform:translateY(6px);}to{opacity:1;transform:translateY(0);}}
+    .service-card-selector{display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;margin-top:0.5rem;}
+    .service-card-option{padding:1rem;border:2px solid rgba(0,0,0,0.1);border-radius:var(--radius-md);cursor:pointer;text-align:center;transition:all 0.2s;font-size:0.85rem;}
+    .service-card-option:hover{border-color:var(--green);background:rgba(0,155,58,0.05);}
+    .service-card-option.selected{border-color:var(--green);background:rgba(0,155,58,0.08);}
+    .service-card-option .sco-icon{font-size:1.75rem;margin-bottom:0.4rem;}
+    @media(max-width:900px){.contact-layout{grid-template-columns:1fr;}.contact-sidebar{position:static;}}
+    @media(max-width:600px){.service-card-selector{grid-template-columns:1fr 1fr;}}
+  </style>
+</head>
+<body>
+
+<div class="trust-bar"><div class="trust-bar-inner"><span class="trust-bar-item">⚡ Reply within 2 hours</span><span class="trust-bar-item">💬 WhatsApp 24/7</span><span class="trust-bar-item">🔒 Your data is safe</span><span class="trust-bar-item">✅ No payment upfront</span></div></div>
+
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><div class="logo-badge">JT</div><span>JUTA Tours JA</span></a>
+    <ul class="nav-links">
+      <li><a href="airport-transfer.html">Airport Transfer</a></li>
+      <li><a href="festival-transport.html">Festivals</a></li>
+      <li><a href="excursions.html">Excursions</a></li>
+      <li><a href="packages.html">Packages</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="blog.html">Blog</a></li>
+    </ul>
+    <div class="nav-cta"><a href="https://wa.me/18765551234" class="nav-whatsapp" target="_blank" rel="noopener noreferrer">💬 WhatsApp</a><a href="contact.html" class="nav-book-btn active">Book Now</a></div>
+    <button class="nav-hamburger" id="menuBtn" aria-label="Toggle mobile menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+  <div id="mobileMenu" class="mobile-menu">
+    <a href="airport-transfer.html">✈️ Airport Transfer</a><a href="festival-transport.html">🎶 Festival Transport</a><a href="excursions.html">🌿 Excursions</a><a href="packages.html">📦 Packages</a><a href="about.html">🙋 About</a><a href="faq.html">❓ FAQ</a><a href="blog.html">📝 Blog</a>
+    <a href="contact.html" class="mobile-book-btn">Book Your Trip</a>
+  </div>
+</nav>
+
+<main id="main-content">
+
+<section class="page-hero" style="min-height:260px;">
+  <div class="page-hero-bg" style="background-image:url('https://www.stay-caribbean.com/uploads/0000/1/2024/11/03/seven-mile-beach-negril.jpeg');" aria-hidden="true"></div>
+  <div class="container page-hero-content">
+    <nav aria-label="Breadcrumb" style="margin-bottom:1.25rem;"><ol style="display:flex;gap:0.5rem;font-size:0.82rem;color:rgba(255,255,255,0.5);"><li><a href="index.html" style="color:rgba(255,255,255,0.5);">Home</a></li><li style="color:rgba(255,255,255,0.3);">/</li><li style="color:rgba(255,255,255,0.9);">Book / Contact</li></ol></nav>
+    <p class="section-label">Your Jamaica Journey Starts Here</p>
+    <h1 id="contact-page-heading">Book Your Trip or Ask Us Anything</h1>
+    <p style="margin-top:0.75rem;max-width:540px;">Fill in the form below and our team will get back to you within 2 hours with a confirmed quote and booking details.</p>
+  </div>
+</section>
+
+<section class="section" style="padding-top:3rem;">
+  <div class="container">
+    <div class="contact-layout">
+
+      <!-- BOOKING FORM -->
+      <div>
+        <div class="booking-form" aria-labelledby="booking-form-heading">
+          <h2 id="booking-form-heading" style="font-size:1.3rem;margin-bottom:0.25rem;">New Booking Request</h2>
+          <p style="font-size:0.85rem;color:var(--gray-text);margin-bottom:1.75rem;">All fields marked <span class="req">*</span> are required. We never share your information with third parties.</p>
+
+          <!-- STEP TABS -->
+          <div class="step-tabs" role="tablist" aria-label="Booking steps">
+            <button class="step-tab active" id="tab1" role="tab" aria-selected="true" aria-controls="step1">1. You</button>
+            <button class="step-tab" id="tab2" role="tab" aria-selected="false" aria-controls="step2">2. Service</button>
+            <button class="step-tab" id="tab3" role="tab" aria-selected="false" aria-controls="step3">3. Trip Details</button>
+            <button class="step-tab" id="tab4" role="tab" aria-selected="false" aria-controls="step4">4. Preferences</button>
+          </div>
+
+          <form id="jutatours-main-form" novalidate aria-label="Jamaica trip booking form">
+            <input type="hidden" name="source_page" value="contact.html" />
+            <input type="hidden" id="hidden_service" name="service_type" value="" />
+            <input type="hidden" id="hidden_package" name="package" value="" />
+            <input type="hidden" id="hidden_excursion" name="excursion" value="" />
+
+            <!-- STEP 1: Personal Info -->
+            <div class="form-step active" id="step1" role="tabpanel" aria-labelledby="tab1">
+              <div class="form-row">
+                <div class="form-group"><label class="form-label" for="c_fname">First Name <span class="req">*</span></label><input class="form-input" type="text" id="c_fname" name="first_name" required placeholder="First name" autocomplete="given-name" /><span class="form-error" data-error-for="first_name">Required.</span></div>
+                <div class="form-group"><label class="form-label" for="c_lname">Last Name <span class="req">*</span></label><input class="form-input" type="text" id="c_lname" name="last_name" required placeholder="Last name" autocomplete="family-name" /><span class="form-error" data-error-for="last_name">Required.</span></div>
+              </div>
+              <div class="form-group"><label class="form-label" for="c_email">Email Address <span class="req">*</span></label><input class="form-input" type="email" id="c_email" name="email" required placeholder="you@example.com" autocomplete="email" /><span class="form-error" data-error-for="email">Please enter a valid email.</span></div>
+              <div class="form-row">
+                <div class="form-group"><label class="form-label" for="c_phone">Phone / WhatsApp <span class="req">*</span></label><input class="form-input" type="tel" id="c_phone" name="phone" required placeholder="+1 876 000 0000" autocomplete="tel" /><span class="form-error" data-error-for="phone">Required.</span></div>
+                <div class="form-group"><label class="form-label" for="c_country">Country of Origin <span class="req">*</span></label><select class="form-select" id="c_country" name="country" required autocomplete="country"><option value="">Select country</option><option>United States</option><option>United Kingdom</option><option>Canada</option><option>Jamaica</option><option>Trinidad &amp; Tobago</option><option>Barbados</option><option>Germany</option><option>France</option><option>Japan</option><option>Australia</option><option>Other</option></select><span class="form-error" data-error-for="country">Required.</span></div>
+              </div>
+              <p class="form-hint">💡 Add your WhatsApp number for the fastest response.</p>
+              <div style="display:flex;justify-content:flex-end;margin-top:1.5rem;">
+                <button type="button" class="btn btn-primary" id="nextStep1">Continue →</button>
+              </div>
+            </div>
+
+            <!-- STEP 2: Service Selection -->
+            <div class="form-step" id="step2" role="tabpanel" aria-labelledby="tab2">
+              <p class="form-label" style="margin-bottom:0.5rem;">What service do you need? <span class="req">*</span></p>
+              <div class="service-card-selector" id="serviceSelector" role="group" aria-label="Service selection">
+                <div class="service-card-option" data-value="airport-transfer" tabindex="0" role="button" aria-pressed="false"><div class="sco-icon">✈️</div><strong>Airport Transfer</strong><p style="font-size:0.75rem;color:var(--gray-text);margin-top:0.2rem;">From $45</p></div>
+                <div class="service-card-option" data-value="festival-transport" tabindex="0" role="button" aria-pressed="false"><div class="sco-icon">🎶</div><strong>Festival Transport</strong><p style="font-size:0.75rem;color:var(--gray-text);margin-top:0.2rem;">From $35/person</p></div>
+                <div class="service-card-option" data-value="excursion" tabindex="0" role="button" aria-pressed="false"><div class="sco-icon">🌿</div><strong>Day Excursion</strong><p style="font-size:0.75rem;color:var(--gray-text);margin-top:0.2rem;">From $75</p></div>
+                <div class="service-card-option" data-value="package" tabindex="0" role="button" aria-pressed="false"><div class="sco-icon">📦</div><strong>Package Bundle</strong><p style="font-size:0.75rem;color:var(--gray-text);margin-top:0.2rem;">From $175</p></div>
+              </div>
+              <span class="form-error" id="service-selection-error" style="display:none;">Please select a service to continue.</span>
+
+              <!-- Conditional: Airport -->
+              <div id="cond-airport" style="display:none;margin-top:1.25rem;">
+                <div class="form-row">
+                  <div class="form-group"><label class="form-label" for="c_airport">Airport</label><select class="form-select" id="c_airport" name="airport"><option value="">Select airport</option><option value="MBJ">Sangster Intl (MBJ) — Montego Bay</option><option value="KIN">Norman Manley Intl (KIN) — Kingston</option></select></div>
+                  <div class="form-group"><label class="form-label" for="c_direction">Direction</label><select class="form-select" id="c_direction" name="direction"><option value="">Select</option><option value="arrival">Arrival (pickup from airport)</option><option value="departure">Departure (to airport)</option><option value="both">Both ways</option></select></div>
+                </div>
+                <div class="form-group"><label class="form-label" for="c_flight">Flight Number</label><input class="form-input" type="text" id="c_flight" name="flight_number" placeholder="e.g. AA 1234" /></div>
+              </div>
+
+              <!-- Conditional: Festival -->
+              <div id="cond-festival" style="display:none;margin-top:1.25rem;">
+                <div class="form-group"><label class="form-label" for="c_festival">Festival / Event</label><select class="form-select" id="c_festival" name="festival"><option value="">Select event</option><option value="sumfest">Reggae Sumfest</option><option value="dream-weekend">Dream Weekend</option><option value="carnival">Jamaica Carnival</option><option value="rebel-salute">Rebel Salute</option><option value="other-event">Other event</option></select></div>
+                <div class="form-group"><label class="form-label" for="c_transport_tier">Transport Tier</label><select class="form-select" id="c_transport_tier" name="transport_tier"><option value="">Select</option><option value="solo">Solo Shuttle ($35/person)</option><option value="group">Group Charter ($299)</option><option value="vip">VIP Private ($175/person)</option></select></div>
+              </div>
+
+              <!-- Conditional: Excursion -->
+              <div id="cond-excursion" style="display:none;margin-top:1.25rem;">
+                <div class="form-group"><label class="form-label" for="c_excursion">Excursion</label><select class="form-select" id="c_excursion" name="excursion_choice">
+                  <option value="">Select excursion</option>
+                  <option value="dunns-river">Dunn's River Falls</option>
+                  <option value="seven-mile-beach">Seven Mile Beach, Negril</option>
+                  <option value="blue-mountains">Blue Mountains Coffee &amp; Hiking</option>
+                  <option value="bob-marley">Bob Marley Museum, Kingston</option>
+                  <option value="luminous-lagoon">Luminous Lagoon, Falmouth</option>
+                  <option value="rio-grande">Rio Grande Rafting</option>
+                  <option value="mystic-mountain">Mystic Mountain, Ocho Rios</option>
+                  <option value="kingston-food">Kingston Street Food Tour</option>
+                  <option value="pelican-bar">Pelican Bar &amp; Black River Safari</option>
+                  <option value="mayfield-falls">Mayfield Falls, Westmoreland</option>
+                  <option value="custom">Custom / I'll describe below</option>
+                </select></div>
+              </div>
+
+              <!-- Conditional: Package -->
+              <div id="cond-package" style="display:none;margin-top:1.25rem;">
+                <div class="form-group"><label class="form-label" for="c_package">Package</label><select class="form-select" id="c_package" name="package_choice">
+                  <option value="">Select package</option>
+                  <option value="explorer">Explorer Package ($199)</option>
+                  <option value="vip-escape">VIP Island Escape ($495/day)</option>
+                  <option value="culture">Culture &amp; Flavours ($245)</option>
+                  <option value="festival-weekend">Festival Weekend ($175)</option>
+                  <option value="digital-nomad">Digital Nomad Weekly ($350)</option>
+                  <option value="romantic-proposal">Romantic Proposal ($395)</option>
+                  <option value="custom">Custom — build my own</option>
+                </select></div>
+              </div>
+
+              <div style="display:flex;justify-content:space-between;margin-top:1.5rem;">
+                <button type="button" class="btn btn-lg" style="background:var(--gray-light);color:var(--black);" id="prevStep2">← Back</button>
+                <button type="button" class="btn btn-primary" id="nextStep2">Continue →</button>
+              </div>
+            </div>
+
+            <!-- STEP 3: Trip Details -->
+            <div class="form-step" id="step3" role="tabpanel" aria-labelledby="tab3">
+              <div class="form-row">
+                <div class="form-group"><label class="form-label" for="c_date">Travel Date <span class="req">*</span></label><input class="form-input" type="date" id="c_date" name="travel_date" required /><span class="form-error" data-error-for="travel_date">Required.</span></div>
+                <div class="form-group"><label class="form-label" for="c_pax">Number of Travellers <span class="req">*</span></label><select class="form-select" id="c_pax" name="passengers" required><option value="">Select</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5-8">5–8</option><option value="9-14">9–14</option><option value="15+">15+</option></select><span class="form-error" data-error-for="passengers">Required.</span></div>
+              </div>
+              <div class="form-group"><label class="form-label" for="c_pickup">Pickup Location <span class="req">*</span></label><input class="form-input" type="text" id="c_pickup" name="pickup_location" required placeholder="Hotel / villa / address" /><span class="form-error" data-error-for="pickup_location">Required.</span></div>
+              <div class="form-group"><label class="form-label" for="c_dropoff">Drop-off / Destination</label><input class="form-input" type="text" id="c_dropoff" name="dropoff_location" placeholder="Final destination or hotel" /></div>
+              <fieldset style="border:1px solid rgba(0,0,0,0.1);border-radius:var(--radius-md);padding:1.25rem;">
+                <legend style="font-size:0.85rem;font-weight:600;padding:0 0.5rem;color:var(--gray-text);">Special requirements (select all that apply)</legend>
+                <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.5rem;margin-top:0.5rem;">
+                  <label style="display:flex;align-items:center;gap:0.5rem;font-size:0.88rem;cursor:pointer;"><input type="checkbox" name="special_req[]" value="child_seat" style="width:auto;" /> Child / baby seat</label>
+                  <label style="display:flex;align-items:center;gap:0.5rem;font-size:0.88rem;cursor:pointer;"><input type="checkbox" name="special_req[]" value="wheelchair" style="width:auto;" /> Wheelchair accessible</label>
+                  <label style="display:flex;align-items:center;gap:0.5rem;font-size:0.88rem;cursor:pointer;"><input type="checkbox" name="special_req[]" value="female_driver" style="width:auto;" /> Female driver preferred</label>
+                  <label style="display:flex;align-items:center;gap:0.5rem;font-size:0.88rem;cursor:pointer;"><input type="checkbox" name="special_req[]" value="quiet_ride" style="width:auto;" /> Quiet ride (no music)</label>
+                  <label style="display:flex;align-items:center;gap:0.5rem;font-size:0.88rem;cursor:pointer;"><input type="checkbox" name="special_req[]" value="large_luggage" style="width:auto;" /> Extra luggage / cargo</label>
+                  <label style="display:flex;align-items:center;gap:0.5rem;font-size:0.88rem;cursor:pointer;"><input type="checkbox" name="special_req[]" value="pet" style="width:auto;" /> Pet-friendly vehicle</label>
+                </div>
+              </fieldset>
+              <div style="display:flex;justify-content:space-between;margin-top:1.5rem;">
+                <button type="button" class="btn btn-lg" style="background:var(--gray-light);color:var(--black);" id="prevStep3">← Back</button>
+                <button type="button" class="btn btn-primary" id="nextStep3">Continue →</button>
+              </div>
+            </div>
+
+            <!-- STEP 4: Preferences & Submit -->
+            <div class="form-step" id="step4" role="tabpanel" aria-labelledby="tab4">
+              <div class="form-group"><label class="form-label" for="c_access">Accessibility or Medical Needs</label><input class="form-input" type="text" id="c_access" name="accessibility_needs" placeholder="e.g. hard of hearing, mobility aid, visual impairment..." /></div>
+              <div class="form-group"><label class="form-label">Preferred Communication</label>
+                <div style="display:flex;gap:1rem;margin-top:0.4rem;flex-wrap:wrap;">
+                  <label style="display:flex;align-items:center;gap:0.4rem;font-size:0.88rem;cursor:pointer;"><input type="radio" name="preferred_contact" value="whatsapp" style="width:auto;" checked /> WhatsApp</label>
+                  <label style="display:flex;align-items:center;gap:0.4rem;font-size:0.88rem;cursor:pointer;"><input type="radio" name="preferred_contact" value="email" style="width:auto;" /> Email</label>
+                  <label style="display:flex;align-items:center;gap:0.4rem;font-size:0.88rem;cursor:pointer;"><input type="radio" name="preferred_contact" value="call" style="width:auto;" /> Phone call</label>
+                </div>
+              </div>
+              <div class="form-group"><label class="form-label" for="c_notes">Additional Notes</label><textarea class="form-textarea" id="c_notes" name="notes" rows="4" placeholder="Anything else we should know about your trip? Special occasions, dietary needs, specific stops en route..." data-maxlength="800"></textarea><p class="form-hint"><span data-counter-for="notes">0</span>/800 characters · The more you share, the better we can prepare.</p></div>
+
+              <div class="form-success notice notice-success" style="display:none;flex-direction:column;gap:0.5rem;">
+                <strong style="font-size:1.05rem;">🎉 Booking request received, <span class="success-name"></span>!</strong>
+                <p style="margin:0;">Our team will review your details and send a confirmed quote to your email within 2 hours. Check your WhatsApp too!</p>
+                <div style="margin-top:1rem;display:flex;gap:0.75rem;flex-wrap:wrap;">
+                  <a href="https://wa.me/18765551234" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">💬 Follow up on WhatsApp</a>
+                  <a href="excursions.html" class="btn btn-sm" style="background:var(--gray-light);color:var(--black);">Browse more excursions</a>
+                </div>
+              </div>
+
+              <div class="form-fields">
+                <p style="font-size:0.8rem;color:var(--gray-text);margin-bottom:1rem;padding:0.75rem;background:var(--gray-light);border-radius:var(--radius-sm);">🔒 Your information is encrypted and never sold. By submitting you agree to our <a href="faq.html#privacy" style="color:var(--green);">Privacy Policy</a>. No payment is taken at this stage.</p>
+                <button type="submit" class="btn btn-primary btn-lg" style="width:100%;justify-content:center;">🇯🇲 Send My Booking Request</button>
+                <p style="text-align:center;font-size:0.78rem;color:var(--gray-text);margin-top:0.75rem;">Prefer to message directly? <a href="https://wa.me/18765551234" style="color:var(--green);">WhatsApp us</a> · <a href="tel:+18765551234" style="color:var(--green);">Call +1 876-555-1234</a></p>
+              </div>
+
+              <div style="display:flex;justify-content:flex-start;margin-top:0.5rem;">
+                <button type="button" class="btn" style="background:var(--gray-light);color:var(--black);" id="prevStep4">← Back</button>
+              </div>
+            </div>
+
+          </form>
+        </div>
+      </div>
+
+      <!-- SIDEBAR -->
+      <aside class="contact-sidebar">
+        <div class="sidebar-card" style="background:var(--green);color:white;">
+          <h4 style="color:white;">⚡ Response Time</h4>
+          <p style="font-size:0.9rem;opacity:0.9;">We reply to every request within <strong>2 hours</strong> during business hours, <strong>same day</strong> on weekends.</p>
+        </div>
+        <div class="sidebar-card">
+          <h4>📞 Contact Us Directly</h4>
+          <div class="sidebar-item"><div class="sidebar-icon" style="background:var(--green);">💬</div><div><strong>WhatsApp</strong><br/><a href="https://wa.me/18765551234" style="color:var(--green);font-weight:600;">+1 876-555-1234</a><br/><span style="font-size:0.78rem;color:var(--gray-text);">Available 24/7</span></div></div>
+          <div class="sidebar-item"><div class="sidebar-icon" style="background:var(--gold-dark);">📞</div><div><strong>Phone</strong><br/><a href="tel:+18765551234" style="color:var(--gold-dark);font-weight:600;">+1 876-555-1234</a><br/><span style="font-size:0.78rem;color:var(--gray-text);">Mon–Sun 7am–9pm</span></div></div>
+          <div class="sidebar-item"><div class="sidebar-icon" style="background:#d44638;">✉️</div><div><strong>Email</strong><br/><a href="mailto:info@jutatoursja.com" style="color:#d44638;font-weight:600;">info@jutatoursja.com</a><br/><span style="font-size:0.78rem;color:var(--gray-text);">Usually within 4 hours</span></div></div>
+        </div>
+        <div class="sidebar-card">
+          <h4>🛡️ Why book with us?</h4>
+          <div style="display:flex;flex-direction:column;gap:0.6rem;font-size:0.85rem;">
+            <div style="display:flex;gap:0.5rem;"><span style="color:var(--green);">✓</span> Licensed &amp; insured vehicles</div>
+            <div style="display:flex;gap:0.5rem;"><span style="color:var(--green);">✓</span> Transparent, fixed pricing</div>
+            <div style="display:flex;gap:0.5rem;"><span style="color:var(--green);">✓</span> No surprise fees</div>
+            <div style="display:flex;gap:0.5rem;"><span style="color:var(--green);">✓</span> Flight tracking for airport trips</div>
+            <div style="display:flex;gap:0.5rem;"><span style="color:var(--green);">✓</span> Accessibility-friendly options</div>
+            <div style="display:flex;gap:0.5rem;"><span style="color:var(--green);">✓</span> Free cancellation 48 hrs ahead</div>
+          </div>
+        </div>
+        <div class="sidebar-card" style="background:var(--black);color:white;">
+          <h4 style="color:white;">🇯🇲 Serving all of Jamaica</h4>
+          <p style="font-size:0.85rem;color:rgba(255,255,255,0.7);margin-bottom:0.75rem;">Kingston · Montego Bay · Ocho Rios · Negril · Mandeville · Port Antonio · Falmouth · Spanish Town</p>
+          <p style="font-size:0.78rem;color:var(--gold);">All 14 parishes covered.</p>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><div class="logo-text">JUTA Tours JA 🇯🇲</div><p>Verified islandwide Jamaica travel — airport transfers, excursions, festival transport.</p><div class="footer-social"><a href="#" aria-label="Instagram">📸</a><a href="#" aria-label="Facebook">📘</a><a href="#" aria-label="TikTok">🎵</a><a href="https://wa.me/18765551234" aria-label="WhatsApp">💬</a></div></div>
+      <div><p class="footer-heading">Services</p><ul class="footer-links"><li><a href="airport-transfer.html">Airport Transfer</a></li><li><a href="festival-transport.html">Festival Transport</a></li><li><a href="excursions.html">Excursions</a></li><li><a href="packages.html">Packages</a></li></ul></div>
+      <div><p class="footer-heading">Company</p><ul class="footer-links"><li><a href="about.html">About</a></li><li><a href="faq.html">FAQ</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div><p class="footer-heading">Contact</p><ul class="footer-links"><li><a href="tel:+18765551234">+1 876-555-1234</a></li><li><a href="mailto:info@jutatoursja.com">info@jutatoursja.com</a></li><li><a href="https://wa.me/18765551234">WhatsApp 24/7</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 JUTA Tours JA. All rights reserved.</span><div class="footer-flag">🇯🇲 Made with pride in Jamaica</div></div>
+  </div>
+</footer>
+
+<div class="a11y-panel"><button class="a11y-trigger" id="a11yTrigger" aria-label="Accessibility settings" aria-expanded="false">♿</button><div id="a11yMenu" class="a11y-menu"><strong style="font-size:0.8rem;color:var(--gray-text);">Accessibility</strong><button id="a11yHighContrast">🌓 High contrast</button><button id="a11yLargeText">🔠 Larger text</button><button id="a11yDyslexia">📖 Dyslexia font</button><button id="a11yReset" style="color:#e53e3e;">↺ Reset</button></div></div>
+<script type="module" src="js/main.js"></script>
+<script>
+// Multi-step form controller for contact.html
+(function(){
+  const steps = [1,2,3,4];
+  let current = 1;
+
+  function goTo(n){
+    document.querySelector('#step'+current).classList.remove('active');
+    document.querySelector('#tab'+current).classList.remove('active');
+    document.querySelector('#tab'+current).setAttribute('aria-selected','false');
+    current = n;
+    document.querySelector('#step'+n).classList.add('active');
+    document.querySelector('#tab'+n).classList.add('active');
+    document.querySelector('#tab'+n).setAttribute('aria-selected','true');
+    document.querySelector('#tab'+n).focus();
+    window.scrollTo({top:document.querySelector('#booking-form-heading').getBoundingClientRect().top+window.scrollY-100,behavior:'smooth'});
+  }
+
+  // Step 1 next
+  document.getElementById('nextStep1').addEventListener('click',function(){
+    const fields = ['c_fname','c_lname','c_email','c_phone','c_country'];
+    let ok = true;
+    fields.forEach(id=>{
+      const el = document.getElementById(id);
+      el.classList.remove('error');
+      if(!el.value.trim()||(el.type==='email'&&!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(el.value))){
+        el.classList.add('error'); ok=false;
+      }
+    });
+    if(ok) goTo(2);
+  });
+  document.getElementById('prevStep2').addEventListener('click',()=>goTo(1));
+
+  // Service card selection
+  const cards = document.querySelectorAll('.service-card-option');
+  cards.forEach(c=>{
+    c.addEventListener('click',function(){
+      cards.forEach(x=>{x.classList.remove('selected');x.setAttribute('aria-pressed','false');});
+      this.classList.add('selected');
+      this.setAttribute('aria-pressed','true');
+      const v=this.dataset.value;
+      document.getElementById('hidden_service').value=v;
+      // Show/hide conditional sections
+      ['airport','festival','excursion','package'].forEach(s=>{
+        document.getElementById('cond-'+s).style.display='none';
+      });
+      if(v==='airport-transfer') document.getElementById('cond-airport').style.display='block';
+      else if(v==='festival-transport') document.getElementById('cond-festival').style.display='block';
+      else if(v==='excursion') document.getElementById('cond-excursion').style.display='block';
+      else if(v==='package') document.getElementById('cond-package').style.display='block';
+    });
+    c.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();this.click();}});
+  });
+
+  document.getElementById('nextStep2').addEventListener('click',function(){
+    const sel = document.querySelector('.service-card-option.selected');
+    if(!sel){document.getElementById('service-selection-error').style.display='block';return;}
+    document.getElementById('service-selection-error').style.display='none';
+    goTo(3);
+  });
+  document.getElementById('prevStep3').addEventListener('click',()=>goTo(2));
+
+  // Step 3 next
+  document.getElementById('nextStep3').addEventListener('click',function(){
+    const d=document.getElementById('c_date'),p=document.getElementById('c_pax'),pk=document.getElementById('c_pickup');
+    let ok=true;
+    [d,p,pk].forEach(el=>{
+      el.classList.remove('error');
+      if(!el.value.trim()){el.classList.add('error');ok=false;}
+    });
+    if(ok) goTo(4);
+  });
+  document.getElementById('prevStep4').addEventListener('click',()=>goTo(3));
+
+  // Tab click navigation
+  [1,2,3,4].forEach(n=>{
+    document.getElementById('tab'+n).addEventListener('click',()=>{if(n<current) goTo(n);});
+  });
+
+  // Date min = today
+  const dateEl=document.getElementById('c_date');
+  if(dateEl) dateEl.min=new Date().toISOString().split('T')[0];
+
+  // Pre-populate from URL params
+  const params=new URLSearchParams(window.location.search);
+  const svc=params.get('service'), pkg=params.get('package'), exc=params.get('excursion');
+  if(svc){
+    const target=document.querySelector('.service-card-option[data-value="'+svc+'"]');
+    if(target){target.click();goTo(2);}
+  }
+  if(pkg){
+    document.getElementById('hidden_package').value=pkg;
+    const pkgCard=document.querySelector('.service-card-option[data-value="package"]');
+    if(pkgCard){pkgCard.click();goTo(2);}
+    const pkgEl=document.getElementById('c_package');
+    if(pkgEl){Array.from(pkgEl.options).forEach(o=>{if(o.value===pkg)o.selected=true;});}
+  }
+  if(exc){
+    document.getElementById('hidden_excursion').value=exc;
+    const excCard=document.querySelector('.service-card-option[data-value="excursion"]');
+    if(excCard){excCard.click();goTo(2);}
+    const excEl=document.getElementById('c_excursion');
+    if(excEl){Array.from(excEl.options).forEach(o=>{if(o.value===exc)o.selected=true;});}
+  }
+
+  // Form submit
+  document.getElementById('jutatours-main-form').addEventListener('submit',async function(e){
+    e.preventDefault();
+    const submitBtn=this.querySelector('[type="submit"]');
+    submitBtn.disabled=true;
+    submitBtn.textContent='Sending…';
+    const fd=new FormData(this);
+    const data=Object.fromEntries(fd.entries());
+    // Collect checkboxes
+    data['special_req'] = Array.from(this.querySelectorAll('input[name="special_req[]"]:checked')).map(x=>x.value).join(', ');
+    try{
+      const res=await fetch('https://formspree.io/f/YOUR_FORM_ID',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(data)});
+      if(res.ok){
+        document.querySelector('.form-fields').style.display='none';
+        const suc=document.querySelector('.form-success');
+        suc.style.display='flex';
+        const sn=document.querySelector('.success-name');
+        if(sn) sn.textContent=data.first_name||'';
+      } else {
+        const wa=`https://wa.me/18765551234?text=Hi+JUTA+Tours+JA!+I'd+like+to+book+a+${encodeURIComponent(data.service_type||'trip')}+for+${encodeURIComponent(data.passengers||'1')}+on+${encodeURIComponent(data.travel_date||'')}.`;
+        window.open(wa,'_blank','noopener,noreferrer');
+      }
+    }catch{
+      const wa=`https://wa.me/18765551234?text=Hi+JUTA+Tours+JA!+I'd+like+to+book+a+trip.`;
+      window.open(wa,'_blank','noopener,noreferrer');
+    } finally{
+      submitBtn.disabled=false;
+      submitBtn.textContent='🇯🇲 Send My Booking Request';
+    }
+  });
+
+})();
+</script>
+</body>
+</html>
