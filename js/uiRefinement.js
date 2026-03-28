@@ -44,7 +44,7 @@ function normalizeNavAndTrustCopy() {
   const compactTrustMap = {
     'Verified Licensed Drivers': 'Verified Drivers',
     '24/7 WhatsApp Support': '24/7 Support',
-    'JUTA-Aligned Standards': 'JUTA Standards',
+    'Licensed Tour Standards': 'JUTA Standards',
     'Transparent Pricing': 'Clear Pricing',
     'Accessible Vehicles Available': 'Accessible Fleet',
   };

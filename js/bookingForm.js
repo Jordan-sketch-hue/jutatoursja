@@ -95,11 +95,8 @@ function setupForm(form) {
     const data = buildFormData(form);
 
     try {
-      // Primary: Formspree (no backend needed)
-      const endpoint = form.getAttribute('data-endpoint') || 'https://formspree.io/f/YOUR_FORM_ID';
-      if (endpoint.includes('YOUR_FORM_ID')) {
-        throw new Error('missing_formspree_endpoint');
-      }
+      // Primary: direct email capture endpoint (no custom backend needed)
+      const endpoint = form.getAttribute('data-endpoint') || 'https://formsubmit.co/ajax/noeltourservice@hotmail.com';
       const res = await fetch(endpoint, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
@@ -153,8 +150,9 @@ function validateStep(form, container) {
 
 function buildFormData(form) {
   const fd = new FormData(form);
-  const data = { _subject: 'New Booking Inquiry — JUTA Tours JA', submitted_at: new Date().toISOString() };
+  const data = { _subject: "New Booking Inquiry — Noel's Jamaica Vibes Tour", submitted_at: new Date().toISOString() };
   fd.forEach((value, key) => { data[key] = value; });
+  data._captcha = 'false';
   return data;
 }
 
@@ -177,7 +175,7 @@ function showSuccess(form, data) {
 
 function openWhatsAppFallback(data) {
   const lines = [
-    `*New JUTA Tours JA Inquiry*`,
+    `*New Noel's Jamaica Vibes Tour Inquiry*`,
     `Name: ${data.first_name || ''} ${data.last_name || ''}`.trim(),
     `Service: ${data.service_type || ''}`,
     `Date: ${data.travel_date || ''}`,
