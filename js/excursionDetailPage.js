@@ -1,4 +1,5 @@
 import { EXCURSIONS, getExcursionById, getExcursionsByCategory } from './excursionsData.js';
+import { getExcursionImageForCard } from './excursionsOnlineImages.js';
 
 function escapeHtml(text) {
   return String(text)
@@ -12,7 +13,7 @@ function escapeHtml(text) {
 function card(item) {
   return `
     <article class="card reveal">
-      <img class="card-img" src="${escapeHtml(item.image)}" alt="${escapeHtml(item.title)} in ${escapeHtml(item.location)}, Jamaica" loading="lazy" />
+      <img class="card-img" src="${escapeHtml(item.image)}" data-excursion-id="${escapeHtml(item.id)}" alt="${escapeHtml(item.title)} in ${escapeHtml(item.location)}, Jamaica" loading="lazy" referrerpolicy="no-referrer" />
       <div class="card-body">
         <span class="card-tag green">${escapeHtml(item.category)} · ${escapeHtml(item.location)}</span>
         <h3 style="margin-top:0.55rem;">${escapeHtml(item.title)}</h3>
@@ -24,6 +25,30 @@ function card(item) {
       </div>
     </article>
   `;
+}
+
+async function hydrateImages(root, chosen, hero) {
+  const cards = Array.from(root.querySelectorAll('img[data-excursion-id]'));
+  const usedUrls = new Set();
+  const itemsById = new Map(EXCURSIONS.map(item => [item.id, item]));
+
+  await Promise.all(
+    cards.map(async img => {
+      const id = img.dataset.excursionId;
+      const item = itemsById.get(id || '');
+      if (!item) return;
+
+      const onlineUrl = await getExcursionImageForCard(item, usedUrls);
+      if (onlineUrl && img.isConnected) {
+        img.src = onlineUrl;
+      }
+    })
+  );
+
+  const chosenOnlineUrl = await getExcursionImageForCard(chosen, usedUrls);
+  if (chosenOnlineUrl && hero) {
+    hero.style.backgroundImage = `url('${chosenOnlineUrl}')`;
+  }
 }
 
 function init() {
@@ -52,7 +77,7 @@ function init() {
   mount.innerHTML = `
     <div class="grid-2" style="gap:1.5rem;align-items:start;">
       <div class="card" style="overflow:hidden;">
-        <img class="card-img" src="${escapeHtml(chosen.image)}" alt="${escapeHtml(chosen.title)} in ${escapeHtml(chosen.location)}, Jamaica" loading="lazy" />
+        <img class="card-img" src="${escapeHtml(chosen.image)}" data-excursion-id="${escapeHtml(chosen.id)}" alt="${escapeHtml(chosen.title)} in ${escapeHtml(chosen.location)}, Jamaica" loading="lazy" referrerpolicy="no-referrer" />
       </div>
       <div class="card" style="box-shadow:none;border:1px solid var(--gray-mid);">
         <div class="card-body">
@@ -82,6 +107,8 @@ function init() {
     allFromCategoryLink.href = `excursions.html#catalog-${encodeURIComponent(categorySlug)}`;
     allFromCategoryLink.textContent = `Back to ${chosen.category} catalog`;
   }
+
+  hydrateImages(document, chosen, hero);
 }
 
 document.addEventListener('DOMContentLoaded', init);
