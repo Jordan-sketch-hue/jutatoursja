@@ -362,6 +362,17 @@ p { color: var(--gray-text); line-height: 1.75; }
   transform: translateY(-1px);
 }
 
+.catalog-quick-tab.is-active {
+  background: var(--green);
+  border-color: var(--green);
+  color: white;
+  box-shadow: 0 10px 24px rgba(0,155,58,0.18);
+}
+
+.catalog-category-hidden {
+  display: none;
+}
+
 .catalog-grid .catalog-card {
   display: flex;
   flex-direction: column;

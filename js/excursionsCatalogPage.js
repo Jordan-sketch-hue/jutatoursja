@@ -36,10 +36,11 @@ function renderCard(item) {
 function renderCategoryBlock(category) {
   const items = getExcursionsByCategory(category);
   if (!items.length) return '';
+
   const slug = slugify(category);
 
   return `
-    <section id="catalog-${slug}" class="catalog-category-block" style="margin-bottom:2.2rem;" aria-label="${category} excursions">
+    <section id="catalog-${slug}" class="catalog-category-block" data-category-slug="${slug}" style="margin-bottom:2.2rem;" aria-label="${category} excursions">
       <div style="display:flex;justify-content:space-between;align-items:end;gap:1rem;flex-wrap:wrap;margin-bottom:0.9rem;">
         <div>
           <p class="section-label" style="margin-bottom:0.2rem;">${category}</p>
@@ -56,13 +57,79 @@ function renderCategoryBlock(category) {
 
 function renderQuickTabs() {
   return `
-    <div class="catalog-quick-tabs" role="navigation" aria-label="Jump to excursion category">
+    <div class="catalog-quick-tabs" role="tablist" aria-label="Filter excursion category">
+      <button type="button" class="catalog-quick-tab is-active" data-category-filter="all" aria-pressed="true">All</button>
       ${CATEGORY_ORDER.map(category => {
         const slug = slugify(category);
-        return `<a class="catalog-quick-tab" href="#catalog-${slug}">${category}</a>`;
+        return `<button type="button" class="catalog-quick-tab" data-category-filter="${slug}" aria-pressed="false">${category}</button>`;
       }).join('')}
     </div>
   `;
+}
+
+function getActiveCategoryFromHash() {
+  const hash = window.location.hash || '';
+  if (!hash.startsWith('#catalog-')) return 'all';
+
+  const slug = hash.replace('#catalog-', '');
+  return CATEGORY_ORDER.some(category => slugify(category) === slug) ? slug : 'all';
+}
+
+function updateCatalogFilterState(root, activeSlug, helperText) {
+  const sections = Array.from(root.querySelectorAll('.catalog-category-block'));
+  const tabs = Array.from(root.querySelectorAll('[data-category-filter]'));
+
+  tabs.forEach(tab => {
+    const isActive = tab.dataset.categoryFilter === activeSlug;
+    tab.classList.toggle('is-active', isActive);
+    tab.setAttribute('aria-pressed', String(isActive));
+  });
+
+  sections.forEach(section => {
+    const isVisible = activeSlug === 'all' || section.dataset.categorySlug === activeSlug;
+    section.hidden = !isVisible;
+    section.classList.toggle('catalog-category-hidden', !isVisible);
+  });
+
+  if (!helperText) return;
+
+  if (activeSlug === 'all') {
+    helperText.textContent = `${EXCURSIONS.length} total excursions now bookable with dedicated detail pages.`;
+    return;
+  }
+
+  const activeCategory = CATEGORY_ORDER.find(category => slugify(category) === activeSlug);
+  const visibleCount = activeCategory ? getExcursionsByCategory(activeCategory).length : 0;
+  helperText.textContent = `Showing ${visibleCount} ${activeCategory || 'selected'} excursions only.`;
+}
+
+function bindCatalogFilters(root, helperText) {
+  const tabs = Array.from(root.querySelectorAll('[data-category-filter]'));
+  if (!tabs.length) return;
+
+  const applyFilter = (activeSlug, shouldScroll) => {
+    updateCatalogFilterState(root, activeSlug, helperText);
+
+    if (activeSlug === 'all') {
+      window.history.replaceState(null, '', window.location.pathname + window.location.search);
+    } else {
+      window.history.replaceState(null, '', `#catalog-${activeSlug}`);
+    }
+
+    if (shouldScroll) {
+      root.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const activeSlug = tab.dataset.categoryFilter || 'all';
+      applyFilter(activeSlug, true);
+    });
+  });
+
+  const initialSlug = getActiveCategoryFromHash();
+  applyFilter(initialSlug, initialSlug !== 'all');
 }
 
 async function hydrateCatalogOnlineImages(root) {
@@ -92,13 +159,13 @@ function initCatalog() {
 
   mount.innerHTML = CATEGORY_ORDER.map(renderCategoryBlock).join('');
 
-  const total = EXCURSIONS.length;
   const heading = document.createElement('p');
   heading.style.cssText = 'margin:0 0 1rem;font-size:0.85rem;color:var(--gray-text);';
-  heading.textContent = `${total} total excursions now bookable with dedicated detail pages.`;
+  heading.textContent = `${EXCURSIONS.length} total excursions now bookable with dedicated detail pages.`;
   mount.prepend(heading);
   heading.insertAdjacentHTML('afterend', renderQuickTabs());
 
+  bindCatalogFilters(mount, heading);
   hydrateCatalogOnlineImages(mount);
 }
 
