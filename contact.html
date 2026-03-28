@@ -146,16 +146,89 @@
               <div id="cond-excursion" style="display:none;margin-top:1.25rem;">
                 <div class="form-group"><label class="form-label" for="c_excursion">Excursion</label><select class="form-select" id="c_excursion" name="excursion_choice">
                   <option value="">Select excursion</option>
-                  <option value="dunns-river">Dunn's River Falls</option>
-                  <option value="seven-mile-beach">Seven Mile Beach, Negril</option>
-                  <option value="blue-mountains">Blue Mountains Coffee &amp; Hiking</option>
-                  <option value="bob-marley">Bob Marley Museum, Kingston</option>
-                  <option value="luminous-lagoon">Luminous Lagoon, Falmouth</option>
-                  <option value="rio-grande">Rio Grande Rafting</option>
-                  <option value="mystic-mountain">Mystic Mountain, Ocho Rios</option>
-                  <option value="kingston-food">Kingston Street Food Tour</option>
-                  <option value="pelican-bar">Pelican Bar &amp; Black River Safari</option>
-                  <option value="mayfield-falls">Mayfield Falls, Westmoreland</option>
+                  <optgroup label="Nature">
+                    <option value="dunns-river-falls">Dunn's River Falls</option>
+                    <option value="blue-hole-secret-falls">Blue Hole (Secret Falls / Island Gully)</option>
+                    <option value="ys-falls">YS Falls</option>
+                    <option value="reach-falls">Reach Falls</option>
+                    <option value="green-grotto-caves">Green Grotto Caves</option>
+                    <option value="blue-mountains-tour">Blue Mountains (hiking + coffee tours)</option>
+                    <option value="cockpit-country">Cockpit Country</option>
+                    <option value="black-river-safari">Black River Safari Tour</option>
+                    <option value="martha-brae-rafting">Martha Brae River bamboo rafting</option>
+                    <option value="rio-grande-rafting">Rio Grande River rafting</option>
+                  </optgroup>
+                  <optgroup label="Beach">
+                    <option value="seven-mile-beach">Seven Mile Beach</option>
+                    <option value="doctors-cave-beach">Doctor's Cave Beach</option>
+                    <option value="frenchmans-cove">Frenchman's Cove</option>
+                    <option value="boston-bay-beach">Boston Bay Beach</option>
+                    <option value="winnifred-beach">Winnifred Beach</option>
+                    <option value="hellshire-beach">Hellshire Beach</option>
+                    <option value="james-bond-beach">James Bond Beach</option>
+                  </optgroup>
+                  <optgroup label="Culture">
+                    <option value="bob-marley-museum">Bob Marley Museum</option>
+                    <option value="devon-house">Devon House</option>
+                    <option value="rose-hall-great-house">Rose Hall Great House</option>
+                    <option value="accompong-maroon-village">Accompong Maroon Village</option>
+                    <option value="rastafari-indigenous-village">Rastafari Indigenous Village</option>
+                    <option value="falmouth-historic-district">Falmouth Historic District</option>
+                    <option value="port-royal">Port Royal</option>
+                  </optgroup>
+                  <optgroup label="Food">
+                    <option value="scotchies">Scotchies</option>
+                    <option value="ricks-cafe-dining">Rick's Cafe</option>
+                    <option value="boston-jerk-centre">Boston Jerk Centre</option>
+                    <option value="glorias-seafood">Gloria's Seafood</option>
+                    <option value="kingston-street-food-flavours">Kingston Street Food &amp; Flavours</option>
+                    <option value="appleton-estate">Appleton Estate rum tours</option>
+                    <option value="sweetwood-jerk-joint">Sweetwood Jerk Joint</option>
+                    <option value="tracks-and-records">Usain Bolt's Tracks &amp; Records</option>
+                  </optgroup>
+                  <optgroup label="Adventure">
+                    <option value="mystic-mountain">Mystic Mountain</option>
+                    <option value="chukka-caribbean">Chukka Caribbean Adventures</option>
+                    <option value="dolphin-cove-adventure">Dolphin Cove</option>
+                    <option value="yaaman-adventure-park">Yaaman Adventure Park</option>
+                    <option value="blue-hole-mineral-spring">Blue Hole Mineral Spring</option>
+                    <option value="luminous-lagoon-swim">Luminous Lagoon night glow swim</option>
+                    <option value="negril-cliffs-diving">Negril Cliffs cliff diving</option>
+                  </optgroup>
+                  <optgroup label="Luxury">
+                    <option value="private-yacht-mobay">Private yacht charter - Montego Bay Marine Park</option>
+                    <option value="helicopter-island-tour">Helicopter tours (island aerial views)</option>
+                    <option value="tryall-roundhill-villas">Private villas in Tryall Club / Round Hill</option>
+                    <option value="taboo-nightclub-vip">VIP nightlife: Taboo Nightclub</option>
+                    <option value="strawberry-hill-spa">Spa day: Strawberry Hill Spa</option>
+                    <option value="pelican-bar-sunset-boat-trip">Pelican Bar Sunset Boat Trip</option>
+                  </optgroup>
+                  <optgroup label="Hidden Gems">
+                    <option value="somerset-falls">Somerset Falls</option>
+                    <option value="konoko-falls">Konoko Falls</option>
+                    <option value="reggae-falls">Reggae Falls</option>
+                    <option value="cane-river-falls">Cane River Falls</option>
+                    <option value="lovers-leap">Lovers Leap</option>
+                    <option value="milk-river-bath">Milk River Bath</option>
+                  </optgroup>
+                  <optgroup label="Accessible">
+                    <option value="emancipation-park">Emancipation Park</option>
+                    <option value="hope-botanical-gardens">Hope Botanical Gardens</option>
+                    <option value="blue-mountain-scenic-drive">Scenic Blue Mountain drive (no hike option)</option>
+                    <option value="doctors-cave-private-setup">Private beach setups at Doctor's Cave</option>
+                  </optgroup>
+                  <optgroup label="Family">
+                    <option value="kool-runnings-water-park">Kool Runnings Water Park</option>
+                    <option value="hope-zoo">Hope Zoo</option>
+                    <option value="dolphin-cove-family">Dolphin Cove</option>
+                    <option value="mystic-mountain-family">Mystic Mountain</option>
+                  </optgroup>
+                  <optgroup label="Couples">
+                    <option value="sunset-cruise-mobay">Sunset cruise in Montego Bay</option>
+                    <option value="caves-restaurant-dinner">Private dinner at The Caves Restaurant</option>
+                    <option value="blue-lagoon-romance">Blue Lagoon romance tour</option>
+                    <option value="strawberry-hill-retreat">Spa + retreat at Strawberry Hill</option>
+                  </optgroup>
                   <option value="custom">Custom / I'll describe below</option>
                 </select></div>
               </div>
