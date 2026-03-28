@@ -15,8 +15,20 @@
     .package-row-dark{background:var(--black);}
     .package-icon{font-size:0.85rem;letter-spacing:0.08em;font-weight:800;text-transform:uppercase;margin-bottom:0.5rem;color:var(--green);}
     .package-row-dark .package-icon{color:var(--gold);}
+    .ai-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;}
+    .ai-tile{border:1px solid var(--gray-mid);border-radius:var(--radius-md);padding:1rem;background:white;display:flex;flex-direction:column;gap:0.5rem;}
+    .ai-meta{display:flex;gap:0.4rem;flex-wrap:wrap;}
+    .ai-meta span{font-size:0.73rem;padding:0.2rem 0.55rem;border-radius:50px;background:var(--gray-light);}
+    .spotlight-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0.85rem;}
+    .spotlight-card{border:1px solid var(--gray-mid);border-radius:12px;overflow:hidden;background:white;}
+    .spotlight-card img{width:100%;height:120px;object-fit:cover;display:block;}
+    .spotlight-card .copy{padding:0.65rem;}
+    .spotlight-card .copy h4{font-size:0.84rem;line-height:1.2;margin-bottom:0.2rem;}
+    .spotlight-card .copy p{font-size:0.72rem;color:var(--gray-text);margin:0;}
     @media(max-width:900px){
       .package-row{grid-template-columns:1fr;padding:1.4rem;gap:1.3rem;}
+      .ai-grid{grid-template-columns:1fr;}
+      .spotlight-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
     }
   </style>
 </head>
@@ -221,6 +233,90 @@
   </div>
 </section>
 
+<section class="section" aria-labelledby="ai-curation-heading">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:1.6rem;">
+      <p class="section-label">AI Curated</p>
+      <h2 class="reveal" id="ai-curation-heading">Smart Special Features & Offerings</h2>
+      <p class="reveal reveal-delay-1" style="max-width:760px;margin:0.7rem auto 0;color:var(--gray-text);">Curated by proximity cluster, activity type, and travel rhythm. Use the selector below and our common recommendation script surfaces the best add-ons for your package.</p>
+    </div>
+
+    <div class="card reveal" style="box-shadow:none;border:1px solid var(--gray-mid);margin-bottom:1rem;">
+      <div class="card-body" style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0.75rem;">
+        <div>
+          <label class="form-label" for="aiRegion">Proximity cluster</label>
+          <select class="form-select" id="aiRegion">
+            <option value="north">North Coast (MBJ / Ocho Rios / Negril)</option>
+            <option value="kingston">Kingston + East (KIN / Blue Mountains / Portland)</option>
+            <option value="south">South Coast (St. Elizabeth / Clarendon)</option>
+            <option value="all">Island-wide mix</option>
+          </select>
+        </div>
+        <div>
+          <label class="form-label" for="aiActivity">Activity type</label>
+          <select class="form-select" id="aiActivity">
+            <option value="adventure">Adventure</option>
+            <option value="culture">Culture</option>
+            <option value="beach">Beach</option>
+            <option value="food">Food</option>
+            <option value="luxury">Luxury</option>
+            <option value="family">Family</option>
+            <option value="couples">Couples</option>
+            <option value="all">Any</option>
+          </select>
+        </div>
+        <div>
+          <label class="form-label" for="aiTempo">Trip rhythm</label>
+          <select class="form-select" id="aiTempo">
+            <option value="day">Day-focused</option>
+            <option value="night">Night-focused</option>
+            <option value="mixed">Mixed</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div id="aiOfferings" class="ai-grid" aria-live="polite"></div>
+
+    <div class="notice notice-info" style="margin-top:1rem;">
+      <span>⚙️</span>
+      <span><strong>Common script logic:</strong> scores offers by proximity match, activity fit, and day/night fit, then ranks top recommendations for conversion-focused package upsells.</span>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt" aria-labelledby="premium-spotlight-heading">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:1.4rem;">
+      <p class="section-label">Second Pass Upgrade</p>
+      <h2 class="reveal" id="premium-spotlight-heading">Attraction-Specific Premium Image Spotlight</h2>
+      <p class="reveal reveal-delay-1" style="max-width:760px;margin:0.7rem auto 0;color:var(--gray-text);">Official place/event-specific visuals for key attractions to elevate package storytelling and trust.</p>
+    </div>
+    <div class="spotlight-grid">
+      <article class="spotlight-card reveal"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Dunns_River_Falls_climb.JPG/640px-Dunns_River_Falls_climb.JPG" alt="Dunn's River Falls in Ocho Rios" loading="lazy" referrerpolicy="no-referrer" /><div class="copy"><h4>Dunn's River Falls</h4><p>Nature · Ocho Rios</p></div></article>
+      <article class="spotlight-card reveal reveal-delay-1"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Jamaica_Discovery_Bay_Green_Grotto_Caves_2.jpg/640px-Jamaica_Discovery_Bay_Green_Grotto_Caves_2.jpg" alt="Green Grotto Caves in St Ann" loading="lazy" referrerpolicy="no-referrer" /><div class="copy"><h4>Green Grotto Caves</h4><p>Nature · Discovery Bay</p></div></article>
+      <article class="spotlight-card reveal reveal-delay-2"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Blue_Mountains%2C_Jamaica.jpg/640px-Blue_Mountains%2C_Jamaica.jpg" alt="Blue Mountains in Jamaica" loading="lazy" referrerpolicy="no-referrer" /><div class="copy"><h4>Blue Mountains</h4><p>Nature · St Andrew</p></div></article>
+      <article class="spotlight-card reveal"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Cockpit_Country.jpg/640px-Cockpit_Country.jpg" alt="Cockpit Country landscape in Jamaica" loading="lazy" referrerpolicy="no-referrer" /><div class="copy"><h4>Cockpit Country</h4><p>Nature · Interior Jamaica</p></div></article>
+
+      <article class="spotlight-card reveal reveal-delay-1"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Doctors-Cave-Beach.jpg/640px-Doctors-Cave-Beach.jpg" alt="Doctor's Cave Beach in Montego Bay" loading="lazy" referrerpolicy="no-referrer" /><div class="copy"><h4>Doctor's Cave Beach</h4><p>Beach · Montego Bay</p></div></article>
+      <article class="spotlight-card reveal reveal-delay-2"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Frenchman%27s_cove1.JPG/640px-Frenchman%27s_cove1.JPG" alt="Frenchman's Cove in Portland" loading="lazy" referrerpolicy="no-referrer" /><div class="copy"><h4>Frenchman's Cove</h4><p>Beach · Portland</p></div></article>
+      <article class="spotlight-card reveal"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Hellshire-beach.jpg/640px-Hellshire-beach.jpg" alt="Hellshire Beach in Jamaica" loading="lazy" referrerpolicy="no-referrer" /><div class="copy"><h4>Hellshire Beach</h4><p>Beach · St Catherine</p></div></article>
+      <article class="spotlight-card reveal reveal-delay-1"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/JamesBondBeach3.jpg/640px-JamesBondBeach3.jpg" alt="James Bond Beach in Oracabessa" loading="lazy" referrerpolicy="no-referrer" /><div class="copy"><h4>James Bond Beach</h4><p>Beach · St Mary</p></div></article>
+
+      <article class="spotlight-card reveal reveal-delay-2"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/56hoperd.JPG/640px-56hoperd.JPG" alt="Bob Marley Museum in Kingston" loading="lazy" referrerpolicy="no-referrer" /><div class="copy"><h4>Bob Marley Museum</h4><p>Culture · Kingston</p></div></article>
+      <article class="spotlight-card reveal"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Devonhouse.jpg/640px-Devonhouse.jpg" alt="Devon House in Kingston" loading="lazy" referrerpolicy="no-referrer" /><div class="copy"><h4>Devon House</h4><p>Culture · Kingston</p></div></article>
+      <article class="spotlight-card reveal reveal-delay-1"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Rose_Hall_Jamaica_Photo_D_Ramey_Logan.jpg/640px-Rose_Hall_Jamaica_Photo_D_Ramey_Logan.jpg" alt="Rose Hall Great House in Montego Bay" loading="lazy" referrerpolicy="no-referrer" /><div class="copy"><h4>Rose Hall Great House</h4><p>Culture · Montego Bay</p></div></article>
+      <article class="spotlight-card reveal reveal-delay-2"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Falmouth%2C_Jamaica_I.jpg/640px-Falmouth%2C_Jamaica_I.jpg" alt="Historic Falmouth district in Jamaica" loading="lazy" referrerpolicy="no-referrer" /><div class="copy"><h4>Falmouth Historic District</h4><p>Culture · Trelawny</p></div></article>
+
+      <article class="spotlight-card reveal"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/MilkRiverBath.JPG/640px-MilkRiverBath.JPG" alt="Milk River Bath in Clarendon" loading="lazy" referrerpolicy="no-referrer" /><div class="copy"><h4>Milk River Bath</h4><p>Hidden Gem · Clarendon</p></div></article>
+      <article class="spotlight-card reveal reveal-delay-1"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Hope_Botanical_Gardens%2C_Jamaica.jpg/640px-Hope_Botanical_Gardens%2C_Jamaica.jpg" alt="Hope Botanical Gardens in Kingston" loading="lazy" referrerpolicy="no-referrer" /><div class="copy"><h4>Hope Botanical Gardens</h4><p>Accessible · Kingston</p></div></article>
+      <article class="spotlight-card reveal reveal-delay-2"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Mavado_performs_on_stage_for_Dancehall_Night_at_Reggae_Sumfest_2008.jpg/640px-Mavado_performs_on_stage_for_Dancehall_Night_at_Reggae_Sumfest_2008.jpg" alt="Reggae Sumfest stage performance" loading="lazy" referrerpolicy="no-referrer" /><div class="copy"><h4>Reggae Sumfest</h4><p>Event · Montego Bay</p></div></article>
+      <article class="spotlight-card reveal"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Jamaica_Carnival_Masqueraders.jpg/640px-Jamaica_Carnival_Masqueraders.jpg" alt="Carnival in Jamaica masqueraders" loading="lazy" referrerpolicy="no-referrer" /><div class="copy"><h4>Carnival in Jamaica</h4><p>Event · Kingston</p></div></article>
+    </div>
+    <p style="margin-top:0.8rem;font-size:0.78rem;color:var(--gray-text);">Image sources: Wikimedia Commons location/event photography.</p>
+  </div>
+</section>
+
 <!-- PRICING TRANSPARENCY -->
 <section class="section section-alt" aria-labelledby="pricing-snapshot-heading">
   <div class="container">
@@ -367,6 +463,63 @@
 
 <div class="sticky-cta"><a href="contact.html" class="btn btn-primary btn-sm">Book Package</a><a href="https://wa.me/18763929505" class="whatsapp-pill" target="_blank" rel="noopener noreferrer">💬 WhatsApp</a></div>
 <div class="a11y-panel"><button class="a11y-trigger" id="a11yTrigger" aria-label="Accessibility settings" aria-expanded="false">♿</button><div id="a11yMenu" class="a11y-menu"><strong style="font-size:0.8rem;color:var(--gray-text);">Accessibility</strong><button id="a11yHighContrast">🌓 High contrast</button><button id="a11yLargeText">🔠 Larger text</button><button id="a11yDyslexia">📖 Dyslexia font</button><button id="a11yReset" style="color:#e53e3e;">↺ Reset</button></div></div>
+<script>
+  (function () {
+    const offerings = [
+      { name: 'North Coast Adventure Stack', area: 'north', activity: 'adventure', tempo: 'day', score: 98, perks: ['Dunn\'s River + Blue Hole combo', 'ATV/zipline add-on', 'Fast-track attraction sequencing'] },
+      { name: 'Kingston Culture Circuit', area: 'kingston', activity: 'culture', tempo: 'day', score: 95, perks: ['Bob Marley Museum + Devon House', 'Port Royal extension', 'Curated heritage guide'] },
+      { name: 'South Coast Signature Escape', area: 'south', activity: 'luxury', tempo: 'mixed', score: 94, perks: ['YS Falls + Appleton Estate route', 'Pelican Bar private boat option', 'Private chef dinner add-on'] },
+      { name: 'Negril Couples Sunset Script', area: 'north', activity: 'couples', tempo: 'night', score: 97, perks: ['Seven Mile Beach afternoon', 'The Caves dinner timing', 'Sunset transfer with photo stop'] },
+      { name: 'Family Easy-Flow Planner', area: 'north', activity: 'family', tempo: 'day', score: 93, perks: ['Mystic Mountain + Dolphin Cove', 'Kid-friendly meal stops', 'Accessible transfer pacing'] },
+      { name: 'Festival Night Logistics', area: 'all', activity: 'luxury', tempo: 'night', score: 96, perks: ['VIP ticket coordination', 'Security + return window control', 'Backup driver routing'] },
+      { name: 'Food Trail Deep Dive', area: 'kingston', activity: 'food', tempo: 'mixed', score: 92, perks: ['Scotchies + Boston Jerk line-up', 'Gloria\'s seafood timing', 'Rum/food pairing options'] },
+      { name: 'Beach-Hopping Route Pack', area: 'north', activity: 'beach', tempo: 'day', score: 91, perks: ['Doctor\'s Cave + Seven Mile pairing', 'Frenchman\'s Cove extension', 'Private beach setup option'] }
+    ];
+
+    const byId = id => document.getElementById(id);
+    const region = byId('aiRegion');
+    const activity = byId('aiActivity');
+    const tempo = byId('aiTempo');
+    const target = byId('aiOfferings');
+    if (!region || !activity || !tempo || !target) return;
+
+    function rank(item) {
+      let s = item.score;
+      if (region.value !== 'all' && item.area === region.value) s += 18;
+      if (activity.value !== 'all' && item.activity === activity.value) s += 22;
+      if (tempo.value === item.tempo || item.tempo === 'mixed' || tempo.value === 'mixed') s += 12;
+      return s;
+    }
+
+    function render() {
+      const sorted = offerings
+        .map(x => ({ ...x, rank: rank(x) }))
+        .sort((a, b) => b.rank - a.rank)
+        .slice(0, 6);
+
+      target.innerHTML = sorted.map(item => `
+        <article class="ai-tile reveal">
+          <strong>${item.name}</strong>
+          <div class="ai-meta">
+            <span>Proximity: ${item.area}</span>
+            <span>Activity: ${item.activity}</span>
+            <span>Tempo: ${item.tempo}</span>
+            <span>Fit score: ${item.rank}</span>
+          </div>
+          <ul style="margin:0.1rem 0 0.2rem 1rem;font-size:0.86rem;display:flex;flex-direction:column;gap:0.2rem;">
+            ${item.perks.map(p => `<li>${p}</li>`).join('')}
+          </ul>
+          <a href="contact.html?package=custom-package&focus=${encodeURIComponent(item.name)}" class="btn btn-sm btn-outline-green" style="width:fit-content;">Use this in my package</a>
+        </article>
+      `).join('');
+    }
+
+    region.addEventListener('change', render);
+    activity.addEventListener('change', render);
+    tempo.addEventListener('change', render);
+    render();
+  })();
+</script>
 <script type="module" src="js/main.js"></script>
 </body>
 </html>
