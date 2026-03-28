@@ -97,6 +97,9 @@ function setupForm(form) {
     try {
       // Primary: Formspree (no backend needed)
       const endpoint = form.getAttribute('data-endpoint') || 'https://formspree.io/f/YOUR_FORM_ID';
+      if (endpoint.includes('YOUR_FORM_ID')) {
+        throw new Error('missing_formspree_endpoint');
+      }
       const res = await fetch(endpoint, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
@@ -159,9 +162,12 @@ function showSuccess(form, data) {
   const successEl = form.querySelector('.form-success');
   if (successEl) {
     successEl.style.display = '';
-    successEl.querySelector('.success-name').textContent = data.first_name || 'there';
-    successEl.querySelector('.success-service').textContent = data.service_type || 'your request';
-    form.querySelector('.form-fields').style.display = 'none';
+    const successName = successEl.querySelector('.success-name');
+    const successService = successEl.querySelector('.success-service');
+    if (successName) successName.textContent = data.first_name || 'there';
+    if (successService) successService.textContent = data.service_type || 'your request';
+    const formFields = form.querySelector('.form-fields');
+    if (formFields) formFields.style.display = 'none';
   } else {
     alert(`Thank you, ${data.first_name || 'friend'}! We've received your inquiry and will respond within 30 minutes via WhatsApp or email.`);
   }

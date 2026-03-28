@@ -178,6 +178,10 @@
                 <div class="form-group"><label class="form-label" for="c_date">Travel Date <span class="req">*</span></label><input class="form-input" type="date" id="c_date" name="travel_date" required /><span class="form-error" data-error-for="travel_date">Required.</span></div>
                 <div class="form-group"><label class="form-label" for="c_pax">Number of Travellers <span class="req">*</span></label><select class="form-select" id="c_pax" name="passengers" required><option value="">Select</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5-8">5–8</option><option value="9-14">9–14</option><option value="15+">15+</option></select><span class="form-error" data-error-for="passengers">Required.</span></div>
               </div>
+              <div class="form-row">
+                <div class="form-group"><label class="form-label" for="c_budget">Budget Range (USD)</label><select class="form-select" id="c_budget" name="budget_range"><option value="">Select budget range</option><option value="under-200">Under $200</option><option value="200-500">$200-$500</option><option value="500-1000">$500-$1,000</option><option value="1000-2000">$1,000-$2,000</option><option value="2000-plus">$2,000+</option></select><p class="form-hint">Helps us recommend the best package mix and add-ons.</p></div>
+                <div class="form-group"><label class="form-label" for="c_trip_style">Trip Style</label><select class="form-select" id="c_trip_style" name="trip_style"><option value="">Select trip style</option><option value="family">Family</option><option value="couples">Couples / Romantic</option><option value="friends">Friends Group</option><option value="solo">Solo</option><option value="business">Business / VIP</option><option value="diaspora">Returning Jamaican / Diaspora</option></select></div>
+              </div>
               <div class="form-group"><label class="form-label" for="c_pickup">Pickup Location <span class="req">*</span></label><input class="form-input" type="text" id="c_pickup" name="pickup_location" required placeholder="Hotel / villa / address" /><span class="form-error" data-error-for="pickup_location">Required.</span></div>
               <div class="form-group"><label class="form-label" for="c_dropoff">Drop-off / Destination</label><input class="form-input" type="text" id="c_dropoff" name="dropoff_location" placeholder="Final destination or hotel" /></div>
               <fieldset style="border:1px solid rgba(0,0,0,0.1);border-radius:var(--radius-md);padding:1.25rem;">
@@ -263,6 +267,33 @@
         </div>
       </aside>
 
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt" aria-labelledby="service-map-heading" style="padding-top:2.5rem;">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:1.5rem;">
+      <p class="section-label">Coverage</p>
+      <h2 id="service-map-heading" class="reveal">Where we operate across Jamaica</h2>
+      <p class="reveal reveal-delay-1" style="max-width:680px;margin:0.75rem auto 0;">Primary routes include Kingston, Montego Bay, Ocho Rios, Negril, Port Antonio, Falmouth, Mandeville and South Coast corridors.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:2fr 1fr;gap:1rem;align-items:stretch;">
+      <div class="reveal" style="border-radius:var(--radius-lg);overflow:hidden;border:1px solid var(--gray-mid);min-height:320px;">
+        <iframe title="Jamaica service area map" src="https://www.openstreetmap.org/export/embed.html?bbox=-78.6%2C17.65%2C-76.15%2C18.75&amp;layer=mapnik" style="border:0;width:100%;height:100%;min-height:320px;" loading="lazy"></iframe>
+      </div>
+      <div class="reveal reveal-delay-1" style="background:white;border-radius:var(--radius-lg);border:1px solid var(--gray-mid);padding:1.2rem;">
+        <h3 style="font-size:1rem;margin-bottom:0.6rem;">Popular routes</h3>
+        <ul style="display:flex;flex-direction:column;gap:0.45rem;font-size:0.88rem;color:var(--gray-text);">
+          <li>MBJ ⇄ Negril resorts</li>
+          <li>MBJ ⇄ Ocho Rios</li>
+          <li>KIN ⇄ Kingston hotels</li>
+          <li>KIN ⇄ Blue Mountains</li>
+          <li>Kingston ⇄ Portland</li>
+          <li>South Coast custom routes</li>
+        </ul>
+        <a href="packages.html" class="btn btn-outline-green btn-sm" style="margin-top:1rem;">See package options</a>
+      </div>
     </div>
   </div>
 </section>
@@ -369,6 +400,7 @@
   // Pre-populate from URL params
   const params=new URLSearchParams(window.location.search);
   const svc=params.get('service'), pkg=params.get('package'), exc=params.get('excursion');
+  const airportParam=(params.get('airport')||'').toLowerCase();
   if(svc){
     const target=document.querySelector('.service-card-option[data-value="'+svc+'"]');
     if(target){target.click();goTo(2);}
@@ -386,6 +418,15 @@
     if(excCard){excCard.click();goTo(2);}
     const excEl=document.getElementById('c_excursion');
     if(excEl){Array.from(excEl.options).forEach(o=>{if(o.value===exc)o.selected=true;});}
+  }
+  if(airportParam){
+    const airportCard=document.querySelector('.service-card-option[data-value="airport-transfer"]');
+    if(airportCard){airportCard.click();}
+    const airportEl=document.getElementById('c_airport');
+    if(airportEl){
+      if(airportParam==='kin') airportEl.value='KIN';
+      if(airportParam==='mbj') airportEl.value='MBJ';
+    }
   }
 
   // Form submit
