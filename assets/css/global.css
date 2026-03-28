@@ -1073,6 +1073,54 @@ p { color: var(--gray-text); line-height: 1.75; }
 }
 .a11y-menu button:hover { background: var(--gray-light); color: var(--green); }
 
+/* ---- SITEWIDE WHATSAPP CHAT ---- */
+.global-whatsapp-chat {
+  position: fixed;
+  right: 1.5rem;
+  bottom: 10.2rem;
+  z-index: 801;
+  width: 54px;
+  height: 54px;
+  border-radius: 999px;
+  background: #25D366;
+  color: #fff;
+  box-shadow: 0 10px 28px rgba(12, 88, 43, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: transform var(--transition), box-shadow var(--transition), background var(--transition);
+}
+.global-whatsapp-chat:hover {
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 14px 34px rgba(12, 88, 43, 0.42);
+  background: #1fb95a;
+}
+.global-whatsapp-chat:focus-visible {
+  outline: 3px solid #111;
+  outline-offset: 3px;
+}
+.global-whatsapp-chat-text {
+  position: absolute;
+  right: calc(100% + 0.6rem);
+  top: 50%;
+  transform: translateY(-50%);
+  background: #111;
+  color: #fff;
+  border-radius: 999px;
+  padding: 0.26rem 0.62rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition);
+}
+.global-whatsapp-chat:hover .global-whatsapp-chat-text,
+.global-whatsapp-chat:focus-visible .global-whatsapp-chat-text {
+  opacity: 1;
+}
+
 /* ---- HIGH CONTRAST MODE ---- */
 body.high-contrast {
   filter: contrast(1.6) grayscale(0.2);
@@ -1334,11 +1382,12 @@ body.large-text { font-size: 18px; }
   .sticky-cta .btn,
   .sticky-cta .whatsapp-pill { flex: 1; justify-content: center; }
   .a11y-panel { right: 0.85rem; bottom: 5.5rem; }
+  .global-whatsapp-chat { right: 0.85rem; bottom: 10rem; }
   .a11y-trigger { width: 42px; height: 42px; font-size: 0.85rem; }
   .festival-photo-strip { grid-template-columns: repeat(2, 1fr) !important; }
   .festival-photo-strip > div { height: 170px !important; }
   .home-visual-strip { grid-template-columns: repeat(2, 1fr) !important; }
-  .home-visual-strip > div { height: 160px !important; }
+  .home-visual-strip > * { height: 160px !important; }
   .booking-form { padding: 1.5rem; }
   .modal-header, .modal-body, .modal-footer { padding-left: 1.25rem; padding-right: 1.25rem; }
   .steps::before { display: none; }
@@ -1391,6 +1440,12 @@ body.large-text { font-size: 18px; }
     padding: 1rem !important;
   }
 
+  .global-whatsapp-chat {
+    width: 52px;
+    height: 52px;
+    right: 0.7rem;
+    bottom: 6.2rem;
+  }
   .a11y-panel { right: 0.7rem; bottom: 1rem; }
   .a11y-trigger { width: 46px; height: 46px; }
   .grid-4 { grid-template-columns: 1fr; }
@@ -1412,5 +1467,5 @@ body.large-text { font-size: 18px; }
   .festival-photo-strip { grid-template-columns: 1fr !important; }
   .festival-photo-strip > div { height: 180px !important; }
   .home-visual-strip { grid-template-columns: 1fr !important; }
-  .home-visual-strip > div { height: 180px !important; }
+  .home-visual-strip > * { height: 180px !important; }
 }
