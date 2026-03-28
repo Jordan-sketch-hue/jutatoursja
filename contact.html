@@ -478,7 +478,8 @@
     data._subject = 'New Booking Inquiry - Noel\'s Jamaica Vibes Tour';
     try{
       const res=await fetch('https://formsubmit.co/ajax/noeltourservice@hotmail.com',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(data)});
-      if(res.ok){
+      const result=await res.json().catch(()=>({}));
+      if(res.ok && result.success==='true'){
         document.querySelector('.form-fields').style.display='none';
         const suc=document.querySelector('.form-success');
         suc.style.display='flex';

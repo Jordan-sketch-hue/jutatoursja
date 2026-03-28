@@ -103,10 +103,11 @@ function setupForm(form) {
         body: JSON.stringify(data)
       });
 
-      if (res.ok) {
+      const payload = await res.json().catch(() => ({}));
+      if (res.ok && payload.success === 'true') {
         showSuccess(form, data);
       } else {
-        throw new Error('submission_failed');
+        throw new Error(payload.message || 'submission_failed');
       }
     } catch (err) {
       // Fallback: open WhatsApp with prefilled message
