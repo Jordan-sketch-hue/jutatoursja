@@ -1175,12 +1175,46 @@ body.large-text { font-size: 18px; }
   .grid-4 { grid-template-columns: 1fr 1fr; }
   .nav-links, .nav-cta { display: none; }
   .nav-hamburger { display: flex; }
+  .nav-inner { height: 64px; }
+  .nav-logo { font-size: 1rem; gap: 0.5rem; }
+  .nav-logo .logo-badge { width: 30px; height: 30px; font-size: 0.7rem; }
   .footer-grid { grid-template-columns: 1fr; }
   .form-row { grid-template-columns: 1fr; }
   .hero { min-height: 80vh; }
   .hero::before { display: none; }
+  .hero-title { font-size: clamp(2rem, 10vw, 3rem); line-height: 1.08; letter-spacing: -0.01em; }
+  .hero-sub { font-size: 1rem; line-height: 1.55; }
+  .hero-features { gap: 0.5rem; margin-bottom: 1.5rem; }
+  .feature-badge { font-size: 0.8rem; padding: 0.35rem 0.75rem; }
   .gallery-grid { grid-template-columns: repeat(2, 1fr); }
-  .trust-bar-inner { gap: 1rem; }
+  .trust-bar { padding: 0.55rem 0; }
+  .trust-bar-inner {
+    gap: 0.5rem;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .trust-bar-inner::-webkit-scrollbar { display: none; }
+  .trust-bar-item {
+    white-space: nowrap;
+    font-size: 0.76rem;
+    padding: 0.2rem 0.55rem;
+    border-radius: 999px;
+    background: rgba(255,255,255,0.08);
+  }
+  .sticky-cta {
+    width: calc(100% - 2rem);
+    max-width: 360px;
+    bottom: 0.9rem;
+    padding: 0.55rem;
+    gap: 0.45rem;
+  }
+  .sticky-cta .btn,
+  .sticky-cta .whatsapp-pill { flex: 1; justify-content: center; }
+  .a11y-panel { right: 0.85rem; bottom: 5.5rem; }
+  .a11y-trigger { width: 42px; height: 42px; font-size: 0.85rem; }
   .festival-photo-strip { grid-template-columns: repeat(2, 1fr) !important; }
   .festival-photo-strip > div { height: 170px !important; }
   .home-visual-strip { grid-template-columns: repeat(2, 1fr) !important; }
@@ -1191,10 +1225,21 @@ body.large-text { font-size: 18px; }
 }
 
 @media (max-width: 480px) {
+  .container { padding: 0 1.1rem; }
+  .hero-content { padding-top: 0.35rem; }
+  .hero-badge { font-size: 0.72rem; padding: 0.35rem 0.85rem; margin-bottom: 1.2rem; }
+  .hero-title { font-size: clamp(1.95rem, 12vw, 2.55rem); line-height: 1.08; }
+  .hero-sub { font-size: 0.95rem; }
+  .nav { padding: 0 1rem; }
+  .mobile-menu { padding: 1rem 1rem 1.25rem; }
+  .mobile-menu a { font-size: 0.95rem; padding: 0.65rem 0.75rem; }
   .hero-btns { flex-direction: column; align-items: flex-start; }
   .btn-lg { width: 100%; justify-content: center; }
   .grid-4 { grid-template-columns: 1fr; }
   .gallery-grid { grid-template-columns: 1fr 1fr; }
+  .sticky-cta { max-width: 340px; }
+  .sticky-cta .btn,
+  .sticky-cta .whatsapp-pill { font-size: 0.82rem; padding: 0.55rem 0.8rem; }
   .festival-photo-strip { grid-template-columns: 1fr !important; }
   .festival-photo-strip > div { height: 180px !important; }
   .home-visual-strip { grid-template-columns: 1fr !important; }

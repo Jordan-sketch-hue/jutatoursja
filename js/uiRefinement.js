@@ -28,8 +28,7 @@ function stripEmojiFromTextNodes() {
     const cleaned = node.nodeValue
       .replace(/\uFE0F/g, '')
       .replace(emojiPattern, '')
-      .replace(/\s{2,}/g, ' ')
-      .replace(/^\s+|\s+$/g, '');
+      .replace(/\s{2,}/g, ' ');
 
     if (cleaned !== node.nodeValue) {
       node.nodeValue = cleaned;
@@ -40,6 +39,21 @@ function stripEmojiFromTextNodes() {
 function normalizeNavAndTrustCopy() {
   document.querySelectorAll('.nav-links a, .mobile-menu a, .trust-bar-item, .blog-cat, .filter-pill').forEach((el) => {
     el.textContent = cleanLabel(el.textContent);
+  });
+
+  const compactTrustMap = {
+    'Verified Licensed Drivers': 'Verified Drivers',
+    '24/7 WhatsApp Support': '24/7 Support',
+    'JUTA-Aligned Standards': 'JUTA Standards',
+    'Transparent Pricing': 'Clear Pricing',
+    'Accessible Vehicles Available': 'Accessible Fleet',
+  };
+
+  document.querySelectorAll('.trust-bar-item').forEach((el) => {
+    const current = cleanLabel(el.textContent);
+    if (compactTrustMap[current]) {
+      el.textContent = compactTrustMap[current];
+    }
   });
 }
 
@@ -141,7 +155,18 @@ function normalizeCommonCtas() {
     el.textContent = 'WhatsApp';
   });
 
+  const mobileLabelMap = {
+    'Airport Transfer': 'Airport',
+    'Festival Transport': 'Festival',
+    Excursions: 'Tours',
+    Packages: 'Packages',
+    About: 'About',
+    FAQ: 'FAQ',
+    Blog: 'Journal',
+  };
+
   document.querySelectorAll('.mobile-menu a').forEach((el) => {
-    el.textContent = el.textContent.replace(/^\s+|\s+$/g, '');
+    const cleaned = cleanLabel(el.textContent);
+    el.textContent = mobileLabelMap[cleaned] || cleaned;
   });
 }
