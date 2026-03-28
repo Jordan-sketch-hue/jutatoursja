@@ -817,6 +817,13 @@ p { color: var(--gray-text); line-height: 1.75; }
   color: var(--green);
   line-height: 1;
 }
+.premium-icon-token {
+  font-size: 0.72rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  line-height: 1;
+}
 .trust-item-text strong { font-size: 0.9rem; display: block; }
 .trust-item-text span { font-size: 0.78rem; color: var(--gray-text); }
 
@@ -1174,6 +1181,10 @@ body.large-text { font-size: 18px; }
   .hero::before { display: none; }
   .gallery-grid { grid-template-columns: repeat(2, 1fr); }
   .trust-bar-inner { gap: 1rem; }
+  .festival-photo-strip { grid-template-columns: repeat(2, 1fr) !important; }
+  .festival-photo-strip > div { height: 170px !important; }
+  .home-visual-strip { grid-template-columns: repeat(2, 1fr) !important; }
+  .home-visual-strip > div { height: 160px !important; }
   .booking-form { padding: 1.5rem; }
   .modal-header, .modal-body, .modal-footer { padding-left: 1.25rem; padding-right: 1.25rem; }
   .steps::before { display: none; }
@@ -1184,4 +1195,8 @@ body.large-text { font-size: 18px; }
   .btn-lg { width: 100%; justify-content: center; }
   .grid-4 { grid-template-columns: 1fr; }
   .gallery-grid { grid-template-columns: 1fr 1fr; }
+  .festival-photo-strip { grid-template-columns: 1fr !important; }
+  .festival-photo-strip > div { height: 180px !important; }
+  .home-visual-strip { grid-template-columns: 1fr !important; }
+  .home-visual-strip > div { height: 180px !important; }
 }
