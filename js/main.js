@@ -7,6 +7,7 @@ import { initAnimations } from './animations.js';
 import { initFilters } from './filters.js';
 import { initAccessibility } from './accessibility.js';
 import { initBookingForm } from './bookingForm.js';
+import { initUiRefinement } from './uiRefinement.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   initNavigation();
@@ -16,4 +17,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initFilters();
   initAccessibility();
   initBookingForm();
+  initUiRefinement();
 });

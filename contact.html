@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/global.css" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
   <style>
     .contact-layout{display:grid;grid-template-columns:1fr 380px;gap:3rem;align-items:start;}
     .contact-sidebar{display:flex;flex-direction:column;gap:1.25rem;position:sticky;top:90px;}
@@ -26,8 +27,15 @@
     .service-card-option{padding:1rem;border:2px solid rgba(0,0,0,0.1);border-radius:var(--radius-md);cursor:pointer;text-align:center;transition:all 0.2s;font-size:0.85rem;}
     .service-card-option:hover{border-color:var(--green);background:rgba(0,155,58,0.05);}
     .service-card-option.selected{border-color:var(--green);background:rgba(0,155,58,0.08);}
-    .service-card-option .sco-icon{font-size:1.75rem;margin-bottom:0.4rem;}
-    @media(max-width:900px){.contact-layout{grid-template-columns:1fr;}.contact-sidebar{position:static;}}
+    .service-card-option .sco-icon{font-size:0.72rem;margin-bottom:0.4rem;letter-spacing:0.08em;font-weight:700;color:var(--green);}
+    .service-card-option .sco-icon:empty::before{content:'SV';}
+    .service-card-option[data-value="airport-transfer"] .sco-icon:empty::before{content:'AT';}
+    .service-card-option[data-value="festival-transport"] .sco-icon:empty::before{content:'FT';}
+    .service-card-option[data-value="excursion"] .sco-icon:empty::before{content:'EX';}
+    .service-card-option[data-value="package"] .sco-icon:empty::before{content:'PK';}
+    .sidebar-icon:empty::before{content:'\2022';font-size:1rem;font-weight:800;color:#fff;}
+    .contact-map-grid{display:grid;grid-template-columns:2fr 1fr;gap:1rem;align-items:stretch;}
+    @media(max-width:900px){.contact-layout{grid-template-columns:1fr;}.contact-sidebar{position:static;}.contact-map-grid{grid-template-columns:1fr;}}
     @media(max-width:600px){.service-card-selector{grid-template-columns:1fr 1fr;}}
   </style>
 </head>
@@ -278,7 +286,7 @@
       <h2 id="service-map-heading" class="reveal">Where we operate across Jamaica</h2>
       <p class="reveal reveal-delay-1" style="max-width:680px;margin:0.75rem auto 0;">Primary routes include Kingston, Montego Bay, Ocho Rios, Negril, Port Antonio, Falmouth, Mandeville and South Coast corridors.</p>
     </div>
-    <div style="display:grid;grid-template-columns:2fr 1fr;gap:1rem;align-items:stretch;">
+    <div class="contact-map-grid">
       <div class="reveal" style="border-radius:var(--radius-lg);overflow:hidden;border:1px solid var(--gray-mid);min-height:320px;">
         <iframe title="Jamaica service area map" src="https://www.openstreetmap.org/export/embed.html?bbox=-78.6%2C17.65%2C-76.15%2C18.75&amp;layer=mapnik" style="border:0;width:100%;height:100%;min-height:320px;" loading="lazy"></iframe>
       </div>

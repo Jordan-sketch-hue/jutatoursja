@@ -8,6 +8,17 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/global.css" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <style>
+    .package-row{display:grid;grid-template-columns:1fr 2fr;gap:2.5rem;align-items:center;padding:2.5rem;border-radius:var(--radius-lg);margin-bottom:1.75rem;}
+    .package-row-light{background:var(--gray-light);}
+    .package-row-dark{background:var(--black);}
+    .package-icon{font-size:0.85rem;letter-spacing:0.08em;font-weight:800;text-transform:uppercase;margin-bottom:0.5rem;color:var(--green);}
+    .package-row-dark .package-icon{color:var(--gold);}
+    @media(max-width:900px){
+      .package-row{grid-template-columns:1fr;padding:1.4rem;gap:1.3rem;}
+    }
+  </style>
 </head>
 <body>
 
@@ -54,9 +65,9 @@
     </div>
 
     <!-- Explorer -->
-    <div style="display:grid;grid-template-columns:1fr 2fr;gap:2.5rem;align-items:center;padding:2.5rem;background:var(--gray-light);border-radius:var(--radius-lg);margin-bottom:1.75rem;" class="reveal">
+    <div class="package-row package-row-light reveal">
       <div style="text-align:center;">
-        <div style="font-size:4rem;margin-bottom:0.5rem;">✈️</div>
+        <div class="package-icon">EXP</div>
         <div style="font-size:2.4rem;font-weight:900;color:var(--green);">$199</div>
         <div style="font-size:0.85rem;color:var(--gray-text);">per trip</div>
         <a href="contact.html?package=explorer" class="btn btn-primary" style="margin-top:1rem;width:100%;justify-content:center;">Book Explorer</a>
@@ -80,9 +91,9 @@
     </div>
 
     <!-- VIP Escape -->
-    <div style="display:grid;grid-template-columns:1fr 2fr;gap:2.5rem;align-items:center;padding:2.5rem;background:var(--black);border-radius:var(--radius-lg);margin-bottom:1.75rem;" class="reveal">
+    <div class="package-row package-row-dark reveal">
       <div style="text-align:center;">
-        <div style="font-size:4rem;margin-bottom:0.5rem;">👑</div>
+        <div class="package-icon">VIP</div>
         <div style="font-size:2.4rem;font-weight:900;color:var(--gold);">$495</div>
         <div style="font-size:0.85rem;color:rgba(255,255,255,0.5);">per day</div>
         <a href="contact.html?package=vip-escape" class="btn btn-gold" style="margin-top:1rem;width:100%;justify-content:center;">Book VIP</a>
@@ -106,9 +117,9 @@
     </div>
 
     <!-- Culture -->
-    <div style="display:grid;grid-template-columns:1fr 2fr;gap:2.5rem;align-items:center;padding:2.5rem;background:var(--gray-light);border-radius:var(--radius-lg);margin-bottom:1.75rem;" class="reveal">
+    <div class="package-row package-row-light reveal">
       <div style="text-align:center;">
-        <div style="font-size:4rem;margin-bottom:0.5rem;">🎵</div>
+        <div class="package-icon">CUL</div>
         <div style="font-size:2.4rem;font-weight:900;color:var(--gold-dark);">$245</div>
         <div style="font-size:0.85rem;color:var(--gray-text);">per person</div>
         <a href="contact.html?package=culture" class="btn btn-primary" style="margin-top:1rem;width:100%;justify-content:center;">Book Culture</a>
@@ -133,21 +144,21 @@
     <!-- Remaining 3 packages in card grid -->
     <div class="grid-3" style="gap:1.75rem;margin-top:1rem;">
       <div class="pricing-card reveal">
-        <span style="font-size:2.5rem;">🎶</span>
+        <span class="package-icon" style="display:inline-block;">FW</span>
         <h3 style="margin:0.75rem 0 0.25rem;">Festival Weekend Pass</h3>
         <p style="font-size:0.85rem;color:var(--gray-text);">Round-trip festival transport · Late-night return guarantee · Backup driver on call</p>
         <div class="pricing-price">$175 <span>/ weekend</span></div>
         <a href="contact.html?package=festival-weekend" class="btn btn-primary" style="width:100%;justify-content:center;">Book Festival</a>
       </div>
       <div class="pricing-card reveal reveal-delay-1">
-        <span style="font-size:2.5rem;">💻</span>
+        <span class="package-icon" style="display:inline-block;">DN</span>
         <h3 style="margin:0.75rem 0 0.25rem;">Digital Nomad Weekly</h3>
         <p style="font-size:0.85rem;color:var(--gray-text);">5 days dedicated driver · Café &amp; coworking guide · SIM card &amp; connectivity tips</p>
         <div class="pricing-price">$350 <span>/ week</span></div>
         <a href="contact.html?package=digital-nomad" class="btn btn-primary" style="width:100%;justify-content:center;">Book Nomad</a>
       </div>
       <div class="pricing-card reveal reveal-delay-2">
-        <span style="font-size:2.5rem;">💍</span>
+        <span class="package-icon" style="display:inline-block;">RP</span>
         <h3 style="margin:0.75rem 0 0.25rem;">Romantic Proposal</h3>
         <p style="font-size:0.85rem;color:var(--gray-text);">Surprise transport · Champagne &amp; flowers · Luxury vehicle décor · Dinner transfer</p>
         <div class="pricing-price">$395 <span>/ event</span></div>
