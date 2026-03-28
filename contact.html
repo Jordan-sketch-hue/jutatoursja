@@ -405,25 +405,31 @@
   const dateEl=document.getElementById('c_date');
   if(dateEl) dateEl.min=new Date().toISOString().split('T')[0];
 
-  // Pre-populate from URL params
+  function getSelectedText(selectEl){
+    if(!selectEl) return '';
+    const selected = selectEl.options[selectEl.selectedIndex];
+    return selected ? selected.text.trim() : '';
+  }
+
+  // Pre-populate from URL params (without forcing users off Step 1)
   const params=new URLSearchParams(window.location.search);
   const svc=params.get('service'), pkg=params.get('package'), exc=params.get('excursion');
   const airportParam=(params.get('airport')||'').toLowerCase();
   if(svc){
     const target=document.querySelector('.service-card-option[data-value="'+svc+'"]');
-    if(target){target.click();goTo(2);}
+    if(target){target.click();}
   }
   if(pkg){
     document.getElementById('hidden_package').value=pkg;
     const pkgCard=document.querySelector('.service-card-option[data-value="package"]');
-    if(pkgCard){pkgCard.click();goTo(2);}
+    if(pkgCard){pkgCard.click();}
     const pkgEl=document.getElementById('c_package');
     if(pkgEl){Array.from(pkgEl.options).forEach(o=>{if(o.value===pkg)o.selected=true;});}
   }
   if(exc){
     document.getElementById('hidden_excursion').value=exc;
     const excCard=document.querySelector('.service-card-option[data-value="excursion"]');
-    if(excCard){excCard.click();goTo(2);}
+    if(excCard){excCard.click();}
     const excEl=document.getElementById('c_excursion');
     if(excEl){Array.from(excEl.options).forEach(o=>{if(o.value===exc)o.selected=true;});}
   }
@@ -447,6 +453,27 @@
     const data=Object.fromEntries(fd.entries());
     // Collect checkboxes
     data['special_req'] = Array.from(this.querySelectorAll('input[name="special_req[]"]:checked')).map(x=>x.value).join(', ');
+
+    // Normalize capture payload so the sheet gets stable, human-readable columns.
+    const serviceMap = {
+      'airport-transfer': 'Airport Transfer',
+      'festival-transport': 'Festival Transport',
+      'excursion': 'Day Excursion',
+      'package': 'Package Bundle'
+    };
+    data.captured_at = new Date().toISOString();
+    data.page_url = window.location.href;
+    data.service_type_label = serviceMap[data.service_type] || data.service_type || '';
+    data.airport_label = getSelectedText(document.getElementById('c_airport'));
+    data.direction_label = getSelectedText(document.getElementById('c_direction'));
+    data.festival_label = getSelectedText(document.getElementById('c_festival'));
+    data.transport_tier_label = getSelectedText(document.getElementById('c_transport_tier'));
+    data.excursion_label = getSelectedText(document.getElementById('c_excursion'));
+    data.package_label = getSelectedText(document.getElementById('c_package'));
+    data.trip_style_label = getSelectedText(document.getElementById('c_trip_style'));
+    data.budget_range_label = getSelectedText(document.getElementById('c_budget'));
+    data.passengers_label = getSelectedText(document.getElementById('c_pax'));
+    data.preferred_contact = data.preferred_contact || 'whatsapp';
     try{
       const res=await fetch('https://formspree.io/f/YOUR_FORM_ID',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(data)});
       if(res.ok){
