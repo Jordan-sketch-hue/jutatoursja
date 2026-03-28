@@ -445,6 +445,13 @@
       else if(v==='festival-transport') document.getElementById('cond-festival').style.display='block';
       else if(v==='excursion') document.getElementById('cond-excursion').style.display='block';
       else if(v==='package') document.getElementById('cond-package').style.display='block';
+
+      saveIntent({
+        service: v,
+        excursion: document.getElementById('hidden_excursion').value,
+        package: document.getElementById('hidden_package').value,
+        airport: document.getElementById('c_airport')?.value || ''
+      });
     });
     c.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();this.click();}});
   });
@@ -484,36 +491,120 @@
     return selected ? selected.text.trim() : '';
   }
 
-  // Pre-populate from URL params (without forcing users off Step 1)
-  const params=new URLSearchParams(window.location.search);
-  const svc=params.get('service'), pkg=params.get('package'), exc=params.get('excursion');
-  const airportParam=(params.get('airport')||'').toLowerCase();
-  if(svc){
-    const target=document.querySelector('.service-card-option[data-value="'+svc+'"]');
-    if(target){target.click();}
+  function readSavedIntent(){
+    try{
+      const raw = window.localStorage.getItem('juta_booking_intent');
+      if(!raw) return {};
+      const parsed = JSON.parse(raw);
+      // Expire saved intent after 7 days.
+      if(parsed.savedAt && (Date.now() - parsed.savedAt) > (7 * 24 * 60 * 60 * 1000)){
+        window.localStorage.removeItem('juta_booking_intent');
+        return {};
+      }
+      return parsed || {};
+    }catch{
+      return {};
+    }
   }
+
+  function saveIntent(intent){
+    try{
+      window.localStorage.setItem('juta_booking_intent', JSON.stringify({ ...intent, savedAt: Date.now() }));
+    }catch{}
+  }
+
+  function normalizeService(value){
+    const v=(value||'').toLowerCase();
+    if(v==='airport'||v==='airport-transfer') return 'airport-transfer';
+    if(v==='festival'||v==='festival-transport') return 'festival-transport';
+    if(v==='excursion'||v==='custom-excursion') return 'excursion';
+    if(v==='package'||v==='packages') return 'package';
+    return '';
+  }
+
+  function selectServiceCard(serviceValue){
+    const normalized=normalizeService(serviceValue);
+    if(!normalized) return false;
+    const target=document.querySelector('.service-card-option[data-value="'+normalized+'"]');
+    if(!target) return false;
+    target.click();
+    return true;
+  }
+
+  // Pre-populate from URL params first, else restore last saved booking intent.
+  const params=new URLSearchParams(window.location.search);
+  const saved=readSavedIntent();
+
+  const svc=normalizeService(params.get('service')||saved.service||'');
+  const pkg=params.get('package')||saved.package||'';
+  const exc=params.get('excursion')||saved.excursion||'';
+  const airportParam=(params.get('airport')||saved.airport||'').toLowerCase();
+
+  if(svc){
+    selectServiceCard(svc);
+    document.getElementById('hidden_service').value=svc;
+  }
+
   if(pkg){
     document.getElementById('hidden_package').value=pkg;
-    const pkgCard=document.querySelector('.service-card-option[data-value="package"]');
-    if(pkgCard){pkgCard.click();}
+    selectServiceCard('package');
     const pkgEl=document.getElementById('c_package');
-    if(pkgEl){Array.from(pkgEl.options).forEach(o=>{if(o.value===pkg)o.selected=true;});}
+    if(pkgEl) pkgEl.value=pkg;
   }
+
   if(exc){
     document.getElementById('hidden_excursion').value=exc;
-    const excCard=document.querySelector('.service-card-option[data-value="excursion"]');
-    if(excCard){excCard.click();}
+    selectServiceCard('excursion');
     const excEl=document.getElementById('c_excursion');
-    if(excEl){Array.from(excEl.options).forEach(o=>{if(o.value===exc)o.selected=true;});}
+    if(excEl) excEl.value=exc;
   }
+
   if(airportParam){
-    const airportCard=document.querySelector('.service-card-option[data-value="airport-transfer"]');
-    if(airportCard){airportCard.click();}
+    selectServiceCard('airport-transfer');
     const airportEl=document.getElementById('c_airport');
     if(airportEl){
       if(airportParam==='kin') airportEl.value='KIN';
       if(airportParam==='mbj') airportEl.value='MBJ';
     }
+  }
+
+  // Keep hidden fields + saved intent in sync with customer changes.
+  const excursionSelect=document.getElementById('c_excursion');
+  if(excursionSelect){
+    excursionSelect.addEventListener('change',function(){
+      document.getElementById('hidden_excursion').value=this.value;
+      saveIntent({
+        service: document.getElementById('hidden_service').value,
+        excursion: this.value,
+        package: document.getElementById('hidden_package').value,
+        airport: document.getElementById('c_airport')?.value || ''
+      });
+    });
+  }
+
+  const packageSelect=document.getElementById('c_package');
+  if(packageSelect){
+    packageSelect.addEventListener('change',function(){
+      document.getElementById('hidden_package').value=this.value;
+      saveIntent({
+        service: document.getElementById('hidden_service').value,
+        excursion: document.getElementById('hidden_excursion').value,
+        package: this.value,
+        airport: document.getElementById('c_airport')?.value || ''
+      });
+    });
+  }
+
+  const airportSelect=document.getElementById('c_airport');
+  if(airportSelect){
+    airportSelect.addEventListener('change',function(){
+      saveIntent({
+        service: document.getElementById('hidden_service').value || 'airport-transfer',
+        excursion: document.getElementById('hidden_excursion').value,
+        package: document.getElementById('hidden_package').value,
+        airport: this.value
+      });
+    });
   }
 
   // Form submit
@@ -553,6 +644,7 @@
       const res=await fetch('https://formsubmit.co/ajax/noeltourservice@hotmail.com',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(data)});
       const result=await res.json().catch(()=>({}));
       if(res.ok && result.success==='true'){
+        try{ window.localStorage.removeItem('juta_booking_intent'); }catch{}
         document.querySelector('.form-fields').style.display='none';
         const suc=document.querySelector('.form-success');
         suc.style.display='flex';
