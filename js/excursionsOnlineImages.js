@@ -1,5 +1,14 @@
 const COMMONS_API_URL = 'https://commons.wikimedia.org/w/api.php';
 
+const PINNED_IMAGE_OVERRIDES = {
+  'somerset-falls': 'https://live.staticflickr.com/4125/5165961381_ea4e4e6b39_b.jpg',
+  'konoko-falls': 'https://static.wixstatic.com/media/d01383_52a05f3d16ca41d7927e8cb146cf00d0.jpg/v1/fit/w_2500,h_1330,al_c/d01383_52a05f3d16ca41d7927e8cb146cf00d0.jpg',
+  'reggae-falls': 'https://live.staticflickr.com/490/32079737900_4256c8ab6d_b.jpg',
+  'cane-river-falls': 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/A._Duperly_%26_Sons_-_Cane_River_Falls%2C_Jamaica_6159928951.jpg/1280px-A._Duperly_%26_Sons_-_Cane_River_Falls%2C_Jamaica_6159928951.jpg',
+  'lovers-leap': 'https://live.staticflickr.com/160/387153874_62f85fd258_b.jpg',
+  'milk-river-bath': 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/MilkRiverBath.JPG/1280px-MilkRiverBath.JPG'
+};
+
 const QUERY_OVERRIDES = {
   'dunns-river-falls': "Dunn's River Falls Ocho Rios Jamaica waterfall",
   'blue-hole-secret-falls': 'Blue Hole Secret Falls Ocho Rios St Ann Jamaica',
@@ -68,6 +77,20 @@ const QUERY_OVERRIDES = {
 
 const imagePromiseCache = new Map();
 
+const TITLE_BLOCKLIST = [
+  'map',
+  'manual',
+  'diaries',
+  '.pdf',
+  'gazette',
+  'state magazine',
+  'cyclopedia',
+  'advertisement',
+  'loc ',
+  'thumbnail',
+  'document'
+];
+
 function cleanTitle(value) {
   return value
     .replace(/\s*\([^)]*\)\s*/g, ' ')
@@ -100,9 +123,29 @@ function buildCommonsSearchUrl(query) {
 function getCandidatesFromPages(pages) {
   return Object.values(pages)
     .sort((a, b) => (a.index || 0) - (b.index || 0))
-    .map(page => page?.imageinfo?.[0]?.thumburl || page?.imageinfo?.[0]?.url || '')
-    .filter(Boolean)
-    .filter(url => !/\.svg($|\?)/i.test(url));
+    .map(page => ({
+      title: String(page?.title || '').toLowerCase(),
+      url: page?.imageinfo?.[0]?.thumburl || page?.imageinfo?.[0]?.url || ''
+    }))
+    .filter(candidate => Boolean(candidate.url))
+    .filter(candidate => !/\.svg($|\?)/i.test(candidate.url));
+}
+
+function isCandidateAllowed(item, candidate) {
+  const title = candidate.title || '';
+  const isBlocked = TITLE_BLOCKLIST.some(token => title.includes(token));
+  if (isBlocked) return false;
+
+  const locationToken = String(item.location || '').toLowerCase();
+  const titleToken = cleanTitle(String(item.title || ''))
+    .toLowerCase()
+    .split(/[^a-z0-9]+/)
+    .filter(token => token.length >= 4)
+    .slice(0, 3);
+
+  if (title.includes('jamaica')) return true;
+  if (locationToken && title.includes(locationToken)) return true;
+  return titleToken.some(token => title.includes(token));
 }
 
 async function fetchCandidates(query) {
@@ -117,13 +160,21 @@ async function fetchCandidates(query) {
   return getCandidatesFromPages(pages);
 }
 
-function pickUniqueUrl(candidates, usedUrls) {
+function pickUniqueUrl(item, candidates, usedUrls) {
   if (!candidates.length) return '';
-  const unique = candidates.find(url => !usedUrls.has(url));
-  return unique || candidates[0];
+  const filtered = candidates.filter(candidate => isCandidateAllowed(item, candidate));
+  const pool = filtered.length ? filtered : candidates;
+  const unique = pool.find(candidate => !usedUrls.has(candidate.url));
+  return (unique || pool[0] || {}).url || '';
 }
 
 export function getExcursionImageForCard(item, usedUrls) {
+  const pinned = PINNED_IMAGE_OVERRIDES[item.id];
+  if (pinned) {
+    usedUrls.add(pinned);
+    return Promise.resolve(pinned);
+  }
+
   const existing = imagePromiseCache.get(item.id);
   if (existing) {
     return existing.then(url => {
@@ -133,7 +184,7 @@ export function getExcursionImageForCard(item, usedUrls) {
   }
 
   const imagePromise = fetchCandidates(getQuery(item))
-    .then(candidates => pickUniqueUrl(candidates, usedUrls))
+    .then(candidates => pickUniqueUrl(item, candidates, usedUrls))
     .catch(() => '');
 
   imagePromiseCache.set(item.id, imagePromise);

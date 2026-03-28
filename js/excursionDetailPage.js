@@ -32,18 +32,16 @@ async function hydrateImages(root, chosen, hero) {
   const usedUrls = new Set();
   const itemsById = new Map(EXCURSIONS.map(item => [item.id, item]));
 
-  await Promise.all(
-    cards.map(async img => {
-      const id = img.dataset.excursionId;
-      const item = itemsById.get(id || '');
-      if (!item) return;
+  for (const img of cards) {
+    const id = img.dataset.excursionId;
+    const item = itemsById.get(id || '');
+    if (!item) continue;
 
-      const onlineUrl = await getExcursionImageForCard(item, usedUrls);
-      if (onlineUrl && img.isConnected) {
-        img.src = onlineUrl;
-      }
-    })
-  );
+    const onlineUrl = await getExcursionImageForCard(item, usedUrls);
+    if (onlineUrl && img.isConnected) {
+      img.src = onlineUrl;
+    }
+  }
 
   const chosenOnlineUrl = await getExcursionImageForCard(chosen, usedUrls);
   if (chosenOnlineUrl && hero) {

@@ -72,20 +72,18 @@ async function hydrateCatalogOnlineImages(root) {
   const itemsById = new Map(EXCURSIONS.map(item => [item.id, item]));
   const usedUrls = new Set();
 
-  await Promise.all(
-    images.map(async img => {
-      const id = img.dataset.excursionId;
-      if (!id) return;
+  for (const img of images) {
+    const id = img.dataset.excursionId;
+    if (!id) continue;
 
-      const item = itemsById.get(id);
-      if (!item) return;
+    const item = itemsById.get(id);
+    if (!item) continue;
 
-      const onlineUrl = await getExcursionImageForCard(item, usedUrls);
-      if (onlineUrl && img.isConnected) {
-        img.src = onlineUrl;
-      }
-    })
-  );
+    const onlineUrl = await getExcursionImageForCard(item, usedUrls);
+    if (onlineUrl && img.isConnected) {
+      img.src = onlineUrl;
+    }
+  }
 }
 
 function initCatalog() {
