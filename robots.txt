@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://noels-jamaica-vibes-tour.vercel.app/sitemap.xml
