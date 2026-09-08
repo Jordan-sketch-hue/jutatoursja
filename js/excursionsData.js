@@ -8,7 +8,7 @@ export const EXCURSIONS = [
   { id: 'blue-mountains-tour', title: 'Blue Mountains (hiking + coffee tours)', category: 'Nature', location: 'St. Andrew', duration: 'Full Day', priceFrom: 95, image: 'assets/images/jamaica-mountains.jpg', summary: 'Sunrise trails and origin coffee tastings above Kingston.' },
   { id: 'cockpit-country', title: 'Cockpit Country', category: 'Nature', location: 'Trelawny', duration: 'Full Day', priceFrom: 110, image: 'assets/images/jamaica-transfer.jpg', summary: 'Karst valleys, endemic wildlife, and expert local nature guiding.' },
   { id: 'black-river-safari', title: 'Black River Safari Tour', category: 'Nature', location: 'St. Elizabeth', duration: '3 hrs', priceFrom: 55, image: 'assets/images/jamaica-river-rafting.jpg', summary: 'Boat safari through mangroves and crocodile habitat.' },
-  { id: 'martha-brae-rafting', title: 'Martha Brae River bamboo rafting', category: 'Nature', location: 'Trelawny', duration: '2 hrs', priceFrom: 50, image: 'assets/images/jamaica-river-rafting.jpg', summary: 'Slow scenic bamboo rafting with local raft captain.' },
+  { id: 'martha-brae-rafting', title: 'Martha Brae River bamboo rafting', category: 'Nature', location: 'Trelawny', duration: '2 hrs', priceFrom: 50, image: 'assets/images/jamaica-bamboo-rafting-guests.jpg', summary: 'Slow scenic bamboo rafting with local raft captain.' },
   { id: 'rio-grande-rafting', title: 'Rio Grande River rafting', category: 'Nature', location: 'Portland', duration: '3-4 hrs', priceFrom: 80, image: 'assets/images/jamaica-falls.jpg', summary: 'Long-form bamboo raft journey through lush Portland valleys.' },
 
   // Beach
@@ -21,7 +21,7 @@ export const EXCURSIONS = [
   { id: 'james-bond-beach', title: 'James Bond Beach', category: 'Beach', location: 'St. Mary', duration: 'Half Day', priceFrom: 50, image: 'assets/images/jamaica-beach.jpg', summary: 'North-coast beach spot tied to Bond film lore.' },
 
   // Culture
-  { id: 'bob-marley-museum', title: 'Bob Marley Museum', category: 'Culture', location: 'Kingston', duration: '2 hrs', priceFrom: 55, image: 'assets/images/jamaica-bob-marley.jpg', summary: 'Walk through 56 Hope Road and reggae history.' },
+  { id: 'bob-marley-museum', title: 'Bob Marley Museum', category: 'Culture', location: 'Kingston', duration: '2 hrs', priceFrom: 55, image: 'assets/images/jamaica-bob-marley-statue.jpg', summary: 'Walk through 56 Hope Road and reggae history.' },
   { id: 'devon-house', title: 'Devon House', category: 'Culture', location: 'Kingston', duration: '2 hrs', priceFrom: 35, image: 'assets/images/jamaica-culture.jpg', summary: 'Historic mansion, courtyard food, and island heritage.' },
   { id: 'rose-hall-great-house', title: 'Rose Hall Great House (haunted night tour)', category: 'Culture', location: 'Montego Bay', duration: '2 hrs', priceFrom: 50, image: 'assets/images/jamaica-mountains.jpg', summary: 'Legendary Georgian estate with night storytelling tour.' },
   { id: 'accompong-maroon-village', title: 'Accompong Maroon Village', category: 'Culture', location: 'St. Elizabeth', duration: 'Full Day', priceFrom: 95, image: 'assets/images/jamaica-carnival.jpg', summary: 'Maroon history, drumming, and indigenous heritage.' },
@@ -41,7 +41,7 @@ export const EXCURSIONS = [
 
   // Adventure
   { id: 'mystic-mountain', title: 'Mystic Mountain (zipline + bobsled)', category: 'Adventure', location: 'Ocho Rios', duration: '3 hrs', priceFrom: 75, image: 'assets/images/jamaica-mystic.jpg', summary: 'Bobsled, zipline, and chairlift in rainforest terrain.' },
-  { id: 'chukka-caribbean', title: 'Chukka Caribbean Adventures (ATV, zipline, horseback)', category: 'Adventure', location: 'Multiple parishes', duration: 'Half Day', priceFrom: 85, image: 'assets/images/jamaica-mountains.jpg', summary: 'High-adrenaline bundles across land and trail routes.' },
+  { id: 'chukka-caribbean', title: 'Chukka Caribbean Adventures (ATV, zipline, horseback)', category: 'Adventure', location: 'Multiple parishes', duration: 'Half Day', priceFrom: 85, image: 'assets/images/jamaica-horseback-riding.jpg', summary: 'High-adrenaline bundles across land and trail routes.' },
   { id: 'dolphin-cove-adventure', title: 'Dolphin Cove', category: 'Adventure', location: 'Ocho Rios', duration: '3 hrs', priceFrom: 90, image: 'assets/images/jamaica-beach.jpg', summary: 'Marine interaction park with added activity options.' },
   { id: 'yaaman-adventure-park', title: 'Yaaman Adventure Park', category: 'Adventure', location: 'Ocho Rios', duration: '3 hrs', priceFrom: 80, image: 'assets/images/jamaica-mystic.jpg', summary: 'ATV rides, mud tracks, and Jamaican cooking moments.' },
   { id: 'blue-hole-mineral-spring', title: 'Blue Hole Mineral Spring', category: 'Adventure', location: 'Negril', duration: '2 hrs', priceFrom: 45, image: 'assets/images/jamaica-lagoon-sunset.jpg', summary: 'Mineral spring cave jump and countryside views.' },
