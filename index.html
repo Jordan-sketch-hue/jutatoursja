@@ -111,25 +111,22 @@
 <svg style="display:none" aria-hidden="true">
   <defs>
     <filter id="vid-enhance" color-interpolation-filters="sRGB" x="0%" y="0%" width="100%" height="100%">
-      <!-- Unsharp mask: sharpens edges on compressed video -->
-      <feConvolveMatrix order="3" kernelMatrix="0 -0.6 0 -0.6 4.4 -0.6 0 -0.6 0" divisor="1" preserveAlpha="true" result="sharpened"/>
-      <!-- Lift blacks slightly, clamp highlights — filmic toe -->
+      <feConvolveMatrix order="3" kernelMatrix="0 -0.4 0 -0.4 2.6 -0.4 0 -0.4 0" divisor="1" preserveAlpha="true" result="sharpened"/>
       <feComponentTransfer in="sharpened" result="graded">
-        <feFuncR type="gamma" amplitude="1.04" exponent="0.88" offset="0.015"/>
-        <feFuncG type="gamma" amplitude="1.04" exponent="0.86" offset="0.012"/>
-        <feFuncB type="gamma" amplitude="1.02" exponent="0.90" offset="0.005"/>
+        <feFuncR type="gamma" amplitude="0.97" exponent="0.94" offset="0.01"/>
+        <feFuncG type="gamma" amplitude="0.97" exponent="0.93" offset="0.008"/>
+        <feFuncB type="gamma" amplitude="0.96" exponent="0.96" offset="0.003"/>
       </feComponentTransfer>
-      <!-- Vibrance: boost saturation -->
-      <feColorMatrix type="saturate" values="1.45" in="graded"/>
+      <feColorMatrix type="saturate" values="1.22" in="graded"/>
     </filter>
     <filter id="img-enhance" color-interpolation-filters="sRGB" x="0%" y="0%" width="100%" height="100%">
-      <feConvolveMatrix order="3" kernelMatrix="0 -0.7 0 -0.7 4.8 -0.7 0 -0.7 0" divisor="1" preserveAlpha="true" result="sharpened"/>
+      <feConvolveMatrix order="3" kernelMatrix="0 -0.5 0 -0.5 3.0 -0.5 0 -0.5 0" divisor="1" preserveAlpha="true" result="sharpened"/>
       <feComponentTransfer in="sharpened" result="graded">
-        <feFuncR type="gamma" amplitude="1.05" exponent="0.87" offset="0.018"/>
-        <feFuncG type="gamma" amplitude="1.05" exponent="0.85" offset="0.014"/>
-        <feFuncB type="gamma" amplitude="1.02" exponent="0.89" offset="0.006"/>
+        <feFuncR type="gamma" amplitude="0.98" exponent="0.93" offset="0.01"/>
+        <feFuncG type="gamma" amplitude="0.98" exponent="0.92" offset="0.008"/>
+        <feFuncB type="gamma" amplitude="0.97" exponent="0.95" offset="0.003"/>
       </feComponentTransfer>
-      <feColorMatrix type="saturate" values="1.5" in="graded"/>
+      <feColorMatrix type="saturate" values="1.25" in="graded"/>
     </filter>
   </defs>
 </svg>
@@ -139,20 +136,19 @@
 
  <!-- Slideshow: videos FIRST, then photos. All stacked absolute, JS fades between them -->
  <div id="hero-slides" style="position:absolute;inset:0;z-index:0;">
-   <video class="hero-slide" muted playsinline preload="auto" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center center;filter:url(#vid-enhance) brightness(1.05) contrast(1.08);opacity:1;transition:opacity 1.2s ease;transform:translateZ(0) scale(1.01);will-change:transform;">
+   <video class="hero-slide" muted playsinline preload="auto" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center center;filter:url(#vid-enhance) brightness(1.0) contrast(1.02);opacity:1;transition:opacity 1.2s ease;transform:translateZ(0) scale(1.01);will-change:transform;">
      <source src="assets/videos/noel-tour-1.mp4" type="video/mp4" />
    </video>
-   <video class="hero-slide" muted playsinline preload="auto" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center center;filter:url(#vid-enhance) brightness(1.05) contrast(1.08);opacity:0;transition:opacity 1.2s ease;transform:translateZ(0) scale(1.01);will-change:transform;">
+   <video class="hero-slide" muted playsinline preload="auto" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center center;filter:url(#vid-enhance) brightness(1.0) contrast(1.02);opacity:0;transition:opacity 1.2s ease;transform:translateZ(0) scale(1.01);will-change:transform;">
      <source src="assets/videos/noel-tour-2.mp4" type="video/mp4" />
    </video>
-   <img class="hero-slide" src="assets/images/noel-airport-group.jpg" alt="" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 25%;filter:url(#img-enhance) brightness(1.04) contrast(1.1);opacity:0;transition:opacity 1.2s ease;transform:translateZ(0);" />
-   <img class="hero-slide" src="assets/images/noel-mural-group.jpg" alt="" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 20%;filter:url(#img-enhance) brightness(1.04) contrast(1.1);opacity:0;transition:opacity 1.2s ease;transform:translateZ(0);" />
-   <img class="hero-slide" src="assets/images/noel-horseback.jpg" alt="" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 15%;filter:url(#img-enhance) brightness(1.04) contrast(1.1);opacity:0;transition:opacity 1.2s ease;transform:translateZ(0);" />
-   <img class="hero-slide" src="assets/images/noel-bamboo-raft.jpg" alt="" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%;filter:url(#img-enhance) brightness(1.04) contrast(1.1);opacity:0;transition:opacity 1.2s ease;transform:translateZ(0);" />
-   <img class="hero-slide" src="assets/images/noel-coconut-stop.jpg" alt="" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 20%;filter:url(#img-enhance) brightness(1.04) contrast(1.1);opacity:0;transition:opacity 1.2s ease;transform:translateZ(0);" />
-   <img class="hero-slide" src="assets/images/noel-group-vans.jpg" alt="" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 25%;filter:url(#img-enhance) brightness(1.04) contrast(1.1);opacity:0;transition:opacity 1.2s ease;transform:translateZ(0);" />
-   <img class="hero-slide" src="assets/images/noel-jamaica-sign.jpg" alt="" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 20%;filter:url(#img-enhance) brightness(1.04) contrast(1.1);opacity:0;transition:opacity 1.2s ease;transform:translateZ(0);" />
-   <img class="hero-slide" src="assets/images/noel-family-venue.jpg" alt="" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 15%;filter:url(#img-enhance) brightness(1.04) contrast(1.1);opacity:0;transition:opacity 1.2s ease;transform:translateZ(0);" />
+   <img class="hero-slide" src="assets/images/noel-airport-group.jpg" alt="" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 25%;filter:url(#img-enhance) brightness(1.0) contrast(1.02);opacity:0;transition:opacity 1.2s ease;transform:translateZ(0);" />
+   <img class="hero-slide" src="assets/images/noel-mural-group.jpg" alt="" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 20%;filter:url(#img-enhance) brightness(1.0) contrast(1.02);opacity:0;transition:opacity 1.2s ease;transform:translateZ(0);" />
+   <img class="hero-slide" src="assets/images/noel-horseback.jpg" alt="" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 15%;filter:url(#img-enhance) brightness(1.0) contrast(1.02);opacity:0;transition:opacity 1.2s ease;transform:translateZ(0);" />
+   <img class="hero-slide" src="assets/images/noel-bamboo-raft.jpg" alt="" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%;filter:url(#img-enhance) brightness(1.0) contrast(1.02);opacity:0;transition:opacity 1.2s ease;transform:translateZ(0);" />
+   <img class="hero-slide" src="assets/images/noel-coconut-stop.jpg" alt="" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 20%;filter:url(#img-enhance) brightness(1.0) contrast(1.02);opacity:0;transition:opacity 1.2s ease;transform:translateZ(0);" />
+    <img class="hero-slide" src="assets/images/noel-jamaica-sign.jpg" alt="" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 20%;filter:url(#img-enhance) brightness(1.0) contrast(1.02);opacity:0;transition:opacity 1.2s ease;transform:translateZ(0);" />
+   <img class="hero-slide" src="assets/images/noel-family-venue.jpg" alt="" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 15%;filter:url(#img-enhance) brightness(1.0) contrast(1.02);opacity:0;transition:opacity 1.2s ease;transform:translateZ(0);" />
  </div>
 
  <!-- Overlay -->
