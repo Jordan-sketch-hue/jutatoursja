@@ -38,7 +38,7 @@ function stripEmojiFromTextNodes() {
 
 function normalizeNavAndTrustCopy() {
   document.querySelectorAll('.nav-links a, .mobile-menu a, .trust-bar-item, .blog-cat, .filter-pill').forEach((el) => {
-    el.textContent = cleanLabel(el.textContent);
+    if (el.childElementCount === 0) el.textContent = cleanLabel(el.textContent);
   });
 
   const compactTrustMap = {
@@ -52,7 +52,12 @@ function normalizeNavAndTrustCopy() {
   document.querySelectorAll('.trust-bar-item').forEach((el) => {
     const current = cleanLabel(el.textContent);
     if (compactTrustMap[current]) {
-      el.textContent = compactTrustMap[current];
+      // Update text nodes only — preserve SVG icon children
+      el.childNodes.forEach((node) => {
+        if (node.nodeType === Node.TEXT_NODE && node.nodeValue.trim()) {
+          node.nodeValue = ' ' + compactTrustMap[current];
+        }
+      });
     }
   });
 }
@@ -66,29 +71,12 @@ function cleanLabel(value) {
 }
 
 function normalizeFooterSocialLabels() {
-  const fallbackLabels = {
-    instagram: 'IG',
-    facebook: 'FB',
-    tiktok: 'TT',
-    whatsapp: 'WA',
-    youtube: 'YT',
-    x: 'X',
-  };
-
-  document.querySelectorAll('.footer-social a').forEach((link) => {
-    const aria = (link.getAttribute('aria-label') || '').toLowerCase();
-    const hasText = link.textContent.trim().length > 0;
-    if (!hasText) {
-      const key = Object.keys(fallbackLabels).find((k) => aria.includes(k));
-      link.textContent = key ? fallbackLabels[key] : 'LN';
-    }
-  });
+  // Footer social links use SVG icons — leave them untouched
 }
 
 function normalizeA11yLabels() {
   const trigger = document.getElementById('a11yTrigger');
   if (trigger) {
-    trigger.textContent = 'A11Y';
     trigger.classList.add('premium-icon-token');
   }
 
@@ -120,18 +108,7 @@ function normalizeIconTokens() {
     icon.classList.add('premium-icon-token');
   });
 
-  document.querySelectorAll('.trust-item-icon, .sidebar-icon').forEach((icon) => {
-    const context = cleanLabel(icon.parentElement ? icon.parentElement.textContent : '').toLowerCase();
-    let token = 'JT';
-    if (context.includes('phone') || context.includes('contact')) token = 'CL';
-    if (context.includes('map') || context.includes('coverage') || context.includes('location')) token = 'MAP';
-    if (context.includes('airport') || context.includes('transfer')) token = 'AT';
-    if (context.includes('festival')) token = 'FT';
-    if (context.includes('excursion') || context.includes('tour')) token = 'EX';
-    if (context.includes('access')) token = 'AC';
-    icon.textContent = token;
-    icon.classList.add('premium-icon-token');
-  });
+  // trust-item-icon and sidebar-icon elements already contain SVG icons — skip them
 }
 
 function normalizeTagLikeLabels() {
@@ -151,8 +128,8 @@ function normalizeFooterBrand() {
 }
 
 function normalizeCommonCtas() {
-  document.querySelectorAll('.nav-whatsapp, .whatsapp-pill').forEach((el) => {
-    el.textContent = 'WhatsApp';
+  document.querySelectorAll('.whatsapp-pill').forEach((el) => {
+    if (el.childElementCount === 0) el.textContent = 'WhatsApp';
   });
 
   const mobileLabelMap = {
@@ -162,7 +139,6 @@ function normalizeCommonCtas() {
     Packages: 'Packages',
     About: 'About',
     FAQ: 'FAQ',
-    Blog: 'Journal',
   };
 
   document.querySelectorAll('.mobile-menu a').forEach((el) => {

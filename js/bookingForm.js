@@ -82,7 +82,7 @@ function setupForm(form) {
     });
   }
 
-  // Submission
+  // Submission — sends to WhatsApp AND email
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
     if (!validateStep(form, form)) return;
@@ -94,27 +94,23 @@ function setupForm(form) {
 
     const data = buildFormData(form);
 
+    // Always open WhatsApp with the enquiry
+    openWhatsApp(data);
+
+    // Also attempt email capture in background
     try {
-      // Primary: direct email capture endpoint (no custom backend needed)
       const endpoint = form.getAttribute('data-endpoint') || 'https://formsubmit.co/ajax/noeltourservice@hotmail.com';
-      const res = await fetch(endpoint, {
+      await fetch(endpoint, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
         body: JSON.stringify(data)
       });
-
-      const payload = await res.json().catch(() => ({}));
-      if (res.ok && payload.success === 'true') {
-        showSuccess(form, data);
-      } else {
-        throw new Error(payload.message || 'submission_failed');
-      }
-    } catch (err) {
-      // Fallback: open WhatsApp with prefilled message
-      openWhatsAppFallback(data);
+    } catch {
+      // Email is secondary — WhatsApp already opened, so silently ignore failures
     } finally {
       submitBtn.innerHTML = originalText;
       submitBtn.disabled = false;
+      showSuccess(form, data);
     }
   });
 }
@@ -174,19 +170,22 @@ function showSuccess(form, data) {
   form.scrollIntoView({ behavior: 'smooth', block: 'center' });
 }
 
-function openWhatsAppFallback(data) {
+function openWhatsApp(data) {
+  const name = [data.first_name || '', data.last_name || ''].filter(Boolean).join(' ');
   const lines = [
-    `*New Noel's Jamaica Vibes Tour Inquiry*`,
-    `Name: ${data.first_name || ''} ${data.last_name || ''}`.trim(),
-    `Service: ${data.service_type || ''}`,
-    `Date: ${data.travel_date || ''}`,
-    `Passengers: ${data.passengers || ''}`,
-    `Email: ${data.email || ''}`,
-    `Phone: ${data.phone || ''}`,
-    `Notes: ${data.notes || 'None'}`,
-  ].filter(l => !l.endsWith(': ')).join('\n');
+    `*New Booking Request — Noel's Jamaica Vibes Tour*`,
+    name ? `Name: ${name}` : null,
+    data.service_type ? `Service: ${data.service_type}` : null,
+    data.travel_date ? `Date: ${data.travel_date}` : null,
+    data.passengers ? `Passengers: ${data.passengers}` : null,
+    data.pickup_location ? `Pickup: ${data.pickup_location}` : null,
+    data.dropoff_location ? `Drop-off: ${data.dropoff_location}` : null,
+    data.flight_number ? `Flight: ${data.flight_number}` : null,
+    data.email ? `Email: ${data.email}` : null,
+    data.phone ? `Phone: ${data.phone}` : null,
+    data.notes ? `Notes: ${data.notes}` : null,
+  ].filter(Boolean).join('\n');
 
-  const phone = '18765551234'; // Replace with real WhatsApp number
-  const url = `https://wa.me/${phone}?text=${encodeURIComponent(lines)}`;
+  const url = `https://wa.me/18763929505?text=${encodeURIComponent(lines)}`;
   window.open(url, '_blank', 'noopener,noreferrer');
 }
