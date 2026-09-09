@@ -108,41 +108,31 @@
 <main id="main-content">
 
 <!-- ===================== HERO ===================== -->
-<section class="hero" aria-label="Hero section" style="position:relative;min-height:92vh;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;padding:0;">
+<section class="hero" aria-label="Hero section" style="position:relative;min-height:92vh;display:flex;flex-direction:column;justify-content:center;overflow:hidden;padding:0;">
 
- <!-- Slideshow backgrounds: images + videos stacked, JS fades between them -->
+ <!-- Slideshow: videos FIRST, then photos. All stacked absolute, JS fades between them -->
  <div id="hero-slides" style="position:absolute;inset:0;z-index:0;">
-   <!-- slide 0: image -->
-   <img class="hero-slide" src="assets/images/noel-airport-group.jpg" alt="" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(1.06) contrast(1.06) saturate(1.35) blur(0.4px);opacity:1;transition:opacity 1.2s ease;transform:translateZ(0);" />
-   <!-- slide 1: image -->
-   <img class="hero-slide" src="assets/images/noel-mural-group.jpg" alt="" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(1.06) contrast(1.06) saturate(1.35) blur(0.4px);opacity:0;transition:opacity 1.2s ease;transform:translateZ(0);" />
-   <!-- slide 2: video -->
-   <video class="hero-slide" muted loop playsinline preload="auto" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(1.06) contrast(1.06) saturate(1.35) blur(0.4px);opacity:0;transition:opacity 1.2s ease;transform:translateZ(0) scale(1.01);">
+   <video class="hero-slide" muted playsinline preload="auto" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center center;filter:brightness(1.06) contrast(1.06) saturate(1.38) blur(0.45px);opacity:1;transition:opacity 1.2s ease;transform:translateZ(0) scale(1.01);will-change:transform;">
      <source src="assets/videos/noel-tour-1.mp4" type="video/mp4" />
    </video>
-   <!-- slide 3: image -->
-   <img class="hero-slide" src="assets/images/noel-horseback.jpg" alt="" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(1.06) contrast(1.06) saturate(1.35) blur(0.4px);opacity:0;transition:opacity 1.2s ease;transform:translateZ(0);" />
-   <!-- slide 4: image -->
-   <img class="hero-slide" src="assets/images/noel-bamboo-raft.jpg" alt="" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(1.06) contrast(1.06) saturate(1.35) blur(0.4px);opacity:0;transition:opacity 1.2s ease;transform:translateZ(0);" />
-   <!-- slide 5: video -->
-   <video class="hero-slide" muted loop playsinline preload="auto" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(1.06) contrast(1.06) saturate(1.35) blur(0.4px);opacity:0;transition:opacity 1.2s ease;transform:translateZ(0) scale(1.01);">
+   <video class="hero-slide" muted playsinline preload="auto" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center center;filter:brightness(1.06) contrast(1.06) saturate(1.38) blur(0.45px);opacity:0;transition:opacity 1.2s ease;transform:translateZ(0) scale(1.01);will-change:transform;">
      <source src="assets/videos/noel-tour-2.mp4" type="video/mp4" />
    </video>
-   <!-- slide 6: image -->
-   <img class="hero-slide" src="assets/images/noel-coconut-stop.jpg" alt="" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(1.06) contrast(1.06) saturate(1.35) blur(0.4px);opacity:0;transition:opacity 1.2s ease;transform:translateZ(0);" />
-   <!-- slide 7: image -->
-   <img class="hero-slide" src="assets/images/noel-group-vans.jpg" alt="" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(1.06) contrast(1.06) saturate(1.35) blur(0.4px);opacity:0;transition:opacity 1.2s ease;transform:translateZ(0);" />
-   <!-- slide 8: image -->
-   <img class="hero-slide" src="assets/images/noel-jamaica-sign.jpg" alt="" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(1.06) contrast(1.06) saturate(1.35) blur(0.4px);opacity:0;transition:opacity 1.2s ease;transform:translateZ(0);" />
-   <!-- slide 9: image -->
-   <img class="hero-slide" src="assets/images/noel-family-venue.jpg" alt="" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(1.06) contrast(1.06) saturate(1.35) blur(0.4px);opacity:0;transition:opacity 1.2s ease;transform:translateZ(0);" />
+   <img class="hero-slide" src="assets/images/noel-airport-group.jpg" alt="" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 25%;filter:brightness(1.06) contrast(1.06) saturate(1.38) blur(0.45px);opacity:0;transition:opacity 1.2s ease;transform:translateZ(0);" />
+   <img class="hero-slide" src="assets/images/noel-mural-group.jpg" alt="" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 20%;filter:brightness(1.06) contrast(1.06) saturate(1.38) blur(0.45px);opacity:0;transition:opacity 1.2s ease;transform:translateZ(0);" />
+   <img class="hero-slide" src="assets/images/noel-horseback.jpg" alt="" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 15%;filter:brightness(1.06) contrast(1.06) saturate(1.38) blur(0.45px);opacity:0;transition:opacity 1.2s ease;transform:translateZ(0);" />
+   <img class="hero-slide" src="assets/images/noel-bamboo-raft.jpg" alt="" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%;filter:brightness(1.06) contrast(1.06) saturate(1.38) blur(0.45px);opacity:0;transition:opacity 1.2s ease;transform:translateZ(0);" />
+   <img class="hero-slide" src="assets/images/noel-coconut-stop.jpg" alt="" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 20%;filter:brightness(1.06) contrast(1.06) saturate(1.38) blur(0.45px);opacity:0;transition:opacity 1.2s ease;transform:translateZ(0);" />
+   <img class="hero-slide" src="assets/images/noel-group-vans.jpg" alt="" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 25%;filter:brightness(1.06) contrast(1.06) saturate(1.38) blur(0.45px);opacity:0;transition:opacity 1.2s ease;transform:translateZ(0);" />
+   <img class="hero-slide" src="assets/images/noel-jamaica-sign.jpg" alt="" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 20%;filter:brightness(1.06) contrast(1.06) saturate(1.38) blur(0.45px);opacity:0;transition:opacity 1.2s ease;transform:translateZ(0);" />
+   <img class="hero-slide" src="assets/images/noel-family-venue.jpg" alt="" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 15%;filter:brightness(1.06) contrast(1.06) saturate(1.38) blur(0.45px);opacity:0;transition:opacity 1.2s ease;transform:translateZ(0);" />
  </div>
 
  <!-- Overlay -->
- <div style="position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,0.28) 0%,rgba(0,20,8,0.52) 60%,rgba(0,0,0,0.82) 100%);z-index:1;"></div>
+ <div style="position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,0.25) 0%,rgba(0,20,8,0.5) 60%,rgba(0,0,0,0.78) 100%);z-index:1;"></div>
 
- <!-- Main content -->
- <div class="container" style="position:relative;z-index:2;flex:1;display:flex;flex-direction:column;justify-content:center;padding-top:4rem;padding-bottom:2rem;text-align:center;">
+ <!-- Content -->
+ <div class="container" style="position:relative;z-index:2;padding-top:4rem;padding-bottom:4rem;text-align:center;">
    <h1 style="color:white;font-size:clamp(2rem,5.5vw,3.75rem);font-weight:900;line-height:1.1;margin-bottom:1.1rem;text-shadow:0 2px 24px rgba(0,0,0,0.6);">
      Your verified <span style="color:#6ee89a;">islandwide guide</span> to<br><span style="color:#F9B233;">Jamaica's best</span> destinations &amp; transport.
    </h1>
@@ -167,48 +157,32 @@
      </a>
    </div>
  </div>
-
- <!-- Thumbnail strip at bottom -->
- <div style="position:relative;z-index:2;width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding:0 0 1.25rem;">
-   <div style="display:flex;gap:0.55rem;padding:0 1.25rem;width:max-content;">
-     <div style="flex:0 0 auto;width:clamp(90px,16vw,140px);height:clamp(60px,11vw,90px);border-radius:10px;overflow:hidden;border:2px solid rgba(255,255,255,0.22);box-shadow:0 4px 16px rgba(0,0,0,0.5);"><img src="assets/images/noel-airport-group.jpg" alt="" aria-hidden="true" style="width:100%;height:100%;object-fit:cover;" loading="eager" /></div>
-     <div style="flex:0 0 auto;width:clamp(90px,16vw,140px);height:clamp(60px,11vw,90px);border-radius:10px;overflow:hidden;border:2px solid rgba(255,255,255,0.22);box-shadow:0 4px 16px rgba(0,0,0,0.5);"><img src="assets/images/noel-mural-group.jpg" alt="" aria-hidden="true" style="width:100%;height:100%;object-fit:cover;" loading="eager" /></div>
-     <div style="flex:0 0 auto;width:clamp(90px,16vw,140px);height:clamp(60px,11vw,90px);border-radius:10px;overflow:hidden;border:2px solid rgba(255,255,255,0.22);box-shadow:0 4px 16px rgba(0,0,0,0.5);"><img src="assets/images/noel-horseback.jpg" alt="" aria-hidden="true" style="width:100%;height:100%;object-fit:cover;" loading="eager" /></div>
-     <div style="flex:0 0 auto;width:clamp(90px,16vw,140px);height:clamp(60px,11vw,90px);border-radius:10px;overflow:hidden;border:2px solid rgba(255,255,255,0.22);box-shadow:0 4px 16px rgba(0,0,0,0.5);"><img src="assets/images/noel-bamboo-raft.jpg" alt="" aria-hidden="true" style="width:100%;height:100%;object-fit:cover;" loading="eager" /></div>
-     <div style="flex:0 0 auto;width:clamp(90px,16vw,140px);height:clamp(60px,11vw,90px);border-radius:10px;overflow:hidden;border:2px solid rgba(255,255,255,0.22);box-shadow:0 4px 16px rgba(0,0,0,0.5);"><img src="assets/images/noel-coconut-stop.jpg" alt="" aria-hidden="true" style="width:100%;height:100%;object-fit:cover;" loading="eager" /></div>
-     <div style="flex:0 0 auto;width:clamp(90px,16vw,140px);height:clamp(60px,11vw,90px);border-radius:10px;overflow:hidden;border:2px solid rgba(255,255,255,0.22);box-shadow:0 4px 16px rgba(0,0,0,0.5);"><img src="assets/images/noel-family-venue.jpg" alt="" aria-hidden="true" style="width:100%;height:100%;object-fit:cover;" loading="eager" /></div>
-     <div style="flex:0 0 auto;width:clamp(90px,16vw,140px);height:clamp(60px,11vw,90px);border-radius:10px;overflow:hidden;border:2px solid rgba(255,255,255,0.22);box-shadow:0 4px 16px rgba(0,0,0,0.5);"><img src="assets/images/noel-group-vans.jpg" alt="" aria-hidden="true" style="width:100%;height:100%;object-fit:cover;" loading="eager" /></div>
-     <div style="flex:0 0 auto;width:clamp(90px,16vw,140px);height:clamp(60px,11vw,90px);border-radius:10px;overflow:hidden;border:2px solid rgba(255,255,255,0.22);box-shadow:0 4px 16px rgba(0,0,0,0.5);"><img src="assets/images/noel-jamaica-sign.jpg" alt="" aria-hidden="true" style="width:100%;height:100%;object-fit:cover;" loading="eager" /></div>
-     <div style="flex:0 0 auto;width:clamp(90px,16vw,140px);height:clamp(60px,11vw,90px);border-radius:10px;overflow:hidden;border:2px solid rgba(255,255,255,0.22);box-shadow:0 4px 16px rgba(0,0,0,0.5);"><img src="assets/images/noel-bob-marley-wall.jpg" alt="" aria-hidden="true" style="width:100%;height:100%;object-fit:cover;" loading="eager" /></div>
-     <div style="flex:0 0 auto;width:clamp(90px,16vw,140px);height:clamp(60px,11vw,90px);border-radius:10px;overflow:hidden;border:2px solid rgba(255,255,255,0.22);box-shadow:0 4px 16px rgba(0,0,0,0.5);"><img src="assets/images/noel-bob-marley-statue.jpg" alt="" aria-hidden="true" style="width:100%;height:100%;object-fit:cover;" loading="eager" /></div>
-   </div>
- </div>
- <div class="hero-accent-line" aria-hidden="true" style="position:relative;z-index:2;"></div>
+ <div class="hero-accent-line" aria-hidden="true" style="position:absolute;bottom:0;left:0;right:0;z-index:2;"></div>
 </section>
 <script>
 (function(){
-  var slides = document.querySelectorAll('#hero-slides .hero-slide');
-  var cur = 0;
-  var DURATION = 5000; // ms per image slide
-  // Pre-play all videos so they're ready
-  slides.forEach(function(s){ if(s.tagName==='VIDEO'){ s.play().catch(function(){}); } });
-  function next(){
+  var slides=document.querySelectorAll('#hero-slides .hero-slide');
+  var cur=0,t;
+  var VIDEO_MS=9000,IMG_MS=5000;
+  function isVid(el){return el.tagName==='VIDEO';}
+  // pre-load all videos silently
+  slides.forEach(function(s){if(isVid(s)){s.load();}});
+  // start first video
+  if(isVid(slides[0])){slides[0].play().catch(function(){});}
+  function goNext(){
     slides[cur].style.opacity='0';
+    if(isVid(slides[cur])){slides[cur].pause();}
     cur=(cur+1)%slides.length;
     slides[cur].style.opacity='1';
-    if(slides[cur].tagName==='VIDEO'){
+    if(isVid(slides[cur])){
       slides[cur].currentTime=0;
       slides[cur].play().catch(function(){});
-      // Advance after video plays ~8s or falls back
-      clearTimeout(t);
-      t=setTimeout(advance, 8000);
-    } else {
-      clearTimeout(t);
-      t=setTimeout(advance, DURATION);
+      t=setTimeout(goNext,VIDEO_MS);
+    }else{
+      t=setTimeout(goNext,IMG_MS);
     }
   }
-  function advance(){ next(); }
-  var t=setTimeout(advance, DURATION);
+  t=setTimeout(goNext,VIDEO_MS);
 })();
 </script>
 
