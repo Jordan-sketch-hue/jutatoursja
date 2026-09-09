@@ -63,6 +63,22 @@ function init() {
   }
 
   document.title = `${chosen.title} — Noel's Jamaica Vibes Tour`;
+
+  // Inject TouristAttraction JSON-LD for SEO rich results
+  const ld = document.createElement('script');
+  ld.type = 'application/ld+json';
+  ld.textContent = JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'TouristAttraction',
+    name: chosen.title,
+    description: chosen.summary,
+    url: `https://noels-jamaica-vibes-tour.vercel.app/excursion-detail?id=${encodeURIComponent(chosen.id)}`,
+    touristType: chosen.category,
+    address: { '@type': 'PostalAddress', addressCountry: 'JM', addressRegion: chosen.location },
+    provider: { '@type': 'TouristInformationCenter', name: "Noel's Jamaica Vibes Tour", telephone: '+1-876-392-9505' }
+  });
+  document.head.appendChild(ld);
+
   const h1 = document.getElementById('excursionTitle');
   const subtitle = document.getElementById('excursionSubtitle');
   const hero = document.getElementById('excursionHeroImage');
@@ -84,11 +100,11 @@ function init() {
           <p style="margin-top:0.65rem;">${escapeHtml(chosen.summary)}</p>
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.65rem;margin-top:1rem;">
             <div style="padding:0.7rem;background:var(--gray-light);border-radius:10px;"><strong style="font-size:0.8rem;">Duration</strong><p style="font-size:0.88rem;">${escapeHtml(chosen.duration)}</p></div>
-            <div style="padding:0.7rem;background:var(--gray-light);border-radius:10px;"><strong style="font-size:0.8rem;">Price</strong><p style="font-size:0.88rem;">From $${chosen.priceFrom}</p></div>
+            <div style="padding:0.7rem;background:var(--gray-light);border-radius:10px;"><strong style="font-size:0.8rem;">Location</strong><p style="font-size:0.88rem;">${escapeHtml(chosen.location)}</p></div>
           </div>
           <div style="display:flex;gap:0.6rem;flex-wrap:wrap;margin-top:1rem;">
-            <a href="contact.html?service=excursion&excursion=${encodeURIComponent(chosen.id)}" class="btn btn-primary">Book This Excursion</a>
-            <a href="https://wa.me/18763929505?text=${encodeURIComponent(`Hi, I want to book ${chosen.title}`)}" class="btn" style="background:var(--gray-light);color:var(--black);">WhatsApp</a>
+            <a href="https://wa.me/18763929505?text=${encodeURIComponent(`Hi Noel, I'd like a quote for: ${chosen.title}`)}" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Request Quote on WhatsApp</a>
+            <a href="contact.html?service=excursion&excursion=${encodeURIComponent(chosen.id)}" class="btn" style="background:var(--gray-light);color:var(--black);">Book via Form</a>
           </div>
         </div>
       </div>

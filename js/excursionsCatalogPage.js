@@ -1,10 +1,6 @@
 import { EXCURSIONS, CATEGORY_ORDER, getExcursionsByCategory } from './excursionsData.js';
 import { getExcursionImageForCard } from './excursionsOnlineImages.js';
 
-function formatPrice(price) {
-  return `$${price}`;
-}
-
 function slugify(value) {
   return value.toLowerCase().replace(/\s+/g, '-');
 }
@@ -22,10 +18,9 @@ function renderCard(item) {
         <h3 style="margin-top:0.55rem;">${item.title}</h3>
         <p style="font-size:0.88rem;margin:0.55rem 0 0.85rem;">${item.summary}</p>
         <div class="catalog-actions" style="display:flex;justify-content:space-between;align-items:center;gap:0.75rem;flex-wrap:wrap;">
-          <strong style="color:var(--green);font-size:1.02rem;">From ${formatPrice(item.priceFrom)}</strong>
           <div style="display:flex;gap:0.45rem;flex-wrap:wrap;">
             <a href="excursion-detail.html?id=${encodeURIComponent(item.id)}" class="btn btn-sm" style="background:var(--gray-light);color:var(--black);">View Details</a>
-            <a href="contact.html?service=excursion&excursion=${encodeURIComponent(item.id)}" class="btn btn-sm btn-primary">Book Now</a>
+            <a href="https://wa.me/18763929505?text=${encodeURIComponent('Hi Noel, I\'d like a quote for: ' + item.title)}" class="btn btn-sm btn-primary" target="_blank" rel="noopener noreferrer">Request Quote</a>
           </div>
         </div>
       </div>

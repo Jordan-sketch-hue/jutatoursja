@@ -17,20 +17,35 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/global.css" />
-  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
-  <script type="application/ld+json">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />  <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "TravelAgency",
+    "@type": "TouristInformationCenter",
     "name": "Noel's Jamaica Vibes Tour",
     "url": "https://noels-jamaica-vibes-tour.vercel.app",
-    "description": "Verified islandwide Jamaica travel guide — airport transfers, festival transport, curated excursions and private drivers.",
-    "areaServed": "Jamaica",
+    "description": "Verified islandwide Jamaica travel guide — airport transfers, festival transport, curated excursions and private drivers. JUTA licensed. 24/7 WhatsApp support.",
+    "areaServed": { "@type": "Country", "name": "Jamaica" },
     "telephone": "+1-876-392-9505",
-    "address": { "@type": "PostalAddress", "addressCountry": "JM" }
+    "address": { "@type": "PostalAddress", "addressCountry": "JM", "addressRegion": "Jamaica" },
+    "priceRange": "$$",
+    "openingHours": "Mo-Su 00:00-23:59",
+    "contactPoint": { "@type": "ContactPoint", "contactType": "customer service", "telephone": "+1-876-392-9505", "availableLanguage": "English" },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Jamaica Tour Services",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Airport Transfer", "description": "Private and shared airport transfers from Norman Manley and Sangster International Airports." } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Festival Transport", "description": "Safe transport to Reggae Sumfest, Dream Weekend, Jamaica Carnival." } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Curated Excursions", "description": "Guided excursions covering nature, culture, food, adventure and luxury across Jamaica." } }
+      ]
+    }
   }
   </script>
   <link rel="canonical" href="https://noels-jamaica-vibes-tour.vercel.app/" />
+
+  <!-- Google Analytics 4 - swap G-XXXXXXXXXX for your real Measurement ID -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');</script>
 <body>
 
 <!-- ===================== TRUST BAR ===================== -->
@@ -224,7 +239,7 @@
           <h3 style="margin-bottom:0.5rem;">Airport Pickup & Private Transfers</h3>
           <p style="font-size:0.9rem;margin-bottom:1rem;">Norman Manley & Sangster airports. Private vans and shuttle buses, meet &amp; greet sign, WhatsApp tracking, child seat option.</p>
           <div style="display:flex;justify-content:space-between;align-items:center;">
-            <span style="font-size:0.85rem;font-weight:700;color:var(--green);">From USD $45</span>
+            <a href="https://wa.me/18763929505?text=Hi%20Noel%2C%20I%27d%20like%20a%20quote%20for%20airport%20transfer." class="btn btn-sm btn-primary" target="_blank" rel="noopener noreferrer">Request Quote</a>
             <span style="font-size:0.85rem;color:var(--gray-text);">→ View details</span>
           </div>
         </div>
@@ -241,7 +256,7 @@
           <h3 style="margin-bottom:0.5rem;">Festival & Event Transportation</h3>
           <p style="font-size:0.9rem;margin-bottom:1rem;">Reggae Sumfest, Dream Weekend, Jamaica Carnival. Safe late-night returns. Backup driver network always on standby.</p>
           <div style="display:flex;justify-content:space-between;align-items:center;">
-            <span style="font-size:0.85rem;font-weight:700;color:var(--green);">From USD $35</span>
+            <a href="https://wa.me/18763929505?text=Hi%20Noel%2C%20I%27d%20like%20a%20quote%20for%20festival%20transport." class="btn btn-sm btn-primary" target="_blank" rel="noopener noreferrer">Request Quote</a>
             <span style="font-size:0.85rem;color:var(--gray-text);">→ View details</span>
           </div>
         </div>
@@ -257,7 +272,7 @@
           <h3 style="margin-bottom:0.5rem;">Curated Excursions & Tours</h3>
           <p style="font-size:0.9rem;margin-bottom:1rem;">Nature, culture, food, adventure, luxury, hidden gems. Filtered by parish, accessibility, price, duration and more.</p>
           <div style="display:flex;justify-content:space-between;align-items:center;">
-            <span style="font-size:0.85rem;font-weight:700;color:var(--green);">From USD $40</span>
+            <a href="https://wa.me/18763929505?text=Hi%20Noel%2C%20I%27d%20like%20a%20quote%20for%20a%20curated%20excursion." class="btn btn-sm btn-primary" target="_blank" rel="noopener noreferrer">Request Quote</a>
             <span style="font-size:0.85rem;color:var(--gray-text);">→ Browse all</span>
           </div>
         </div>
@@ -285,9 +300,8 @@
           <h4>Dunn's River Falls</h4>
           <p style="font-size:0.85rem;">Ocho Rios · 3 hrs</p>
           <div class="stars" aria-label="4.8 out of 5 stars">★★★★★</div>
-          <div style="display:flex;justify-content:space-between;margin-top:0.75rem;align-items:center;">
-            <strong style="color:var(--green);">$45</strong>
-            <a href="contact.html?excursion=dunns-river" class="btn btn-sm btn-primary">Book</a>
+          <div style="display:flex;justify-content:flex-end;margin-top:0.75rem;">
+            <a href="https://wa.me/18763929505?text=Hi%20Noel%2C%20I%27d%20like%20a%20quote%20for%3A%20Dunn%27s%20River%20Falls" class="btn btn-sm btn-primary" target="_blank" rel="noopener noreferrer">Request Quote</a>
           </div>
         </div>
       </div>
@@ -299,9 +313,8 @@
           <h4>Seven Mile Beach Day</h4>
           <p style="font-size:0.85rem;">Negril · Full Day</p>
           <div class="stars" aria-label="4.9 out of 5 stars">★★★★★</div>
-          <div style="display:flex;justify-content:space-between;margin-top:0.75rem;align-items:center;">
-            <strong style="color:var(--green);">$85</strong>
-            <a href="contact.html?excursion=seven-mile-beach" class="btn btn-sm btn-primary">Book</a>
+          <div style="display:flex;justify-content:flex-end;margin-top:0.75rem;">
+            <a href="https://wa.me/18763929505?text=Hi%20Noel%2C%20I%27d%20like%20a%20quote%20for%3A%20Seven%20Mile%20Beach%20Day" class="btn btn-sm btn-primary" target="_blank" rel="noopener noreferrer">Request Quote</a>
           </div>
         </div>
       </div>
@@ -313,9 +326,8 @@
           <h4>Luminous Lagoon Night</h4>
           <p style="font-size:0.85rem;">Falmouth · 2 hrs</p>
           <div class="stars" aria-label="4.9 out of 5 stars">★★★★★</div>
-          <div style="display:flex;justify-content:space-between;margin-top:0.75rem;align-items:center;">
-            <strong style="color:var(--green);">$40</strong>
-            <a href="contact.html?excursion=luminous-lagoon" class="btn btn-sm btn-primary">Book</a>
+          <div style="display:flex;justify-content:flex-end;margin-top:0.75rem;">
+            <a href="https://wa.me/18763929505?text=Hi%20Noel%2C%20I%27d%20like%20a%20quote%20for%3A%20Luminous%20Lagoon%20Night" class="btn btn-sm btn-primary" target="_blank" rel="noopener noreferrer">Request Quote</a>
           </div>
         </div>
       </div>
@@ -327,9 +339,8 @@
           <h4>Bob Marley Museum Tour</h4>
           <p style="font-size:0.85rem;">Kingston · 4 hrs</p>
           <div class="stars" aria-label="4.8 out of 5 stars">★★★★★</div>
-          <div style="display:flex;justify-content:space-between;margin-top:0.75rem;align-items:center;">
-            <strong style="color:var(--green);">$55</strong>
-            <a href="contact.html?excursion=bob-marley-museum" class="btn btn-sm btn-primary">Book</a>
+          <div style="display:flex;justify-content:flex-end;margin-top:0.75rem;">
+            <a href="https://wa.me/18763929505?text=Hi%20Noel%2C%20I%27d%20like%20a%20quote%20for%3A%20Bob%20Marley%20Museum%20Tour" class="btn btn-sm btn-primary" target="_blank" rel="noopener noreferrer">Request Quote</a>
           </div>
         </div>
       </div>
@@ -350,14 +361,13 @@
         <span style="display:flex;width:48px;height:48px;align-items:center;justify-content:center;background:rgba(0,155,58,0.1);border-radius:12px;margin-bottom:0.25rem;"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.44 11.05l-9.19 9.19a6 6 0 01-8.49-8.49l9.19-9.19a4 4 0 015.66 5.66l-9.2 9.19a2 2 0 01-2.83-2.83l8.49-8.48"/></svg></span>
         <h3 style="margin:0.75rem 0 0.25rem;">Explorer Package</h3>
         <p style="font-size:0.85rem;color:var(--gray-text);">The perfect first-timer bundle</p>
-        <div class="pricing-price">$199 <span>/ trip</span></div>
         <ul class="pricing-includes">
           <li><span class="check">✓</span> Airport pickup & return transfer</li>
           <li><span class="check">✓</span> 2 curated excursions</li>
           <li><span class="check">✓</span> 24/7 WhatsApp support</li>
           <li><span class="check">✓</span> Meet & greet sign service</li>
         </ul>
-        <a href="contact.html?package=explorer" class="btn btn-primary" style="width:100%;justify-content:center;">Book Explorer</a>
+        <a href="https://wa.me/18763929505?text=Hi%20Noel%2C%20I%27d%20like%20a%20quote%20for%20the%20Explorer%20Package." class="btn btn-primary" style="width:100%;justify-content:center;" target="_blank" rel="noopener noreferrer">Request Quote</a>
       </div>
 
       <div class="pricing-card featured reveal reveal-delay-1" style="position:relative;">
@@ -365,28 +375,26 @@
         <span style="display:flex;width:48px;height:48px;align-items:center;justify-content:center;background:rgba(255,255,255,0.15);border-radius:12px;margin-bottom:0.25rem;"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
         <h3 style="margin:0.75rem 0 0.25rem;">VIP Island Escape</h3>
         <p style="font-size:0.85rem;color:rgba(255,255,255,0.6);">Private, seamless, unforgettable</p>
-        <div class="pricing-price">$495 <span style="color:rgba(255,255,255,0.5);">/ day</span></div>
         <ul class="pricing-includes">
           <li><span class="check">✓</span> Private luxury vehicle all day</li>
           <li><span class="check">✓</span> Concierge itinerary service</li>
           <li><span class="check">✓</span> VIP restaurant reservations</li>
           <li><span class="check">✓</span> Priority airport fast-track</li>
         </ul>
-        <a href="contact.html?package=vip-escape" class="btn btn-gold" style="width:100%;justify-content:center;">Book VIP</a>
+        <a href="https://wa.me/18763929505?text=Hi%20Noel%2C%20I%27d%20like%20a%20quote%20for%20the%20VIP%20Island%20Escape%20package." class="btn btn-gold" style="width:100%;justify-content:center;" target="_blank" rel="noopener noreferrer">Request Quote</a>
       </div>
 
       <div class="pricing-card reveal reveal-delay-2">
         <span style="display:flex;width:48px;height:48px;align-items:center;justify-content:center;background:rgba(0,155,58,0.1);border-radius:12px;margin-bottom:0.25rem;"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></span>
         <h3 style="margin:0.75rem 0 0.25rem;">Festival Weekend</h3>
         <p style="font-size:0.85rem;color:var(--gray-text);">Live the full festival experience</p>
-        <div class="pricing-price">$175 <span>/ weekend</span></div>
         <ul class="pricing-includes">
           <li><span class="check">✓</span> Round-trip festival transport</li>
           <li><span class="check">✓</span> Late-night safe return guarantee</li>
           <li><span class="check">✓</span> Emergency backup driver</li>
           <li><span class="check">✓</span> Multi-event route optimization</li>
         </ul>
-        <a href="contact.html?package=festival-weekend" class="btn btn-primary" style="width:100%;justify-content:center;">Book Festival</a>
+        <a href="https://wa.me/18763929505?text=Hi%20Noel%2C%20I%27d%20like%20a%20quote%20for%20the%20Festival%20Weekend%20package." class="btn btn-primary" style="width:100%;justify-content:center;" target="_blank" rel="noopener noreferrer">Request Quote</a>
       </div>
     </div>
     <div style="text-align:center;margin-top:2rem;">
