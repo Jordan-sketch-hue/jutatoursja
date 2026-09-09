@@ -1483,3 +1483,52 @@ body.large-text { font-size: 18px; }
 .blog-card img {
   object-position: top center;
 }
+
+/* ---- HERO SLIDESHOW MOBILE FIXES ---- */
+/* The hero uses a JS video/image slideshow — override the legacy static-bg mobile rules */
+@media (max-width: 768px) {
+  .hero {
+    min-height: 85vh;
+    background-image: none !important;
+  }
+  /* Kill the white overlay that would cover the slideshow */
+  .hero::before {
+    display: none !important;
+  }
+  /* Tighten hero content padding on mobile */
+  .hero .container[style*="padding-top:4rem"] {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+  }
+  /* Hero text stack — center and tighten */
+  .hero-btns {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.65rem;
+  }
+  .hero-btns .btn-lg {
+    width: 100%;
+    max-width: 320px;
+    justify-content: center;
+  }
+  /* Stats 4-col → 2-col at 768 */
+  [style*="grid-template-columns:repeat(4,1fr)"] {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    min-height: 80vh;
+  }
+  /* Hero content padding even tighter on small phones */
+  .hero .container {
+    padding-top: 1.5rem !important;
+    padding-bottom: 1.5rem !important;
+  }
+  /* Feature badges — tighter on small screens */
+  .feature-badge {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.65rem;
+  }
+}
