@@ -1,409 +1,409 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Book your Jamaica trip with Noel's Jamaica Vibes Tour — airport transfers, excursions, festival transport and custom packages. Smart booking form with WhatsApp support." />
-  <meta property="og:title" content="Contact &amp; Book — Noel's Jamaica Vibes Tour" />
-  <meta property="og:description" content="Book your Jamaica trip with Noel's Jamaica Vibes Tour — airport transfers, excursions, festival transport and custom packages. Smart booking form with WhatsApp support." />
-  <meta property="og:image" content="https://noels-jamaica-vibes-tour.vercel.app/assets/images/jamaica-airport-pickup-group.jpg" />
-  <meta property="og:url" content="https://noels-jamaica-vibes-tour.vercel.app/contact.html" />
-  <meta property="og:type" content="website" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:image" content="https://noels-jamaica-vibes-tour.vercel.app/assets/images/jamaica-airport-pickup-group.jpg" />
-  <title>Contact &amp; Book — Noel's Jamaica Vibes Tour</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/css/global.css" />
-  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
-  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
-  <link rel="manifest" href="manifest.json" />
-  <style>
-    .contact-layout{display:grid;grid-template-columns:1fr 380px;gap:3rem;align-items:start;}
-    .contact-sidebar{display:flex;flex-direction:column;gap:1.25rem;position:sticky;top:90px;}
-    .sidebar-card{background:var(--gray-light);border-radius:var(--radius-lg);padding:1.5rem;}
-    .sidebar-card h4{font-size:0.9rem;font-weight:700;margin-bottom:0.75rem;}
-    .sidebar-item{display:flex;gap:0.75rem;align-items:start;padding:0.75rem 0;border-bottom:1px solid rgba(0,0,0,0.06);font-size:0.9rem;}
-    .sidebar-item:last-child{border-bottom:none;}
-    .sidebar-icon{width:34px;height:34px;border-radius:50%;background:var(--green);display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;}
-    .step-tabs{display:flex;gap:0;margin-bottom:2rem;border-radius:var(--radius-md);overflow:hidden;border:2px solid var(--green);}
-    .step-tab{flex:1;padding:0.75rem 0.25rem;text-align:center;font-size:0.8rem;font-weight:600;background:white;color:var(--gray-text);cursor:pointer;border:none;transition:all 0.2s;}
-    .step-tab.active{background:var(--green);color:white;}
-    .form-step{display:none;animation:fadeIn 0.3s ease;}
-    .form-step.active{display:block;}
-    @keyframes fadeIn{from{opacity:0;transform:translateY(6px);}to{opacity:1;transform:translateY(0);}}
-    .service-card-selector{display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;margin-top:0.5rem;}
-    .service-card-option{padding:1rem;border:2px solid rgba(0,0,0,0.1);border-radius:var(--radius-md);cursor:pointer;text-align:center;transition:all 0.2s;font-size:0.85rem;}
-    .service-card-option:hover{border-color:var(--green);background:rgba(0,155,58,0.05);}
-    .service-card-option.selected{border-color:var(--green);background:rgba(0,155,58,0.08);}
-    .service-card-option .sco-icon{font-size:0.72rem;margin-bottom:0.4rem;letter-spacing:0.08em;font-weight:700;color:var(--green);}
-    .service-card-option .sco-icon:empty::before{content:'SV';}
-    .service-card-option[data-value="airport-transfer"] .sco-icon:empty::before{content:'AT';}
-    .service-card-option[data-value="festival-transport"] .sco-icon:empty::before{content:'FT';}
-    .service-card-option[data-value="excursion"] .sco-icon:empty::before{content:'EX';}
-    .service-card-option[data-value="package"] .sco-icon:empty::before{content:'PK';}
-    .sidebar-icon:empty::before{content:'\2022';font-size:1rem;font-weight:800;color:#fff;}
-    .contact-map-grid{display:grid;grid-template-columns:2fr 1fr;gap:1rem;align-items:stretch;}
-    @media(max-width:900px){.contact-layout{grid-template-columns:1fr;}.contact-sidebar{position:static;}.contact-map-grid{grid-template-columns:1fr;}}
-    @media(max-width:600px){.service-card-selector{grid-template-columns:1fr 1fr;}}
-  </style>
-  <link rel="canonical" href="https://noels-jamaica-vibes-tour.vercel.app/contact.html" />
-  <!-- Google Analytics 4 - swap G-XXXXXXXXXX for your real Measurement ID -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');</script>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <meta name="description" content="Book your Jamaica trip with Noel's Jamaica Vibes Tour — airport transfers, excursions, festival transport and custom packages. Smart booking form with WhatsApp support." />
+ <meta property="og:title" content="Contact &amp; Book — Noel's Jamaica Vibes Tour" />
+ <meta property="og:description" content="Book your Jamaica trip with Noel's Jamaica Vibes Tour — airport transfers, excursions, festival transport and custom packages. Smart booking form with WhatsApp support." />
+ <meta property="og:image" content="https://noels-jamaica-vibes-tour.vercel.app/assets/images/jamaica-airport-pickup-group.jpg" />
+ <meta property="og:url" content="https://noels-jamaica-vibes-tour.vercel.app/contact.html" />
+ <meta property="og:type" content="website" />
+ <meta name="twitter:card" content="summary_large_image" />
+ <meta name="twitter:image" content="https://noels-jamaica-vibes-tour.vercel.app/assets/images/jamaica-airport-pickup-group.jpg" />
+ <title>Contact &amp; Book — Noel's Jamaica Vibes Tour</title>
+ <link rel="preconnect" href="https://fonts.googleapis.com" />
+ <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+ <link rel="stylesheet" href="assets/css/global.css" />
+ <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+ <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+ <link rel="manifest" href="manifest.json" />
+ <style>
+ .contact-layout{display:grid;grid-template-columns:1fr 380px;gap:3rem;align-items:start;}
+ .contact-sidebar{display:flex;flex-direction:column;gap:1.25rem;position:sticky;top:90px;}
+ .sidebar-card{background:var(--gray-light);border-radius:var(--radius-lg);padding:1.5rem;}
+ .sidebar-card h4{font-size:0.9rem;font-weight:700;margin-bottom:0.75rem;}
+ .sidebar-item{display:flex;gap:0.75rem;align-items:start;padding:0.75rem 0;border-bottom:1px solid rgba(0,0,0,0.06);font-size:0.9rem;}
+ .sidebar-item:last-child{border-bottom:none;}
+ .sidebar-icon{width:34px;height:34px;border-radius:50%;background:var(--green);display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;}
+ .step-tabs{display:flex;gap:0;margin-bottom:2rem;border-radius:var(--radius-md);overflow:hidden;border:2px solid var(--green);}
+ .step-tab{flex:1;padding:0.75rem 0.25rem;text-align:center;font-size:0.8rem;font-weight:600;background:white;color:var(--gray-text);cursor:pointer;border:none;transition:all 0.2s;}
+ .step-tab.active{background:var(--green);color:white;}
+ .form-step{display:none;animation:fadeIn 0.3s ease;}
+ .form-step.active{display:block;}
+ @keyframes fadeIn{from{opacity:0;transform:translateY(6px);}to{opacity:1;transform:translateY(0);}}
+ .service-card-selector{display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;margin-top:0.5rem;}
+ .service-card-option{padding:1rem;border:2px solid rgba(0,0,0,0.1);border-radius:var(--radius-md);cursor:pointer;text-align:center;transition:all 0.2s;font-size:0.85rem;}
+ .service-card-option:hover{border-color:var(--green);background:rgba(0,155,58,0.05);}
+ .service-card-option.selected{border-color:var(--green);background:rgba(0,155,58,0.08);}
+ .service-card-option .sco-icon{font-size:0.72rem;margin-bottom:0.4rem;letter-spacing:0.08em;font-weight:700;color:var(--green);}
+ .service-card-option .sco-icon:empty::before{content:'SV';}
+ .service-card-option[data-value="airport-transfer"] .sco-icon:empty::before{content:'AT';}
+ .service-card-option[data-value="festival-transport"] .sco-icon:empty::before{content:'FT';}
+ .service-card-option[data-value="excursion"] .sco-icon:empty::before{content:'EX';}
+ .service-card-option[data-value="package"] .sco-icon:empty::before{content:'PK';}
+ .sidebar-icon:empty::before{content:'\2022';font-size:1rem;font-weight:800;color:#fff;}
+ .contact-map-grid{display:grid;grid-template-columns:2fr 1fr;gap:1rem;align-items:stretch;}
+ @media(max-width:900px){.contact-layout{grid-template-columns:1fr;}.contact-sidebar{position:static;}.contact-map-grid{grid-template-columns:1fr;}}
+ @media(max-width:600px){.service-card-selector{grid-template-columns:1fr 1fr;}}
+ </style>
+ <link rel="canonical" href="https://noels-jamaica-vibes-tour.vercel.app/contact.html" />
+ <!-- Google Analytics 4 - swap G-XXXXXXXXXX for your real Measurement ID -->
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+ <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');</script>
 <body>
 
-<div class="trust-bar"><div class="trust-bar-inner"><span class="trust-bar-item">⚡ Reply within 2 hours</span><span class="trust-bar-item">💬 WhatsApp 24/7</span><span class="trust-bar-item">🔒 Your data is safe</span><span class="trust-bar-item">✅ No payment upfront</span></div></div>
+<div class="trust-bar"><div class="trust-bar-inner"><span class="trust-bar-item">⚡ Reply within 2 hours</span><span class="trust-bar-item"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><circle cx="6" cy="6" r="6" fill="#c8a85a" opacity="0.2"/><path d="M3.5 6l2 2 3-3" stroke="#c8a85a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> WhatsApp 24/7</span><span class="trust-bar-item"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><circle cx="6" cy="6" r="6" fill="#c8a85a" opacity="0.2"/><path d="M3.5 6l2 2 3-3" stroke="#c8a85a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Your data is safe</span><span class="trust-bar-item"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><circle cx="6" cy="6" r="6" fill="#c8a85a" opacity="0.2"/><path d="M3.5 6l2 2 3-3" stroke="#c8a85a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> No payment upfront</span></div></div>
 
 <nav class="nav" role="navigation" aria-label="Main navigation">
-  <div class="nav-inner">
-    <a href="index.html" class="nav-logo"><div class="logo-badge">NV</div><span>Noel's Jamaica Vibes Tour</span></a>
-    <ul class="nav-links">
-      <li><a href="airport-transfer.html">Airport Transfer</a></li>
-      <li><a href="festival-transport.html">Festivals</a></li>
-      <li><a href="excursions.html">Excursions</a></li>
-      <li><a href="cruise-excursions.html">Cruise Guests</a></li>
-      <li><a href="packages.html">Packages</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="blog.html">Blog</a></li>
-    </ul>
-    <div class="nav-cta"><a href="https://wa.me/18763929505" class="nav-whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> WhatsApp</a><a href="contact.html" class="nav-book-btn active">Book Now</a></div>
-    <button class="nav-hamburger" id="menuBtn" aria-label="Toggle mobile menu" aria-expanded="false"><span></span><span></span><span></span></button>
-  </div>
-  <div id="mobileMenu" class="mobile-menu">
-    <a href="airport-transfer.html">Airport Transfer</a><a href="festival-transport.html">Festival Transport</a><a href="excursions.html">Excursions</a><a href="cruise-excursions.html">Cruise Guests</a><a href="packages.html">Packages</a><a href="about.html">About</a><a href="faq.html">FAQ</a><a href="blog.html">Blog</a>
-    <a href="contact.html" class="mobile-book-btn">Book Your Trip</a>
-  </div>
+ <div class="nav-inner">
+ <a href="index.html" class="nav-logo"><div class="logo-badge"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" width="36" height="36" aria-hidden="true"><rect width="36" height="36" rx="8" fill="#0d3320"/><line x1="18" y1="34" x2="18" y2="17" stroke="#c8a85a" stroke-width="2.2" stroke-linecap="round"/><path d="M18,17 Q10,10 5,12 Q10,15 15,20" fill="#1a7a4a"/><path d="M18,17 Q18,7 18,2 Q19,10 21,18" fill="#1a7a4a"/><path d="M18,17 Q26,10 31,12 Q26,15 21,20" fill="#15683f"/><path d="M18,17 Q11,13 7,17 Q11,17 16,21" fill="#1a7a4a" opacity="0.75"/><path d="M18,17 Q25,13 29,17 Q25,17 20,21" fill="#15683f" opacity="0.75"/><circle cx="17" cy="18" r="1.8" fill="#c8a85a"/><circle cx="20" cy="19" r="1.8" fill="#c8a85a"/></svg></div><span>Noel's Jamaica Vibes Tour</span></a>
+ <ul class="nav-links">
+ <li><a href="airport-transfer.html">Airport Transfer</a></li>
+ <li><a href="festival-transport.html">Festivals</a></li>
+ <li><a href="excursions.html">Excursions</a></li>
+ <li><a href="cruise-excursions.html">Cruise Guests</a></li>
+ <li><a href="packages.html">Packages</a></li>
+ <li><a href="about.html">About</a></li>
+ <li><a href="blog.html">Blog</a></li>
+ </ul>
+ <div class="nav-cta"><a href="https://wa.me/18763929505" class="nav-whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> WhatsApp</a><a href="contact.html" class="nav-book-btn active">Book Now</a></div>
+ <button class="nav-hamburger" id="menuBtn" aria-label="Toggle mobile menu" aria-expanded="false"><span></span><span></span><span></span></button>
+ </div>
+ <div id="mobileMenu" class="mobile-menu">
+ <a href="airport-transfer.html">Airport Transfer</a><a href="festival-transport.html">Festival Transport</a><a href="excursions.html">Excursions</a><a href="cruise-excursions.html">Cruise Guests</a><a href="packages.html">Packages</a><a href="about.html">About</a><a href="faq.html">FAQ</a><a href="blog.html">Blog</a>
+ <a href="contact.html" class="mobile-book-btn">Book Your Trip</a>
+ </div>
 </nav>
 
 <main id="main-content">
 
 <section class="page-hero" style="min-height:260px;">
-  <div class="page-hero-bg" style="background-image:url('assets/images/jamaica-beach.jpg');" aria-hidden="true"></div>
-  <div class="container page-hero-content">
-    <nav aria-label="Breadcrumb" style="margin-bottom:1.25rem;"><ol style="display:flex;gap:0.5rem;font-size:0.82rem;color:rgba(255,255,255,0.5);"><li><a href="index.html" style="color:rgba(255,255,255,0.5);">Home</a></li><li style="color:rgba(255,255,255,0.3);">/</li><li style="color:rgba(255,255,255,0.9);">Book / Contact</li></ol></nav>
-    <p class="section-label">Your Jamaica Journey Starts Here</p>
-    <h1 id="contact-page-heading">Book Your Trip or Ask Us Anything</h1>
-    <p style="margin-top:0.75rem;max-width:540px;">Fill in the form below and our team will get back to you within 2 hours with a confirmed quote and booking details.</p>
-  </div>
+ <div class="page-hero-bg" style="background-image:url('assets/images/jamaica-beach.jpg');" aria-hidden="true"></div>
+ <div class="container page-hero-content">
+ <nav aria-label="Breadcrumb" style="margin-bottom:1.25rem;"><ol style="display:flex;gap:0.5rem;font-size:0.82rem;color:rgba(255,255,255,0.5);"><li><a href="index.html" style="color:rgba(255,255,255,0.5);">Home</a></li><li style="color:rgba(255,255,255,0.3);">/</li><li style="color:rgba(255,255,255,0.9);">Book / Contact</li></ol></nav>
+ <p class="section-label">Your Jamaica Journey Starts Here</p>
+ <h1 id="contact-page-heading">Book Your Trip or Ask Us Anything</h1>
+ <p style="margin-top:0.75rem;max-width:540px;">Fill in the form below and our team will get back to you within 2 hours with a confirmed quote and booking details.</p>
+ </div>
 </section>
 
 <section class="section" style="padding-top:3rem;">
-  <div class="container">
-    <div class="contact-layout">
+ <div class="container">
+ <div class="contact-layout">
 
-      <!-- BOOKING FORM -->
-      <div>
-        <div class="booking-form" aria-labelledby="booking-form-heading">
-          <h2 id="booking-form-heading" style="font-size:1.3rem;margin-bottom:0.25rem;">New Booking Request</h2>
-          <p style="font-size:0.85rem;color:var(--gray-text);margin-bottom:1.75rem;">All fields marked <span class="req">*</span> are required. We never share your information with third parties.</p>
+ <!-- BOOKING FORM -->
+ <div>
+ <div class="booking-form" aria-labelledby="booking-form-heading">
+ <h2 id="booking-form-heading" style="font-size:1.3rem;margin-bottom:0.25rem;">New Booking Request</h2>
+ <p style="font-size:0.85rem;color:var(--gray-text);margin-bottom:1.75rem;">All fields marked <span class="req">*</span> are required. We never share your information with third parties.</p>
 
-          <!-- STEP TABS -->
-          <div class="step-tabs" role="tablist" aria-label="Booking steps">
-            <button class="step-tab active" id="tab1" role="tab" aria-selected="true" aria-controls="step1">1. You</button>
-            <button class="step-tab" id="tab2" role="tab" aria-selected="false" aria-controls="step2">2. Service</button>
-            <button class="step-tab" id="tab3" role="tab" aria-selected="false" aria-controls="step3">3. Trip Details</button>
-            <button class="step-tab" id="tab4" role="tab" aria-selected="false" aria-controls="step4">4. Preferences</button>
-          </div>
+ <!-- STEP TABS -->
+ <div class="step-tabs" role="tablist" aria-label="Booking steps">
+ <button class="step-tab active" id="tab1" role="tab" aria-selected="true" aria-controls="step1">1. You</button>
+ <button class="step-tab" id="tab2" role="tab" aria-selected="false" aria-controls="step2">2. Service</button>
+ <button class="step-tab" id="tab3" role="tab" aria-selected="false" aria-controls="step3">3. Trip Details</button>
+ <button class="step-tab" id="tab4" role="tab" aria-selected="false" aria-controls="step4">4. Preferences</button>
+ </div>
 
-          <form id="jutatours-main-form" novalidate aria-label="Jamaica trip booking form">
-            <input type="hidden" name="source_page" value="contact.html" />
-            <input type="hidden" id="hidden_service" name="service_type" value="" />
-            <input type="hidden" id="hidden_package" name="package" value="" />
-            <input type="hidden" id="hidden_excursion" name="excursion" value="" />
+ <form id="jutatours-main-form" novalidate aria-label="Jamaica trip booking form">
+ <input type="hidden" name="source_page" value="contact.html" />
+ <input type="hidden" id="hidden_service" name="service_type" value="" />
+ <input type="hidden" id="hidden_package" name="package" value="" />
+ <input type="hidden" id="hidden_excursion" name="excursion" value="" />
 
-            <!-- STEP 1: Personal Info -->
-            <div class="form-step active" id="step1" role="tabpanel" aria-labelledby="tab1">
-              <div class="form-row">
-                <div class="form-group"><label class="form-label" for="c_fname">First Name <span class="req">*</span></label><input class="form-input" type="text" id="c_fname" name="first_name" required placeholder="First name" autocomplete="given-name" /><span class="form-error" data-error-for="first_name">Required.</span></div>
-                <div class="form-group"><label class="form-label" for="c_lname">Last Name <span class="req">*</span></label><input class="form-input" type="text" id="c_lname" name="last_name" required placeholder="Last name" autocomplete="family-name" /><span class="form-error" data-error-for="last_name">Required.</span></div>
-              </div>
-              <div class="form-group"><label class="form-label" for="c_email">Email Address <span class="req">*</span></label><input class="form-input" type="email" id="c_email" name="email" required placeholder="you@example.com" autocomplete="email" /><span class="form-error" data-error-for="email">Please enter a valid email.</span></div>
-              <div class="form-row">
-                <div class="form-group"><label class="form-label" for="c_phone">Phone / WhatsApp <span class="req">*</span></label><input class="form-input" type="tel" id="c_phone" name="phone" required placeholder="+1 876 000 0000" autocomplete="tel" /><span class="form-error" data-error-for="phone">Required.</span></div>
-                <div class="form-group"><label class="form-label" for="c_country">Country of Origin <span class="req">*</span></label><select class="form-select" id="c_country" name="country" required autocomplete="country"><option value="">Select country</option><option>United States</option><option>United Kingdom</option><option>Canada</option><option>Jamaica</option><option>Trinidad &amp; Tobago</option><option>Barbados</option><option>Germany</option><option>France</option><option>Japan</option><option>Australia</option><option>Other</option></select><span class="form-error" data-error-for="country">Required.</span></div>
-              </div>
-              <p class="form-hint"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-2px;margin-right:3px;"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>Add your WhatsApp number for the fastest response.</p>
-              <div style="display:flex;justify-content:flex-end;margin-top:1.5rem;">
-                <button type="button" class="btn btn-primary" id="nextStep1">Continue →</button>
-              </div>
-            </div>
+ <!-- STEP 1: Personal Info -->
+ <div class="form-step active" id="step1" role="tabpanel" aria-labelledby="tab1">
+ <div class="form-row">
+ <div class="form-group"><label class="form-label" for="c_fname">First Name <span class="req">*</span></label><input class="form-input" type="text" id="c_fname" name="first_name" required placeholder="First name" autocomplete="given-name" /><span class="form-error" data-error-for="first_name">Required.</span></div>
+ <div class="form-group"><label class="form-label" for="c_lname">Last Name <span class="req">*</span></label><input class="form-input" type="text" id="c_lname" name="last_name" required placeholder="Last name" autocomplete="family-name" /><span class="form-error" data-error-for="last_name">Required.</span></div>
+ </div>
+ <div class="form-group"><label class="form-label" for="c_email">Email Address <span class="req">*</span></label><input class="form-input" type="email" id="c_email" name="email" required placeholder="you@example.com" autocomplete="email" /><span class="form-error" data-error-for="email">Please enter a valid email.</span></div>
+ <div class="form-row">
+ <div class="form-group"><label class="form-label" for="c_phone">Phone / WhatsApp <span class="req">*</span></label><input class="form-input" type="tel" id="c_phone" name="phone" required placeholder="+1 876 000 0000" autocomplete="tel" /><span class="form-error" data-error-for="phone">Required.</span></div>
+ <div class="form-group"><label class="form-label" for="c_country">Country of Origin <span class="req">*</span></label><select class="form-select" id="c_country" name="country" required autocomplete="country"><option value="">Select country</option><option>United States</option><option>United Kingdom</option><option>Canada</option><option>Jamaica</option><option>Trinidad &amp; Tobago</option><option>Barbados</option><option>Germany</option><option>France</option><option>Japan</option><option>Australia</option><option>Other</option></select><span class="form-error" data-error-for="country">Required.</span></div>
+ </div>
+ <p class="form-hint"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-2px;margin-right:3px;"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>Add your WhatsApp number for the fastest response.</p>
+ <div style="display:flex;justify-content:flex-end;margin-top:1.5rem;">
+ <button type="button" class="btn btn-primary" id="nextStep1">Continue →</button>
+ </div>
+ </div>
 
-            <!-- STEP 2: Service Selection -->
-            <div class="form-step" id="step2" role="tabpanel" aria-labelledby="tab2">
-              <p class="form-label" style="margin-bottom:0.5rem;">What service do you need? <span class="req">*</span></p>
-              <div class="service-card-selector" id="serviceSelector" role="group" aria-label="Service selection">
-                <div class="service-card-option" data-value="airport-transfer" tabindex="0" role="button" aria-pressed="false"><div class="sco-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21 4 19 2c-2-2-4-2-5.5-.5L10 5 1.8 6.2c-.5.1-.9.6-.6 1.1l1.5 2.7c.3.5.9.7 1.4.5l2.4-1L8 13l-2 1.5c-.4.3-.4.9 0 1.3l2.2 2.2c.4.4 1 .4 1.3 0L11 16l3.5 1.5c-.2.5 0 1.1.5 1.4l2.7 1.5c.5.3 1 0 1.1-.5z"/></svg></div><strong>Airport Transfer</strong><p style="font-size:0.75rem;color:var(--gray-text);margin-top:0.2rem;">From $45</p></div>
-                <div class="service-card-option" data-value="festival-transport" tabindex="0" role="button" aria-pressed="false"><div class="sco-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></div><strong>Festival Transport</strong><p style="font-size:0.75rem;color:var(--gray-text);margin-top:0.2rem;">From $35/person</p></div>
-                <div class="service-card-option" data-value="excursion" tabindex="0" role="button" aria-pressed="false"><div class="sco-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 20A7 7 0 014 13c0-4 3-7 7-7h1V3s4 2 4 7a7 7 0 01-5 6.7V20"/></svg></div><strong>Day Excursion</strong><p style="font-size:0.75rem;color:var(--gray-text);margin-top:0.2rem;">From $75</p></div>
-                <div class="service-card-option" data-value="package" tabindex="0" role="button" aria-pressed="false"><div class="sco-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16.5 9.4l-9-5.19M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 002 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></div><strong>Package Bundle</strong><p style="font-size:0.75rem;color:var(--gray-text);margin-top:0.2rem;">From $175</p></div>
-              </div>
-              <span class="form-error" id="service-selection-error" style="display:none;">Please select a service to continue.</span>
+ <!-- STEP 2: Service Selection -->
+ <div class="form-step" id="step2" role="tabpanel" aria-labelledby="tab2">
+ <p class="form-label" style="margin-bottom:0.5rem;">What service do you need? <span class="req">*</span></p>
+ <div class="service-card-selector" id="serviceSelector" role="group" aria-label="Service selection">
+ <div class="service-card-option" data-value="airport-transfer" tabindex="0" role="button" aria-pressed="false"><div class="sco-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21 4 19 2c-2-2-4-2-5.5-.5L10 5 1.8 6.2c-.5.1-.9.6-.6 1.1l1.5 2.7c.3.5.9.7 1.4.5l2.4-1L8 13l-2 1.5c-.4.3-.4.9 0 1.3l2.2 2.2c.4.4 1 .4 1.3 0L11 16l3.5 1.5c-.2.5 0 1.1.5 1.4l2.7 1.5c.5.3 1 0 1.1-.5z"/></svg></div><strong>Airport Transfer</strong><p style="font-size:0.75rem;color:var(--gray-text);margin-top:0.2rem;">From $45</p></div>
+ <div class="service-card-option" data-value="festival-transport" tabindex="0" role="button" aria-pressed="false"><div class="sco-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></div><strong>Festival Transport</strong><p style="font-size:0.75rem;color:var(--gray-text);margin-top:0.2rem;">From $35/person</p></div>
+ <div class="service-card-option" data-value="excursion" tabindex="0" role="button" aria-pressed="false"><div class="sco-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 20A7 7 0 014 13c0-4 3-7 7-7h1V3s4 2 4 7a7 7 0 01-5 6.7V20"/></svg></div><strong>Day Excursion</strong><p style="font-size:0.75rem;color:var(--gray-text);margin-top:0.2rem;">From $75</p></div>
+ <div class="service-card-option" data-value="package" tabindex="0" role="button" aria-pressed="false"><div class="sco-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16.5 9.4l-9-5.19M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 002 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></div><strong>Package Bundle</strong><p style="font-size:0.75rem;color:var(--gray-text);margin-top:0.2rem;">From $175</p></div>
+ </div>
+ <span class="form-error" id="service-selection-error" style="display:none;">Please select a service to continue.</span>
 
-              <!-- Conditional: Airport -->
-              <div id="cond-airport" style="display:none;margin-top:1.25rem;">
-                <div class="form-row">
-                  <div class="form-group"><label class="form-label" for="c_airport">Airport</label><select class="form-select" id="c_airport" name="airport"><option value="">Select airport</option><option value="MBJ">Sangster Intl (MBJ) — Montego Bay</option><option value="KIN">Norman Manley Intl (KIN) — Kingston</option></select></div>
-                  <div class="form-group"><label class="form-label" for="c_direction">Direction</label><select class="form-select" id="c_direction" name="direction"><option value="">Select</option><option value="arrival">Arrival (pickup from airport)</option><option value="departure">Departure (to airport)</option><option value="both">Both ways</option></select></div>
-                </div>
-                <div class="form-group"><label class="form-label" for="c_flight">Flight Number</label><input class="form-input" type="text" id="c_flight" name="flight_number" placeholder="e.g. AA 1234" /></div>
-              </div>
+ <!-- Conditional: Airport -->
+ <div id="cond-airport" style="display:none;margin-top:1.25rem;">
+ <div class="form-row">
+ <div class="form-group"><label class="form-label" for="c_airport">Airport</label><select class="form-select" id="c_airport" name="airport"><option value="">Select airport</option><option value="MBJ">Sangster Intl (MBJ) — Montego Bay</option><option value="KIN">Norman Manley Intl (KIN) — Kingston</option></select></div>
+ <div class="form-group"><label class="form-label" for="c_direction">Direction</label><select class="form-select" id="c_direction" name="direction"><option value="">Select</option><option value="arrival">Arrival (pickup from airport)</option><option value="departure">Departure (to airport)</option><option value="both">Both ways</option></select></div>
+ </div>
+ <div class="form-group"><label class="form-label" for="c_flight">Flight Number</label><input class="form-input" type="text" id="c_flight" name="flight_number" placeholder="e.g. AA 1234" /></div>
+ </div>
 
-              <!-- Conditional: Festival -->
-              <div id="cond-festival" style="display:none;margin-top:1.25rem;">
-                <div class="form-group"><label class="form-label" for="c_festival">Festival / Event</label><select class="form-select" id="c_festival" name="festival"><option value="">Select event</option><option value="sumfest">Reggae Sumfest</option><option value="dream-weekend">Dream Weekend</option><option value="carnival">Jamaica Carnival</option><option value="rebel-salute">Rebel Salute</option><option value="other-event">Other event</option></select></div>
-                <div class="form-group"><label class="form-label" for="c_transport_tier">Transport Tier</label><select class="form-select" id="c_transport_tier" name="transport_tier"><option value="">Select</option><option value="solo">Solo Shuttle</option><option value="group">Group Charter</option><option value="vip">VIP Private</option></select></div>
-              </div>
+ <!-- Conditional: Festival -->
+ <div id="cond-festival" style="display:none;margin-top:1.25rem;">
+ <div class="form-group"><label class="form-label" for="c_festival">Festival / Event</label><select class="form-select" id="c_festival" name="festival"><option value="">Select event</option><option value="sumfest">Reggae Sumfest</option><option value="dream-weekend">Dream Weekend</option><option value="carnival">Jamaica Carnival</option><option value="rebel-salute">Rebel Salute</option><option value="other-event">Other event</option></select></div>
+ <div class="form-group"><label class="form-label" for="c_transport_tier">Transport Tier</label><select class="form-select" id="c_transport_tier" name="transport_tier"><option value="">Select</option><option value="solo">Solo Shuttle</option><option value="group">Group Charter</option><option value="vip">VIP Private</option></select></div>
+ </div>
 
-              <!-- Conditional: Excursion -->
-              <div id="cond-excursion" style="display:none;margin-top:1.25rem;">
-                <div class="form-group"><label class="form-label" for="c_excursion">Excursion</label><select class="form-select" id="c_excursion" name="excursion_choice">
-                  <option value="">Select excursion</option>
-                  <optgroup label="Nature">
-                    <option value="dunns-river-falls">Dunn's River Falls</option>
-                    <option value="blue-hole-secret-falls">Blue Hole (Secret Falls / Island Gully)</option>
-                    <option value="ys-falls">YS Falls</option>
-                    <option value="reach-falls">Reach Falls</option>
-                    <option value="green-grotto-caves">Green Grotto Caves</option>
-                    <option value="blue-mountains-tour">Blue Mountains (hiking + coffee tours)</option>
-                    <option value="cockpit-country">Cockpit Country</option>
-                    <option value="black-river-safari">Black River Safari Tour</option>
-                    <option value="martha-brae-rafting">Martha Brae River bamboo rafting</option>
-                    <option value="rio-grande-rafting">Rio Grande River rafting</option>
-                  </optgroup>
-                  <optgroup label="Beach">
-                    <option value="seven-mile-beach">Seven Mile Beach</option>
-                    <option value="doctors-cave-beach">Doctor's Cave Beach</option>
-                    <option value="frenchmans-cove">Frenchman's Cove</option>
-                    <option value="boston-bay-beach">Boston Bay Beach</option>
-                    <option value="winnifred-beach">Winnifred Beach</option>
-                    <option value="hellshire-beach">Hellshire Beach</option>
-                    <option value="james-bond-beach">James Bond Beach</option>
-                  </optgroup>
-                  <optgroup label="Culture">
-                    <option value="bob-marley-museum">Bob Marley Museum</option>
-                    <option value="devon-house">Devon House</option>
-                    <option value="rose-hall-great-house">Rose Hall Great House</option>
-                    <option value="accompong-maroon-village">Accompong Maroon Village</option>
-                    <option value="rastafari-indigenous-village">Rastafari Indigenous Village</option>
-                    <option value="falmouth-historic-district">Falmouth Historic District</option>
-                    <option value="port-royal">Port Royal</option>
-                  </optgroup>
-                  <optgroup label="Food">
-                    <option value="scotchies">Scotchies</option>
-                    <option value="ricks-cafe-dining">Rick's Cafe</option>
-                    <option value="boston-jerk-centre">Boston Jerk Centre</option>
-                    <option value="glorias-seafood">Gloria's Seafood</option>
-                    <option value="kingston-street-food-flavours">Kingston Street Food &amp; Flavours</option>
-                    <option value="appleton-estate">Appleton Estate rum tours</option>
-                    <option value="sweetwood-jerk-joint">Sweetwood Jerk Joint</option>
-                    <option value="tracks-and-records">Usain Bolt's Tracks &amp; Records</option>
-                  </optgroup>
-                  <optgroup label="Adventure">
-                    <option value="mystic-mountain">Mystic Mountain</option>
-                    <option value="chukka-caribbean">Chukka Caribbean Adventures</option>
-                    <option value="dolphin-cove-adventure">Dolphin Cove</option>
-                    <option value="yaaman-adventure-park">Yaaman Adventure Park</option>
-                    <option value="blue-hole-mineral-spring">Blue Hole Mineral Spring</option>
-                    <option value="luminous-lagoon-swim">Luminous Lagoon night glow swim</option>
-                    <option value="negril-cliffs-diving">Negril Cliffs cliff diving</option>
-                  </optgroup>
-                  <optgroup label="Luxury">
-                    <option value="private-yacht-mobay">Private yacht charter - Montego Bay Marine Park</option>
-                    <option value="helicopter-island-tour">Helicopter tours (island aerial views)</option>
-                    <option value="tryall-roundhill-villas">Private villas in Tryall Club / Round Hill</option>
-                    <option value="taboo-nightclub-vip">VIP nightlife: Taboo Nightclub</option>
-                    <option value="strawberry-hill-spa">Spa day: Strawberry Hill Spa</option>
-                    <option value="pelican-bar-sunset-boat-trip">Pelican Bar Sunset Boat Trip</option>
-                  </optgroup>
-                  <optgroup label="Hidden Gems">
-                    <option value="somerset-falls">Somerset Falls</option>
-                    <option value="konoko-falls">Konoko Falls</option>
-                    <option value="reggae-falls">Reggae Falls</option>
-                    <option value="cane-river-falls">Cane River Falls</option>
-                    <option value="lovers-leap">Lovers Leap</option>
-                    <option value="milk-river-bath">Milk River Bath</option>
-                  </optgroup>
-                  <optgroup label="Accessible">
-                    <option value="emancipation-park">Emancipation Park</option>
-                    <option value="hope-botanical-gardens">Hope Botanical Gardens</option>
-                    <option value="blue-mountain-scenic-drive">Scenic Blue Mountain drive (no hike option)</option>
-                    <option value="doctors-cave-private-setup">Private beach setups at Doctor's Cave</option>
-                  </optgroup>
-                  <optgroup label="Family">
-                    <option value="kool-runnings-water-park">Kool Runnings Water Park</option>
-                    <option value="hope-zoo">Hope Zoo</option>
-                    <option value="dolphin-cove-family">Dolphin Cove</option>
-                    <option value="mystic-mountain-family">Mystic Mountain</option>
-                  </optgroup>
-                  <optgroup label="Couples">
-                    <option value="sunset-cruise-mobay">Sunset cruise in Montego Bay</option>
-                    <option value="caves-restaurant-dinner">Private dinner at The Caves Restaurant</option>
-                    <option value="blue-lagoon-romance">Blue Lagoon romance tour</option>
-                    <option value="strawberry-hill-retreat">Spa + retreat at Strawberry Hill</option>
-                  </optgroup>
-                  <option value="custom">Custom / I'll describe below</option>
-                </select></div>
-              </div>
+ <!-- Conditional: Excursion -->
+ <div id="cond-excursion" style="display:none;margin-top:1.25rem;">
+ <div class="form-group"><label class="form-label" for="c_excursion">Excursion</label><select class="form-select" id="c_excursion" name="excursion_choice">
+ <option value="">Select excursion</option>
+ <optgroup label="Nature">
+ <option value="dunns-river-falls">Dunn's River Falls</option>
+ <option value="blue-hole-secret-falls">Blue Hole (Secret Falls / Island Gully)</option>
+ <option value="ys-falls">YS Falls</option>
+ <option value="reach-falls">Reach Falls</option>
+ <option value="green-grotto-caves">Green Grotto Caves</option>
+ <option value="blue-mountains-tour">Blue Mountains (hiking + coffee tours)</option>
+ <option value="cockpit-country">Cockpit Country</option>
+ <option value="black-river-safari">Black River Safari Tour</option>
+ <option value="martha-brae-rafting">Martha Brae River bamboo rafting</option>
+ <option value="rio-grande-rafting">Rio Grande River rafting</option>
+ </optgroup>
+ <optgroup label="Beach">
+ <option value="seven-mile-beach">Seven Mile Beach</option>
+ <option value="doctors-cave-beach">Doctor's Cave Beach</option>
+ <option value="frenchmans-cove">Frenchman's Cove</option>
+ <option value="boston-bay-beach">Boston Bay Beach</option>
+ <option value="winnifred-beach">Winnifred Beach</option>
+ <option value="hellshire-beach">Hellshire Beach</option>
+ <option value="james-bond-beach">James Bond Beach</option>
+ </optgroup>
+ <optgroup label="Culture">
+ <option value="bob-marley-museum">Bob Marley Museum</option>
+ <option value="devon-house">Devon House</option>
+ <option value="rose-hall-great-house">Rose Hall Great House</option>
+ <option value="accompong-maroon-village">Accompong Maroon Village</option>
+ <option value="rastafari-indigenous-village">Rastafari Indigenous Village</option>
+ <option value="falmouth-historic-district">Falmouth Historic District</option>
+ <option value="port-royal">Port Royal</option>
+ </optgroup>
+ <optgroup label="Food">
+ <option value="scotchies">Scotchies</option>
+ <option value="ricks-cafe-dining">Rick's Cafe</option>
+ <option value="boston-jerk-centre">Boston Jerk Centre</option>
+ <option value="glorias-seafood">Gloria's Seafood</option>
+ <option value="kingston-street-food-flavours">Kingston Street Food &amp; Flavours</option>
+ <option value="appleton-estate">Appleton Estate rum tours</option>
+ <option value="sweetwood-jerk-joint">Sweetwood Jerk Joint</option>
+ <option value="tracks-and-records">Usain Bolt's Tracks &amp; Records</option>
+ </optgroup>
+ <optgroup label="Adventure">
+ <option value="mystic-mountain">Mystic Mountain</option>
+ <option value="chukka-caribbean">Chukka Caribbean Adventures</option>
+ <option value="dolphin-cove-adventure">Dolphin Cove</option>
+ <option value="yaaman-adventure-park">Yaaman Adventure Park</option>
+ <option value="blue-hole-mineral-spring">Blue Hole Mineral Spring</option>
+ <option value="luminous-lagoon-swim">Luminous Lagoon night glow swim</option>
+ <option value="negril-cliffs-diving">Negril Cliffs cliff diving</option>
+ </optgroup>
+ <optgroup label="Luxury">
+ <option value="private-yacht-mobay">Private yacht charter - Montego Bay Marine Park</option>
+ <option value="helicopter-island-tour">Helicopter tours (island aerial views)</option>
+ <option value="tryall-roundhill-villas">Private villas in Tryall Club / Round Hill</option>
+ <option value="taboo-nightclub-vip">VIP nightlife: Taboo Nightclub</option>
+ <option value="strawberry-hill-spa">Spa day: Strawberry Hill Spa</option>
+ <option value="pelican-bar-sunset-boat-trip">Pelican Bar Sunset Boat Trip</option>
+ </optgroup>
+ <optgroup label="Hidden Gems">
+ <option value="somerset-falls">Somerset Falls</option>
+ <option value="konoko-falls">Konoko Falls</option>
+ <option value="reggae-falls">Reggae Falls</option>
+ <option value="cane-river-falls">Cane River Falls</option>
+ <option value="lovers-leap">Lovers Leap</option>
+ <option value="milk-river-bath">Milk River Bath</option>
+ </optgroup>
+ <optgroup label="Accessible">
+ <option value="emancipation-park">Emancipation Park</option>
+ <option value="hope-botanical-gardens">Hope Botanical Gardens</option>
+ <option value="blue-mountain-scenic-drive">Scenic Blue Mountain drive (no hike option)</option>
+ <option value="doctors-cave-private-setup">Private beach setups at Doctor's Cave</option>
+ </optgroup>
+ <optgroup label="Family">
+ <option value="kool-runnings-water-park">Kool Runnings Water Park</option>
+ <option value="hope-zoo">Hope Zoo</option>
+ <option value="dolphin-cove-family">Dolphin Cove</option>
+ <option value="mystic-mountain-family">Mystic Mountain</option>
+ </optgroup>
+ <optgroup label="Couples">
+ <option value="sunset-cruise-mobay">Sunset cruise in Montego Bay</option>
+ <option value="caves-restaurant-dinner">Private dinner at The Caves Restaurant</option>
+ <option value="blue-lagoon-romance">Blue Lagoon romance tour</option>
+ <option value="strawberry-hill-retreat">Spa + retreat at Strawberry Hill</option>
+ </optgroup>
+ <option value="custom">Custom / I'll describe below</option>
+ </select></div>
+ </div>
 
-              <!-- Conditional: Package -->
-              <div id="cond-package" style="display:none;margin-top:1.25rem;">
-                <div class="form-group"><label class="form-label" for="c_package">Package</label><select class="form-select" id="c_package" name="package_choice">
-                  <option value="">Select package</option>
-                  <option value="explorer">Explorer Package</option>
-                  <option value="vip-escape">VIP Island Escape</option>
-                  <option value="culture">Culture &amp; Flavours</option>
-                  <option value="festival-weekend">Festival Weekend</option>
-                  <option value="digital-nomad">Digital Nomad Weekly</option>
-                  <option value="romantic-proposal">Romantic Proposal</option>
-                  <option value="custom">Custom — build my own</option>
-                </select></div>
-              </div>
+ <!-- Conditional: Package -->
+ <div id="cond-package" style="display:none;margin-top:1.25rem;">
+ <div class="form-group"><label class="form-label" for="c_package">Package</label><select class="form-select" id="c_package" name="package_choice">
+ <option value="">Select package</option>
+ <option value="explorer">Explorer Package</option>
+ <option value="vip-escape">VIP Island Escape</option>
+ <option value="culture">Culture &amp; Flavours</option>
+ <option value="festival-weekend">Festival Weekend</option>
+ <option value="digital-nomad">Digital Nomad Weekly</option>
+ <option value="romantic-proposal">Romantic Proposal</option>
+ <option value="custom">Custom — build my own</option>
+ </select></div>
+ </div>
 
-              <div style="display:flex;justify-content:space-between;margin-top:1.5rem;">
-                <button type="button" class="btn btn-lg" style="background:var(--gray-light);color:var(--black);" id="prevStep2">← Back</button>
-                <button type="button" class="btn btn-primary" id="nextStep2">Continue →</button>
-              </div>
-            </div>
+ <div style="display:flex;justify-content:space-between;margin-top:1.5rem;">
+ <button type="button" class="btn btn-lg" style="background:var(--gray-light);color:var(--black);" id="prevStep2">← Back</button>
+ <button type="button" class="btn btn-primary" id="nextStep2">Continue →</button>
+ </div>
+ </div>
 
-            <!-- STEP 3: Trip Details -->
-            <div class="form-step" id="step3" role="tabpanel" aria-labelledby="tab3">
-              <div class="form-row">
-                <div class="form-group"><label class="form-label" for="c_date">Travel Date <span class="req">*</span></label><input class="form-input" type="date" id="c_date" name="travel_date" required /><span class="form-error" data-error-for="travel_date">Required.</span></div>
-                <div class="form-group"><label class="form-label" for="c_pax">Number of Travellers <span class="req">*</span></label><select class="form-select" id="c_pax" name="passengers" required><option value="">Select</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5-8">5–8</option><option value="9-14">9–14</option><option value="15+">15+</option></select><span class="form-error" data-error-for="passengers">Required.</span></div>
-              </div>
-              <div class="form-row">
-                <div class="form-group"><label class="form-label" for="c_budget">Budget Range (USD)</label><select class="form-select" id="c_budget" name="budget_range"><option value="">Select budget range</option><option value="under-200">Under $200</option><option value="200-500">$200-$500</option><option value="500-1000">$500-$1,000</option><option value="1000-2000">$1,000-$2,000</option><option value="2000-plus">$2,000+</option></select><p class="form-hint">Helps us recommend the best package mix and add-ons.</p></div>
-                <div class="form-group"><label class="form-label" for="c_trip_style">Trip Style</label><select class="form-select" id="c_trip_style" name="trip_style"><option value="">Select trip style</option><option value="family">Family</option><option value="couples">Couples / Romantic</option><option value="friends">Friends Group</option><option value="solo">Solo</option><option value="business">Business / VIP</option><option value="diaspora">Returning Jamaican / Diaspora</option></select></div>
-              </div>
-              <div class="form-group"><label class="form-label" for="c_pickup">Pickup Location <span class="req">*</span></label><input class="form-input" type="text" id="c_pickup" name="pickup_location" required placeholder="Hotel / villa / address" /><span class="form-error" data-error-for="pickup_location">Required.</span></div>
-              <div class="form-group"><label class="form-label" for="c_dropoff">Drop-off / Destination</label><input class="form-input" type="text" id="c_dropoff" name="dropoff_location" placeholder="Final destination or hotel" /></div>
-              <fieldset style="border:1px solid rgba(0,0,0,0.1);border-radius:var(--radius-md);padding:1.25rem;">
-                <legend style="font-size:0.85rem;font-weight:600;padding:0 0.5rem;color:var(--gray-text);">Special requirements (select all that apply)</legend>
-                <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.5rem;margin-top:0.5rem;">
-                  <label style="display:flex;align-items:center;gap:0.5rem;font-size:0.88rem;cursor:pointer;"><input type="checkbox" name="special_req[]" value="child_seat" style="width:auto;" /> Child / baby seat</label>
-                  <label style="display:flex;align-items:center;gap:0.5rem;font-size:0.88rem;cursor:pointer;"><input type="checkbox" name="special_req[]" value="wheelchair" style="width:auto;" /> Wheelchair accessible</label>
-                  <label style="display:flex;align-items:center;gap:0.5rem;font-size:0.88rem;cursor:pointer;"><input type="checkbox" name="special_req[]" value="female_driver" style="width:auto;" /> Female driver preferred</label>
-                  <label style="display:flex;align-items:center;gap:0.5rem;font-size:0.88rem;cursor:pointer;"><input type="checkbox" name="special_req[]" value="quiet_ride" style="width:auto;" /> Quiet ride (no music)</label>
-                  <label style="display:flex;align-items:center;gap:0.5rem;font-size:0.88rem;cursor:pointer;"><input type="checkbox" name="special_req[]" value="large_luggage" style="width:auto;" /> Extra luggage / cargo</label>
-                  <label style="display:flex;align-items:center;gap:0.5rem;font-size:0.88rem;cursor:pointer;"><input type="checkbox" name="special_req[]" value="pet" style="width:auto;" /> Pet-friendly vehicle</label>
-                </div>
-              </fieldset>
-              <div style="display:flex;justify-content:space-between;margin-top:1.5rem;">
-                <button type="button" class="btn btn-lg" style="background:var(--gray-light);color:var(--black);" id="prevStep3">← Back</button>
-                <button type="button" class="btn btn-primary" id="nextStep3">Continue →</button>
-              </div>
-            </div>
+ <!-- STEP 3: Trip Details -->
+ <div class="form-step" id="step3" role="tabpanel" aria-labelledby="tab3">
+ <div class="form-row">
+ <div class="form-group"><label class="form-label" for="c_date">Travel Date <span class="req">*</span></label><input class="form-input" type="date" id="c_date" name="travel_date" required /><span class="form-error" data-error-for="travel_date">Required.</span></div>
+ <div class="form-group"><label class="form-label" for="c_pax">Number of Travellers <span class="req">*</span></label><select class="form-select" id="c_pax" name="passengers" required><option value="">Select</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5-8">5–8</option><option value="9-14">9–14</option><option value="15+">15+</option></select><span class="form-error" data-error-for="passengers">Required.</span></div>
+ </div>
+ <div class="form-row">
+ <div class="form-group"><label class="form-label" for="c_budget">Budget Range (USD)</label><select class="form-select" id="c_budget" name="budget_range"><option value="">Select budget range</option><option value="under-200">Under $200</option><option value="200-500">$200-$500</option><option value="500-1000">$500-$1,000</option><option value="1000-2000">$1,000-$2,000</option><option value="2000-plus">$2,000+</option></select><p class="form-hint">Helps us recommend the best package mix and add-ons.</p></div>
+ <div class="form-group"><label class="form-label" for="c_trip_style">Trip Style</label><select class="form-select" id="c_trip_style" name="trip_style"><option value="">Select trip style</option><option value="family">Family</option><option value="couples">Couples / Romantic</option><option value="friends">Friends Group</option><option value="solo">Solo</option><option value="business">Business / VIP</option><option value="diaspora">Returning Jamaican / Diaspora</option></select></div>
+ </div>
+ <div class="form-group"><label class="form-label" for="c_pickup">Pickup Location <span class="req">*</span></label><input class="form-input" type="text" id="c_pickup" name="pickup_location" required placeholder="Hotel / villa / address" /><span class="form-error" data-error-for="pickup_location">Required.</span></div>
+ <div class="form-group"><label class="form-label" for="c_dropoff">Drop-off / Destination</label><input class="form-input" type="text" id="c_dropoff" name="dropoff_location" placeholder="Final destination or hotel" /></div>
+ <fieldset style="border:1px solid rgba(0,0,0,0.1);border-radius:var(--radius-md);padding:1.25rem;">
+ <legend style="font-size:0.85rem;font-weight:600;padding:0 0.5rem;color:var(--gray-text);">Special requirements (select all that apply)</legend>
+ <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.5rem;margin-top:0.5rem;">
+ <label style="display:flex;align-items:center;gap:0.5rem;font-size:0.88rem;cursor:pointer;"><input type="checkbox" name="special_req[]" value="child_seat" style="width:auto;" /> Child / baby seat</label>
+ <label style="display:flex;align-items:center;gap:0.5rem;font-size:0.88rem;cursor:pointer;"><input type="checkbox" name="special_req[]" value="wheelchair" style="width:auto;" /> Wheelchair accessible</label>
+ <label style="display:flex;align-items:center;gap:0.5rem;font-size:0.88rem;cursor:pointer;"><input type="checkbox" name="special_req[]" value="female_driver" style="width:auto;" /> Female driver preferred</label>
+ <label style="display:flex;align-items:center;gap:0.5rem;font-size:0.88rem;cursor:pointer;"><input type="checkbox" name="special_req[]" value="quiet_ride" style="width:auto;" /> Quiet ride (no music)</label>
+ <label style="display:flex;align-items:center;gap:0.5rem;font-size:0.88rem;cursor:pointer;"><input type="checkbox" name="special_req[]" value="large_luggage" style="width:auto;" /> Extra luggage / cargo</label>
+ <label style="display:flex;align-items:center;gap:0.5rem;font-size:0.88rem;cursor:pointer;"><input type="checkbox" name="special_req[]" value="pet" style="width:auto;" /> Pet-friendly vehicle</label>
+ </div>
+ </fieldset>
+ <div style="display:flex;justify-content:space-between;margin-top:1.5rem;">
+ <button type="button" class="btn btn-lg" style="background:var(--gray-light);color:var(--black);" id="prevStep3">← Back</button>
+ <button type="button" class="btn btn-primary" id="nextStep3">Continue →</button>
+ </div>
+ </div>
 
-            <!-- STEP 4: Preferences & Submit -->
-            <div class="form-step" id="step4" role="tabpanel" aria-labelledby="tab4">
-              <div class="form-group"><label class="form-label" for="c_access">Accessibility or Medical Needs</label><input class="form-input" type="text" id="c_access" name="accessibility_needs" placeholder="e.g. hard of hearing, mobility aid, visual impairment..." /></div>
-              <div class="form-group"><label class="form-label">Preferred Communication</label>
-                <div style="display:flex;gap:1rem;margin-top:0.4rem;flex-wrap:wrap;">
-                  <label style="display:flex;align-items:center;gap:0.4rem;font-size:0.88rem;cursor:pointer;"><input type="radio" name="preferred_contact" value="whatsapp" style="width:auto;" checked /> WhatsApp</label>
-                  <label style="display:flex;align-items:center;gap:0.4rem;font-size:0.88rem;cursor:pointer;"><input type="radio" name="preferred_contact" value="email" style="width:auto;" /> Email</label>
-                  <label style="display:flex;align-items:center;gap:0.4rem;font-size:0.88rem;cursor:pointer;"><input type="radio" name="preferred_contact" value="call" style="width:auto;" /> Phone call</label>
-                </div>
-              </div>
-              <div class="form-group"><label class="form-label" for="c_notes">Additional Notes</label><textarea class="form-textarea" id="c_notes" name="notes" rows="4" placeholder="Anything else we should know about your trip? Special occasions, dietary needs, specific stops en route..." data-maxlength="800"></textarea><p class="form-hint"><span data-counter-for="notes">0</span>/800 characters · The more you share, the better we can prepare.</p></div>
+ <!-- STEP 4: Preferences & Submit -->
+ <div class="form-step" id="step4" role="tabpanel" aria-labelledby="tab4">
+ <div class="form-group"><label class="form-label" for="c_access">Accessibility or Medical Needs</label><input class="form-input" type="text" id="c_access" name="accessibility_needs" placeholder="e.g. hard of hearing, mobility aid, visual impairment..." /></div>
+ <div class="form-group"><label class="form-label">Preferred Communication</label>
+ <div style="display:flex;gap:1rem;margin-top:0.4rem;flex-wrap:wrap;">
+ <label style="display:flex;align-items:center;gap:0.4rem;font-size:0.88rem;cursor:pointer;"><input type="radio" name="preferred_contact" value="whatsapp" style="width:auto;" checked /> WhatsApp</label>
+ <label style="display:flex;align-items:center;gap:0.4rem;font-size:0.88rem;cursor:pointer;"><input type="radio" name="preferred_contact" value="email" style="width:auto;" /> Email</label>
+ <label style="display:flex;align-items:center;gap:0.4rem;font-size:0.88rem;cursor:pointer;"><input type="radio" name="preferred_contact" value="call" style="width:auto;" /> Phone call</label>
+ </div>
+ </div>
+ <div class="form-group"><label class="form-label" for="c_notes">Additional Notes</label><textarea class="form-textarea" id="c_notes" name="notes" rows="4" placeholder="Anything else we should know about your trip? Special occasions, dietary needs, specific stops en route..." data-maxlength="800"></textarea><p class="form-hint"><span data-counter-for="notes">0</span>/800 characters · The more you share, the better we can prepare.</p></div>
 
-              <div class="form-success notice notice-success" style="display:none;flex-direction:column;gap:0.5rem;">
-                <strong style="font-size:1.05rem;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-2px;margin-right:4px;color:var(--green);"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Booking request received, <span class="success-name"></span>!</strong>
-                <p style="margin:0;">Our team will review your details and send a confirmed quote to your email within 2 hours. Check your WhatsApp too!</p>
-                <div style="margin-top:1rem;display:flex;gap:0.75rem;flex-wrap:wrap;">
-                  <a href="https://wa.me/18763929505" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer" aria-label="Follow up on WhatsApp"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="margin-right:4px;vertical-align:-1px;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>Follow up on WhatsApp</a>
-                  <a href="excursions.html" class="btn btn-sm" style="background:var(--gray-light);color:var(--black);">Browse more excursions</a>
-                </div>
-              </div>
+ <div class="form-success notice notice-success" style="display:none;flex-direction:column;gap:0.5rem;">
+ <strong style="font-size:1.05rem;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-2px;margin-right:4px;color:var(--green);"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Booking request received, <span class="success-name"></span>!</strong>
+ <p style="margin:0;">Our team will review your details and send a confirmed quote to your email within 2 hours. Check your WhatsApp too!</p>
+ <div style="margin-top:1rem;display:flex;gap:0.75rem;flex-wrap:wrap;">
+ <a href="https://wa.me/18763929505" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer" aria-label="Follow up on WhatsApp"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="margin-right:4px;vertical-align:-1px;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>Follow up on WhatsApp</a>
+ <a href="excursions.html" class="btn btn-sm" style="background:var(--gray-light);color:var(--black);">Browse more excursions</a>
+ </div>
+ </div>
 
-              <div class="form-fields">
-                <p style="font-size:0.8rem;color:var(--gray-text);margin-bottom:1rem;padding:0.75rem;background:var(--gray-light);border-radius:var(--radius-sm);"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-1px;margin-right:3px;"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>Your information is encrypted and never sold. By submitting you agree to our <a href="faq.html#privacy" style="color:var(--green);">Privacy Policy</a>. No payment is taken at this stage.</p>
-                <button type="submit" class="btn btn-primary btn-lg" style="width:100%;justify-content:center;">🇯🇲 Send My Booking Request</button>
-                <p style="text-align:center;font-size:0.78rem;color:var(--gray-text);margin-top:0.75rem;">Prefer to message directly? <a href="https://wa.me/18763929505" style="color:var(--green);">WhatsApp (Digicel)</a> · <a href="tel:+18763929505" style="color:var(--green);">Call +1 876-392-9505</a> · <a href="tel:+18763442401" style="color:var(--green);">Call +1 876-344-2401</a></p>
-              </div>
+ <div class="form-fields">
+ <p style="font-size:0.8rem;color:var(--gray-text);margin-bottom:1rem;padding:0.75rem;background:var(--gray-light);border-radius:var(--radius-sm);"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-1px;margin-right:3px;"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>Your information is encrypted and never sold. By submitting you agree to our <a href="faq.html#privacy" style="color:var(--green);">Privacy Policy</a>. No payment is taken at this stage.</p>
+ <button type="submit" class="btn btn-primary btn-lg" style="width:100%;justify-content:center;"> Send My Booking Request</button>
+ <p style="text-align:center;font-size:0.78rem;color:var(--gray-text);margin-top:0.75rem;">Prefer to message directly? <a href="https://wa.me/18763929505" style="color:var(--green);">WhatsApp (Digicel)</a> · <a href="tel:+18763929505" style="color:var(--green);">Call +1 876-392-9505</a> · <a href="tel:+18763442401" style="color:var(--green);">Call +1 876-344-2401</a></p>
+ </div>
 
-              <div style="display:flex;justify-content:flex-start;margin-top:0.5rem;">
-                <button type="button" class="btn" style="background:var(--gray-light);color:var(--black);" id="prevStep4">← Back</button>
-              </div>
-            </div>
+ <div style="display:flex;justify-content:flex-start;margin-top:0.5rem;">
+ <button type="button" class="btn" style="background:var(--gray-light);color:var(--black);" id="prevStep4">← Back</button>
+ </div>
+ </div>
 
-          </form>
-        </div>
-      </div>
+ </form>
+ </div>
+ </div>
 
-      <!-- SIDEBAR -->
-      <aside class="contact-sidebar">
-        <div class="sidebar-card" style="background:var(--green);color:white;">
-          <h4 style="color:white;">⚡ Response Time</h4>
-          <p style="font-size:0.9rem;opacity:0.9;">We reply to every request within <strong>2 hours</strong> during business hours, <strong>same day</strong> on weekends.</p>
-        </div>
-        <div class="sidebar-card">
-          <h4>Contact Us Directly</h4>
-          <div class="sidebar-item"><div class="sidebar-icon" style="background:var(--green);"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></div><div><strong>WhatsApp</strong><br/><a href="https://wa.me/18763929505" style="color:var(--green);font-weight:600;">+1 876-392-9505</a><br/><span style="font-size:0.78rem;color:var(--gray-text);">Available 24/7</span></div></div>
-          <div class="sidebar-item"><div class="sidebar-icon" style="background:var(--gold-dark);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.95 19.79 19.79 0 012 1.36a2 2 0 012-2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 6.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div><div><strong>Phone</strong><br/><a href="tel:+18763929505" style="color:var(--gold-dark);font-weight:600;">+1 876-392-9505 (Digicel)</a><br/><a href="tel:+18763442401" style="color:var(--gold-dark);font-weight:600;">+1 876-344-2401 (FLOW)</a><br/><span style="font-size:0.78rem;color:var(--gray-text);">Mon–Sun 7am–9pm</span></div></div>
-          <div class="sidebar-item"><div class="sidebar-icon" style="background:#d44638;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div><div><strong>Email</strong><br/><a href="mailto:noeltourservice@hotmail.com" style="color:#d44638;font-weight:600;">noeltourservice@hotmail.com</a><br/><span style="font-size:0.78rem;color:var(--gray-text);">Usually within 4 hours</span></div></div>
-        </div>
-        <div class="sidebar-card">
-          <h4><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-2px;margin-right:4px;"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>Why book with us?</h4>
-          <div style="display:flex;flex-direction:column;gap:0.6rem;font-size:0.85rem;">
-            <div style="display:flex;gap:0.5rem;"><span style="color:var(--green);">✓</span> Licensed &amp; insured vehicles</div>
-            <div style="display:flex;gap:0.5rem;"><span style="color:var(--green);">✓</span> Transparent, fixed pricing</div>
-            <div style="display:flex;gap:0.5rem;"><span style="color:var(--green);">✓</span> No surprise fees</div>
-            <div style="display:flex;gap:0.5rem;"><span style="color:var(--green);">✓</span> Flight tracking for airport trips</div>
-            <div style="display:flex;gap:0.5rem;"><span style="color:var(--green);">✓</span> Accessibility-friendly options</div>
-            <div style="display:flex;gap:0.5rem;"><span style="color:var(--green);">✓</span> Free cancellation 48 hrs ahead</div>
-          </div>
-        </div>
-        <div class="sidebar-card" style="background:var(--black);color:white;">
-          <h4 style="color:white;">🇯🇲 Serving all of Jamaica</h4>
-          <p style="font-size:0.85rem;color:rgba(255,255,255,0.7);margin-bottom:0.75rem;">Kingston · Montego Bay · Ocho Rios · Negril · Mandeville · Port Antonio · Falmouth · Spanish Town</p>
-          <p style="font-size:0.78rem;color:var(--gold);">All 14 parishes covered.</p>
-        </div>
-      </aside>
+ <!-- SIDEBAR -->
+ <aside class="contact-sidebar">
+ <div class="sidebar-card" style="background:var(--green);color:white;">
+ <h4 style="color:white;">⚡ Response Time</h4>
+ <p style="font-size:0.9rem;opacity:0.9;">We reply to every request within <strong>2 hours</strong> during business hours, <strong>same day</strong> on weekends.</p>
+ </div>
+ <div class="sidebar-card">
+ <h4>Contact Us Directly</h4>
+ <div class="sidebar-item"><div class="sidebar-icon" style="background:var(--green);"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></div><div><strong>WhatsApp</strong><br/><a href="https://wa.me/18763929505" style="color:var(--green);font-weight:600;">+1 876-392-9505</a><br/><span style="font-size:0.78rem;color:var(--gray-text);">Available 24/7</span></div></div>
+ <div class="sidebar-item"><div class="sidebar-icon" style="background:var(--gold-dark);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.95 19.79 19.79 0 012 1.36a2 2 0 012-2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 6.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div><div><strong>Phone</strong><br/><a href="tel:+18763929505" style="color:var(--gold-dark);font-weight:600;">+1 876-392-9505 (Digicel)</a><br/><a href="tel:+18763442401" style="color:var(--gold-dark);font-weight:600;">+1 876-344-2401 (FLOW)</a><br/><span style="font-size:0.78rem;color:var(--gray-text);">Mon–Sun 7am–9pm</span></div></div>
+ <div class="sidebar-item"><div class="sidebar-icon" style="background:#d44638;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div><div><strong>Email</strong><br/><a href="mailto:noeltourservice@hotmail.com" style="color:#d44638;font-weight:600;">noeltourservice@hotmail.com</a><br/><span style="font-size:0.78rem;color:var(--gray-text);">Usually within 4 hours</span></div></div>
+ </div>
+ <div class="sidebar-card">
+ <h4><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-2px;margin-right:4px;"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>Why book with us?</h4>
+ <div style="display:flex;flex-direction:column;gap:0.6rem;font-size:0.85rem;">
+ <div style="display:flex;gap:0.5rem;"><span style="color:var(--green);">✓</span> Licensed &amp; insured vehicles</div>
+ <div style="display:flex;gap:0.5rem;"><span style="color:var(--green);">✓</span> Transparent, fixed pricing</div>
+ <div style="display:flex;gap:0.5rem;"><span style="color:var(--green);">✓</span> No surprise fees</div>
+ <div style="display:flex;gap:0.5rem;"><span style="color:var(--green);">✓</span> Flight tracking for airport trips</div>
+ <div style="display:flex;gap:0.5rem;"><span style="color:var(--green);">✓</span> Accessibility-friendly options</div>
+ <div style="display:flex;gap:0.5rem;"><span style="color:var(--green);">✓</span> Free cancellation 48 hrs ahead</div>
+ </div>
+ </div>
+ <div class="sidebar-card" style="background:var(--black);color:white;">
+ <h4 style="color:white;"> Serving all of Jamaica</h4>
+ <p style="font-size:0.85rem;color:rgba(255,255,255,0.7);margin-bottom:0.75rem;">Kingston · Montego Bay · Ocho Rios · Negril · Mandeville · Port Antonio · Falmouth · Spanish Town</p>
+ <p style="font-size:0.78rem;color:var(--gold);">All 14 parishes covered.</p>
+ </div>
+ </aside>
 
-    </div>
-  </div>
+ </div>
+ </div>
 </section>
 
 <section class="section section-alt" aria-labelledby="service-map-heading" style="padding-top:2.5rem;">
-  <div class="container">
-    <div style="text-align:center;margin-bottom:1.5rem;">
-      <p class="section-label">Coverage</p>
-      <h2 id="service-map-heading" class="reveal">Where we operate across Jamaica</h2>
-      <p class="reveal reveal-delay-1" style="max-width:680px;margin:0.75rem auto 0;">Primary routes include Kingston, Montego Bay, Ocho Rios, Negril, Port Antonio, Falmouth, Mandeville and South Coast corridors.</p>
-    </div>
-    <div class="contact-map-grid">
-      <div class="reveal" style="border-radius:var(--radius-lg);overflow:hidden;border:1px solid var(--gray-mid);min-height:320px;">
-        <iframe title="Jamaica service area map" src="https://www.openstreetmap.org/export/embed.html?bbox=-78.6%2C17.65%2C-76.15%2C18.75&amp;layer=mapnik" style="border:0;width:100%;height:100%;min-height:320px;" loading="lazy"></iframe>
-      </div>
-      <div class="reveal reveal-delay-1" style="background:white;border-radius:var(--radius-lg);border:1px solid var(--gray-mid);padding:1.2rem;">
-        <h3 style="font-size:1rem;margin-bottom:0.6rem;">Popular routes</h3>
-        <ul style="display:flex;flex-direction:column;gap:0.45rem;font-size:0.88rem;color:var(--gray-text);">
-          <li>MBJ ⇄ Negril resorts</li>
-          <li>MBJ ⇄ Ocho Rios</li>
-          <li>KIN ⇄ Kingston hotels</li>
-          <li>KIN ⇄ Blue Mountains</li>
-          <li>Kingston ⇄ Portland</li>
-          <li>South Coast custom routes</li>
-        </ul>
-        <a href="packages.html" class="btn btn-outline-green btn-sm" style="margin-top:1rem;">See package options</a>
-      </div>
-    </div>
-  </div>
+ <div class="container">
+ <div style="text-align:center;margin-bottom:1.5rem;">
+ <p class="section-label">Coverage</p>
+ <h2 id="service-map-heading" class="reveal">Where we operate across Jamaica</h2>
+ <p class="reveal reveal-delay-1" style="max-width:680px;margin:0.75rem auto 0;">Primary routes include Kingston, Montego Bay, Ocho Rios, Negril, Port Antonio, Falmouth, Mandeville and South Coast corridors.</p>
+ </div>
+ <div class="contact-map-grid">
+ <div class="reveal" style="border-radius:var(--radius-lg);overflow:hidden;border:1px solid var(--gray-mid);min-height:320px;">
+ <iframe title="Jamaica service area map" src="https://www.openstreetmap.org/export/embed.html?bbox=-78.6%2C17.65%2C-76.15%2C18.75&amp;layer=mapnik" style="border:0;width:100%;height:100%;min-height:320px;" loading="lazy"></iframe>
+ </div>
+ <div class="reveal reveal-delay-1" style="background:white;border-radius:var(--radius-lg);border:1px solid var(--gray-mid);padding:1.2rem;">
+ <h3 style="font-size:1rem;margin-bottom:0.6rem;">Popular routes</h3>
+ <ul style="display:flex;flex-direction:column;gap:0.45rem;font-size:0.88rem;color:var(--gray-text);">
+ <li>MBJ ⇄ Negril resorts</li>
+ <li>MBJ ⇄ Ocho Rios</li>
+ <li>KIN ⇄ Kingston hotels</li>
+ <li>KIN ⇄ Blue Mountains</li>
+ <li>Kingston ⇄ Portland</li>
+ <li>South Coast custom routes</li>
+ </ul>
+ <a href="packages.html" class="btn btn-outline-green btn-sm" style="margin-top:1rem;">See package options</a>
+ </div>
+ </div>
+ </div>
 </section>
 
 </main>
 
 <footer class="footer" role="contentinfo">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand"><div class="logo-text">Noel's Jamaica Vibes Tour 🇯🇲</div><p>Your verified islandwide guide to Jamaica's best destinations, restaurants, events and transport. Licensed, trusted, locally rooted.</p><div class="footer-social"><a href="https://www.instagram.com/noeljatourservice" target="_blank" rel="noopener noreferrer" aria-label="Follow on Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a><a href="https://facebook.com/jutatoursja" target="_blank" rel="noopener noreferrer" aria-label="Follow on Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a><a href="https://tiktok.com/@jutatoursja" target="_blank" rel="noopener noreferrer" aria-label="Follow on TikTok"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 12a4 4 0 104 4V4a5 5 0 005 5"/></svg></a><a href="https://wa.me/18763929505" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp us"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="none" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a></div></div>
-      <div><p class="footer-heading">Services</p><ul class="footer-links"><li><a href="airport-transfer.html">Airport Transfer</a></li><li><a href="festival-transport.html">Festival Transport</a></li><li><a href="excursions.html">Excursions</a></li><li><a href="packages.html">Packages</a></li></ul></div>
-      <div><p class="footer-heading">Company</p><ul class="footer-links"><li><a href="about.html">About</a></li><li><a href="faq.html">FAQ</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact</a></li></ul></div>
-      <div><p class="footer-heading">Contact</p><ul class="footer-links"><li><a href="tel:+18763929505">+1 876-392-9505 (Digicel)</a></li><li><a href="tel:+18763442401">+1 876-344-2401 (FLOW)</a></li><li><a href="mailto:noeltourservice@hotmail.com">noeltourservice@hotmail.com</a></li><li><a href="https://wa.me/18763929505">WhatsApp Text (Digicel)</a></li></ul></div>
-    </div>
-    <div class="footer-bottom"><span>&copy; 2026 Noel's Jamaica Vibes Tour. All rights reserved. | <a href="faq.html#legal">Terms &amp; Conditions</a> | <a href="faq.html#privacy">Privacy Policy</a></span><div class="footer-flag">🇯🇲 Made with pride in Jamaica</div></div>
-  </div>
+ <div class="container">
+ <div class="footer-grid">
+ <div class="footer-brand"><div class="logo-text">Noel's Jamaica Vibes Tour </div><p>Your verified islandwide guide to Jamaica's best destinations, restaurants, events and transport. Licensed, trusted, locally rooted.</p><div class="footer-social"><a href="https://www.instagram.com/noeljatourservice" target="_blank" rel="noopener noreferrer" aria-label="Follow on Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a><a href="https://facebook.com/jutatoursja" target="_blank" rel="noopener noreferrer" aria-label="Follow on Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a><a href="https://tiktok.com/@jutatoursja" target="_blank" rel="noopener noreferrer" aria-label="Follow on TikTok"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 12a4 4 0 104 4V4a5 5 0 005 5"/></svg></a><a href="https://wa.me/18763929505" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp us"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="none" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a></div></div>
+ <div><p class="footer-heading">Services</p><ul class="footer-links"><li><a href="airport-transfer.html">Airport Transfer</a></li><li><a href="festival-transport.html">Festival Transport</a></li><li><a href="excursions.html">Excursions</a></li><li><a href="packages.html">Packages</a></li></ul></div>
+ <div><p class="footer-heading">Company</p><ul class="footer-links"><li><a href="about.html">About</a></li><li><a href="faq.html">FAQ</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+ <div><p class="footer-heading">Contact</p><ul class="footer-links"><li><a href="tel:+18763929505">+1 876-392-9505 (Digicel)</a></li><li><a href="tel:+18763442401">+1 876-344-2401 (FLOW)</a></li><li><a href="mailto:noeltourservice@hotmail.com">noeltourservice@hotmail.com</a></li><li><a href="https://wa.me/18763929505">WhatsApp Text (Digicel)</a></li></ul></div>
+ </div>
+ <div class="footer-bottom"><span>&copy; 2026 Noel's Jamaica Vibes Tour. All rights reserved. | <a href="faq.html#legal">Terms &amp; Conditions</a> | <a href="faq.html#privacy">Privacy Policy</a></span><div class="footer-flag"> Made with pride in Jamaica</div></div>
+ </div>
 </footer>
 
 <div class="a11y-panel" role="region" aria-label="Accessibility options"><button class="a11y-trigger" id="a11yTrigger" aria-label="Accessibility settings" aria-expanded="false" aria-controls="a11yMenu"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="5" r="1"/><path d="M9 20l3-6 3 6"/><path d="M6 8l6 2 6-2"/><path d="M12 10v4"/></svg></button><div id="a11yMenu" class="a11y-menu" role="dialog" aria-label="Accessibility menu"><strong style="font-size:0.8rem;color:var(--gray-text);text-transform:uppercase;letter-spacing:0.08em;">Accessibility</strong><button id="a11yHighContrast"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 2v20M2 12h20"/></svg> High contrast mode</button><button id="a11yLargeText"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4 7 4 4 20 4 20 7"/><line x1="9" y1="20" x2="15" y2="20"/><line x1="12" y1="4" x2="12" y2="20"/></svg> Larger text</button><button id="a11yDyslexia"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg> Dyslexia-friendly font</button><button id="a11yReset" style="color:#e53e3e;">&#8635; Reset all settings</button></div></div>
@@ -411,271 +411,271 @@
 <script>
 // Multi-step form controller for contact.html
 (function(){
-  const steps = [1,2,3,4];
-  let current = 1;
+ const steps = [1,2,3,4];
+ let current = 1;
 
-  function goTo(n){
-    document.querySelector('#step'+current).classList.remove('active');
-    document.querySelector('#tab'+current).classList.remove('active');
-    document.querySelector('#tab'+current).setAttribute('aria-selected','false');
-    current = n;
-    document.querySelector('#step'+n).classList.add('active');
-    document.querySelector('#tab'+n).classList.add('active');
-    document.querySelector('#tab'+n).setAttribute('aria-selected','true');
-    document.querySelector('#tab'+n).focus();
-    window.scrollTo({top:document.querySelector('#booking-form-heading').getBoundingClientRect().top+window.scrollY-100,behavior:'smooth'});
-  }
+ function goTo(n){
+ document.querySelector('#step'+current).classList.remove('active');
+ document.querySelector('#tab'+current).classList.remove('active');
+ document.querySelector('#tab'+current).setAttribute('aria-selected','false');
+ current = n;
+ document.querySelector('#step'+n).classList.add('active');
+ document.querySelector('#tab'+n).classList.add('active');
+ document.querySelector('#tab'+n).setAttribute('aria-selected','true');
+ document.querySelector('#tab'+n).focus();
+ window.scrollTo({top:document.querySelector('#booking-form-heading').getBoundingClientRect().top+window.scrollY-100,behavior:'smooth'});
+ }
 
-  // Step 1 next
-  document.getElementById('nextStep1').addEventListener('click',function(){
-    const fields = ['c_fname','c_lname','c_email','c_phone','c_country'];
-    let ok = true;
-    fields.forEach(id=>{
-      const el = document.getElementById(id);
-      el.classList.remove('error');
-      if(!el.value.trim()||(el.type==='email'&&!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(el.value))){
-        el.classList.add('error'); ok=false;
-      }
-    });
-    if(ok) goTo(2);
-  });
-  document.getElementById('prevStep2').addEventListener('click',()=>goTo(1));
+ // Step 1 next
+ document.getElementById('nextStep1').addEventListener('click',function(){
+ const fields = ['c_fname','c_lname','c_email','c_phone','c_country'];
+ let ok = true;
+ fields.forEach(id=>{
+ const el = document.getElementById(id);
+ el.classList.remove('error');
+ if(!el.value.trim()||(el.type==='email'&&!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(el.value))){
+ el.classList.add('error'); ok=false;
+ }
+ });
+ if(ok) goTo(2);
+ });
+ document.getElementById('prevStep2').addEventListener('click',()=>goTo(1));
 
-  // Service card selection
-  const cards = document.querySelectorAll('.service-card-option');
-  cards.forEach(c=>{
-    c.addEventListener('click',function(){
-      cards.forEach(x=>{x.classList.remove('selected');x.setAttribute('aria-pressed','false');});
-      this.classList.add('selected');
-      this.setAttribute('aria-pressed','true');
-      const v=this.dataset.value;
-      document.getElementById('hidden_service').value=v;
-      // Show/hide conditional sections
-      ['airport','festival','excursion','package'].forEach(s=>{
-        document.getElementById('cond-'+s).style.display='none';
-      });
-      if(v==='airport-transfer') document.getElementById('cond-airport').style.display='block';
-      else if(v==='festival-transport') document.getElementById('cond-festival').style.display='block';
-      else if(v==='excursion') document.getElementById('cond-excursion').style.display='block';
-      else if(v==='package') document.getElementById('cond-package').style.display='block';
+ // Service card selection
+ const cards = document.querySelectorAll('.service-card-option');
+ cards.forEach(c=>{
+ c.addEventListener('click',function(){
+ cards.forEach(x=>{x.classList.remove('selected');x.setAttribute('aria-pressed','false');});
+ this.classList.add('selected');
+ this.setAttribute('aria-pressed','true');
+ const v=this.dataset.value;
+ document.getElementById('hidden_service').value=v;
+ // Show/hide conditional sections
+ ['airport','festival','excursion','package'].forEach(s=>{
+ document.getElementById('cond-'+s).style.display='none';
+ });
+ if(v==='airport-transfer') document.getElementById('cond-airport').style.display='block';
+ else if(v==='festival-transport') document.getElementById('cond-festival').style.display='block';
+ else if(v==='excursion') document.getElementById('cond-excursion').style.display='block';
+ else if(v==='package') document.getElementById('cond-package').style.display='block';
 
-      saveIntent({
-        service: v,
-        excursion: document.getElementById('hidden_excursion').value,
-        package: document.getElementById('hidden_package').value,
-        airport: document.getElementById('c_airport')?.value || ''
-      });
-    });
-    c.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();this.click();}});
-  });
+ saveIntent({
+ service: v,
+ excursion: document.getElementById('hidden_excursion').value,
+ package: document.getElementById('hidden_package').value,
+ airport: document.getElementById('c_airport')?.value || ''
+ });
+ });
+ c.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();this.click();}});
+ });
 
-  document.getElementById('nextStep2').addEventListener('click',function(){
-    const sel = document.querySelector('.service-card-option.selected');
-    if(!sel){document.getElementById('service-selection-error').style.display='block';return;}
-    document.getElementById('service-selection-error').style.display='none';
-    goTo(3);
-  });
-  document.getElementById('prevStep3').addEventListener('click',()=>goTo(2));
+ document.getElementById('nextStep2').addEventListener('click',function(){
+ const sel = document.querySelector('.service-card-option.selected');
+ if(!sel){document.getElementById('service-selection-error').style.display='block';return;}
+ document.getElementById('service-selection-error').style.display='none';
+ goTo(3);
+ });
+ document.getElementById('prevStep3').addEventListener('click',()=>goTo(2));
 
-  // Step 3 next
-  document.getElementById('nextStep3').addEventListener('click',function(){
-    const d=document.getElementById('c_date'),p=document.getElementById('c_pax'),pk=document.getElementById('c_pickup');
-    let ok=true;
-    [d,p,pk].forEach(el=>{
-      el.classList.remove('error');
-      if(!el.value.trim()){el.classList.add('error');ok=false;}
-    });
-    if(ok) goTo(4);
-  });
-  document.getElementById('prevStep4').addEventListener('click',()=>goTo(3));
+ // Step 3 next
+ document.getElementById('nextStep3').addEventListener('click',function(){
+ const d=document.getElementById('c_date'),p=document.getElementById('c_pax'),pk=document.getElementById('c_pickup');
+ let ok=true;
+ [d,p,pk].forEach(el=>{
+ el.classList.remove('error');
+ if(!el.value.trim()){el.classList.add('error');ok=false;}
+ });
+ if(ok) goTo(4);
+ });
+ document.getElementById('prevStep4').addEventListener('click',()=>goTo(3));
 
-  // Tab click navigation
-  [1,2,3,4].forEach(n=>{
-    document.getElementById('tab'+n).addEventListener('click',()=>{if(n<current) goTo(n);});
-  });
+ // Tab click navigation
+ [1,2,3,4].forEach(n=>{
+ document.getElementById('tab'+n).addEventListener('click',()=>{if(n<current) goTo(n);});
+ });
 
-  // Date min = today
-  const dateEl=document.getElementById('c_date');
-  if(dateEl) dateEl.min=new Date().toISOString().split('T')[0];
+ // Date min = today
+ const dateEl=document.getElementById('c_date');
+ if(dateEl) dateEl.min=new Date().toISOString().split('T')[0];
 
-  function getSelectedText(selectEl){
-    if(!selectEl) return '';
-    const selected = selectEl.options[selectEl.selectedIndex];
-    return selected ? selected.text.trim() : '';
-  }
+ function getSelectedText(selectEl){
+ if(!selectEl) return '';
+ const selected = selectEl.options[selectEl.selectedIndex];
+ return selected ? selected.text.trim() : '';
+ }
 
-  function readSavedIntent(){
-    try{
-      const raw = window.localStorage.getItem('juta_booking_intent');
-      if(!raw) return {};
-      const parsed = JSON.parse(raw);
-      // Expire saved intent after 7 days.
-      if(parsed.savedAt && (Date.now() - parsed.savedAt) > (7 * 24 * 60 * 60 * 1000)){
-        window.localStorage.removeItem('juta_booking_intent');
-        return {};
-      }
-      return parsed || {};
-    }catch{
-      return {};
-    }
-  }
+ function readSavedIntent(){
+ try{
+ const raw = window.localStorage.getItem('juta_booking_intent');
+ if(!raw) return {};
+ const parsed = JSON.parse(raw);
+ // Expire saved intent after 7 days.
+ if(parsed.savedAt && (Date.now() - parsed.savedAt) > (7 * 24 * 60 * 60 * 1000)){
+ window.localStorage.removeItem('juta_booking_intent');
+ return {};
+ }
+ return parsed || {};
+ }catch{
+ return {};
+ }
+ }
 
-  function saveIntent(intent){
-    try{
-      window.localStorage.setItem('juta_booking_intent', JSON.stringify({ ...intent, savedAt: Date.now() }));
-    }catch{}
-  }
+ function saveIntent(intent){
+ try{
+ window.localStorage.setItem('juta_booking_intent', JSON.stringify({ ...intent, savedAt: Date.now() }));
+ }catch{}
+ }
 
-  function normalizeService(value){
-    const v=(value||'').toLowerCase();
-    if(v==='airport'||v==='airport-transfer') return 'airport-transfer';
-    if(v==='festival'||v==='festival-transport') return 'festival-transport';
-    if(v==='excursion'||v==='custom-excursion') return 'excursion';
-    if(v==='package'||v==='packages') return 'package';
-    return '';
-  }
+ function normalizeService(value){
+ const v=(value||'').toLowerCase();
+ if(v==='airport'||v==='airport-transfer') return 'airport-transfer';
+ if(v==='festival'||v==='festival-transport') return 'festival-transport';
+ if(v==='excursion'||v==='custom-excursion') return 'excursion';
+ if(v==='package'||v==='packages') return 'package';
+ return '';
+ }
 
-  function selectServiceCard(serviceValue){
-    const normalized=normalizeService(serviceValue);
-    if(!normalized) return false;
-    const target=document.querySelector('.service-card-option[data-value="'+normalized+'"]');
-    if(!target) return false;
-    target.click();
-    return true;
-  }
+ function selectServiceCard(serviceValue){
+ const normalized=normalizeService(serviceValue);
+ if(!normalized) return false;
+ const target=document.querySelector('.service-card-option[data-value="'+normalized+'"]');
+ if(!target) return false;
+ target.click();
+ return true;
+ }
 
-  // Pre-populate from URL params first, else restore last saved booking intent.
-  const params=new URLSearchParams(window.location.search);
-  const saved=readSavedIntent();
+ // Pre-populate from URL params first, else restore last saved booking intent.
+ const params=new URLSearchParams(window.location.search);
+ const saved=readSavedIntent();
 
-  const svc=normalizeService(params.get('service')||saved.service||'');
-  const pkg=params.get('package')||saved.package||'';
-  const exc=params.get('excursion')||saved.excursion||'';
-  const airportParam=(params.get('airport')||saved.airport||'').toLowerCase();
+ const svc=normalizeService(params.get('service')||saved.service||'');
+ const pkg=params.get('package')||saved.package||'';
+ const exc=params.get('excursion')||saved.excursion||'';
+ const airportParam=(params.get('airport')||saved.airport||'').toLowerCase();
 
-  if(svc){
-    selectServiceCard(svc);
-    document.getElementById('hidden_service').value=svc;
-  }
+ if(svc){
+ selectServiceCard(svc);
+ document.getElementById('hidden_service').value=svc;
+ }
 
-  if(pkg){
-    document.getElementById('hidden_package').value=pkg;
-    selectServiceCard('package');
-    const pkgEl=document.getElementById('c_package');
-    if(pkgEl) pkgEl.value=pkg;
-  }
+ if(pkg){
+ document.getElementById('hidden_package').value=pkg;
+ selectServiceCard('package');
+ const pkgEl=document.getElementById('c_package');
+ if(pkgEl) pkgEl.value=pkg;
+ }
 
-  if(exc){
-    document.getElementById('hidden_excursion').value=exc;
-    selectServiceCard('excursion');
-    const excEl=document.getElementById('c_excursion');
-    if(excEl) excEl.value=exc;
-  }
+ if(exc){
+ document.getElementById('hidden_excursion').value=exc;
+ selectServiceCard('excursion');
+ const excEl=document.getElementById('c_excursion');
+ if(excEl) excEl.value=exc;
+ }
 
-  if(airportParam){
-    selectServiceCard('airport-transfer');
-    const airportEl=document.getElementById('c_airport');
-    if(airportEl){
-      if(airportParam==='kin') airportEl.value='KIN';
-      if(airportParam==='mbj') airportEl.value='MBJ';
-    }
-  }
+ if(airportParam){
+ selectServiceCard('airport-transfer');
+ const airportEl=document.getElementById('c_airport');
+ if(airportEl){
+ if(airportParam==='kin') airportEl.value='KIN';
+ if(airportParam==='mbj') airportEl.value='MBJ';
+ }
+ }
 
-  // Keep hidden fields + saved intent in sync with customer changes.
-  const excursionSelect=document.getElementById('c_excursion');
-  if(excursionSelect){
-    excursionSelect.addEventListener('change',function(){
-      document.getElementById('hidden_excursion').value=this.value;
-      saveIntent({
-        service: document.getElementById('hidden_service').value,
-        excursion: this.value,
-        package: document.getElementById('hidden_package').value,
-        airport: document.getElementById('c_airport')?.value || ''
-      });
-    });
-  }
+ // Keep hidden fields + saved intent in sync with customer changes.
+ const excursionSelect=document.getElementById('c_excursion');
+ if(excursionSelect){
+ excursionSelect.addEventListener('change',function(){
+ document.getElementById('hidden_excursion').value=this.value;
+ saveIntent({
+ service: document.getElementById('hidden_service').value,
+ excursion: this.value,
+ package: document.getElementById('hidden_package').value,
+ airport: document.getElementById('c_airport')?.value || ''
+ });
+ });
+ }
 
-  const packageSelect=document.getElementById('c_package');
-  if(packageSelect){
-    packageSelect.addEventListener('change',function(){
-      document.getElementById('hidden_package').value=this.value;
-      saveIntent({
-        service: document.getElementById('hidden_service').value,
-        excursion: document.getElementById('hidden_excursion').value,
-        package: this.value,
-        airport: document.getElementById('c_airport')?.value || ''
-      });
-    });
-  }
+ const packageSelect=document.getElementById('c_package');
+ if(packageSelect){
+ packageSelect.addEventListener('change',function(){
+ document.getElementById('hidden_package').value=this.value;
+ saveIntent({
+ service: document.getElementById('hidden_service').value,
+ excursion: document.getElementById('hidden_excursion').value,
+ package: this.value,
+ airport: document.getElementById('c_airport')?.value || ''
+ });
+ });
+ }
 
-  const airportSelect=document.getElementById('c_airport');
-  if(airportSelect){
-    airportSelect.addEventListener('change',function(){
-      saveIntent({
-        service: document.getElementById('hidden_service').value || 'airport-transfer',
-        excursion: document.getElementById('hidden_excursion').value,
-        package: document.getElementById('hidden_package').value,
-        airport: this.value
-      });
-    });
-  }
+ const airportSelect=document.getElementById('c_airport');
+ if(airportSelect){
+ airportSelect.addEventListener('change',function(){
+ saveIntent({
+ service: document.getElementById('hidden_service').value || 'airport-transfer',
+ excursion: document.getElementById('hidden_excursion').value,
+ package: document.getElementById('hidden_package').value,
+ airport: this.value
+ });
+ });
+ }
 
-  // Form submit
-  document.getElementById('jutatours-main-form').addEventListener('submit',async function(e){
-    e.preventDefault();
-    const submitBtn=this.querySelector('[type="submit"]');
-    submitBtn.disabled=true;
-    submitBtn.textContent='Sending…';
-    const fd=new FormData(this);
-    const data=Object.fromEntries(fd.entries());
-    // Collect checkboxes
-    data['special_req'] = Array.from(this.querySelectorAll('input[name="special_req[]"]:checked')).map(x=>x.value).join(', ');
+ // Form submit
+ document.getElementById('jutatours-main-form').addEventListener('submit',async function(e){
+ e.preventDefault();
+ const submitBtn=this.querySelector('[type="submit"]');
+ submitBtn.disabled=true;
+ submitBtn.textContent='Sending…';
+ const fd=new FormData(this);
+ const data=Object.fromEntries(fd.entries());
+ // Collect checkboxes
+ data['special_req'] = Array.from(this.querySelectorAll('input[name="special_req[]"]:checked')).map(x=>x.value).join(', ');
 
-    // Normalize capture payload so the sheet gets stable, human-readable columns.
-    const serviceMap = {
-      'airport-transfer': 'Airport Transfer',
-      'festival-transport': 'Festival Transport',
-      'excursion': 'Day Excursion',
-      'package': 'Package Bundle'
-    };
-    data.captured_at = new Date().toISOString();
-    data.page_url = window.location.href;
-    data.service_type_label = serviceMap[data.service_type] || data.service_type || '';
-    data.airport_label = getSelectedText(document.getElementById('c_airport'));
-    data.direction_label = getSelectedText(document.getElementById('c_direction'));
-    data.festival_label = getSelectedText(document.getElementById('c_festival'));
-    data.transport_tier_label = getSelectedText(document.getElementById('c_transport_tier'));
-    data.excursion_label = getSelectedText(document.getElementById('c_excursion'));
-    data.package_label = getSelectedText(document.getElementById('c_package'));
-    data.trip_style_label = getSelectedText(document.getElementById('c_trip_style'));
-    data.budget_range_label = getSelectedText(document.getElementById('c_budget'));
-    data.passengers_label = getSelectedText(document.getElementById('c_pax'));
-    data.preferred_contact = data.preferred_contact || 'whatsapp';
-    data._captcha = 'false';
-    data._subject = 'New Booking Inquiry - Noel\'s Jamaica Vibes Tour';
-    data._autoresponse = `Hi ${data.first_name || 'there'},\n\nThank you for reaching out to Noel's Jamaica Vibes Tour!\n\nWe've received your booking request and Noel will personally review it and get back to you within 30 minutes via your preferred contact method.\n\nYour request summary:\n- Service: ${data.service_type_label || data.service_type || 'Not specified'}\n- Travel date: ${data.travel_date || 'Not specified'}\n- Group size: ${data.passengers_label || 'Not specified'}\n\nIn the meantime, you can reach us directly:\nWhatsApp: +1 876-392-9505 (fastest)\nPhone: +1 876-392-9505 (Digicel) | +1 876-344-2401 (FLOW)\n\nWe look forward to making your Jamaica experience unforgettable!\n\nNoel's Jamaica Vibes Tour\nJUTA Licensed & Verified`;
-    try{
-      const res=await fetch('https://formsubmit.co/ajax/noeltourservice@hotmail.com',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(data)});
-      const result=await res.json().catch(()=>({}));
-      if(res.ok && result.success==='true'){
-        try{ window.localStorage.removeItem('juta_booking_intent'); }catch{}
-        document.querySelector('.form-fields').style.display='none';
-        const suc=document.querySelector('.form-success');
-        suc.style.display='flex';
-        const sn=document.querySelector('.success-name');
-        if(sn) sn.textContent=data.first_name||'';
-      } else {
-        const wa=`https://wa.me/18763929505?text=Hi+Noel%27s+Jamaica+Vibes+Tour!+I%27d+like+to+book+a+${encodeURIComponent(data.service_type||'trip')}+for+${encodeURIComponent(data.passengers||'1')}+on+${encodeURIComponent(data.travel_date||'')}.`;
-        window.open(wa,'_blank','noopener,noreferrer');
-      }
-    }catch{
-      const wa=`https://wa.me/18763929505?text=Hi+Noel%27s+Jamaica+Vibes+Tour!+I%27d+like+to+book+a+trip.`;
-      window.open(wa,'_blank','noopener,noreferrer');
-    } finally{
-      submitBtn.disabled=false;
-      submitBtn.textContent='🇯🇲 Send My Booking Request';
-    }
-  });
+ // Normalize capture payload so the sheet gets stable, human-readable columns.
+ const serviceMap = {
+ 'airport-transfer': 'Airport Transfer',
+ 'festival-transport': 'Festival Transport',
+ 'excursion': 'Day Excursion',
+ 'package': 'Package Bundle'
+ };
+ data.captured_at = new Date().toISOString();
+ data.page_url = window.location.href;
+ data.service_type_label = serviceMap[data.service_type] || data.service_type || '';
+ data.airport_label = getSelectedText(document.getElementById('c_airport'));
+ data.direction_label = getSelectedText(document.getElementById('c_direction'));
+ data.festival_label = getSelectedText(document.getElementById('c_festival'));
+ data.transport_tier_label = getSelectedText(document.getElementById('c_transport_tier'));
+ data.excursion_label = getSelectedText(document.getElementById('c_excursion'));
+ data.package_label = getSelectedText(document.getElementById('c_package'));
+ data.trip_style_label = getSelectedText(document.getElementById('c_trip_style'));
+ data.budget_range_label = getSelectedText(document.getElementById('c_budget'));
+ data.passengers_label = getSelectedText(document.getElementById('c_pax'));
+ data.preferred_contact = data.preferred_contact || 'whatsapp';
+ data._captcha = 'false';
+ data._subject = 'New Booking Inquiry - Noel\'s Jamaica Vibes Tour';
+ data._autoresponse = `Hi ${data.first_name || 'there'},\n\nThank you for reaching out to Noel's Jamaica Vibes Tour!\n\nWe've received your booking request and Noel will personally review it and get back to you within 30 minutes via your preferred contact method.\n\nYour request summary:\n- Service: ${data.service_type_label || data.service_type || 'Not specified'}\n- Travel date: ${data.travel_date || 'Not specified'}\n- Group size: ${data.passengers_label || 'Not specified'}\n\nIn the meantime, you can reach us directly:\nWhatsApp: +1 876-392-9505 (fastest)\nPhone: +1 876-392-9505 (Digicel) | +1 876-344-2401 (FLOW)\n\nWe look forward to making your Jamaica experience unforgettable!\n\nNoel's Jamaica Vibes Tour\nJUTA Licensed & Verified`;
+ try{
+ const res=await fetch('https://formsubmit.co/ajax/noeltourservice@hotmail.com',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(data)});
+ const result=await res.json().catch(()=>({}));
+ if(res.ok && result.success==='true'){
+ try{ window.localStorage.removeItem('juta_booking_intent'); }catch{}
+ document.querySelector('.form-fields').style.display='none';
+ const suc=document.querySelector('.form-success');
+ suc.style.display='flex';
+ const sn=document.querySelector('.success-name');
+ if(sn) sn.textContent=data.first_name||'';
+ } else {
+ const wa=`https://wa.me/18763929505?text=Hi+Noel%27s+Jamaica+Vibes+Tour!+I%27d+like+to+book+a+${encodeURIComponent(data.service_type||'trip')}+for+${encodeURIComponent(data.passengers||'1')}+on+${encodeURIComponent(data.travel_date||'')}.`;
+ window.open(wa,'_blank','noopener,noreferrer');
+ }
+ }catch{
+ const wa=`https://wa.me/18763929505?text=Hi+Noel%27s+Jamaica+Vibes+Tour!+I%27d+like+to+book+a+trip.`;
+ window.open(wa,'_blank','noopener,noreferrer');
+ } finally{
+ submitBtn.disabled=false;
+ submitBtn.textContent=' Send My Booking Request';
+ }
+ });
 
 })();
 </script>
