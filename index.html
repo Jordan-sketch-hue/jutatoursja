@@ -108,61 +108,68 @@
 <main id="main-content">
 
 <!-- ===================== HERO ===================== -->
-<section class="hero" aria-label="Hero section">
- <div class="container home-hero-layout" style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;padding-top:2rem;padding-bottom:2rem;">
- <div class="hero-content">
- <h1 class="hero-title reveal reveal-delay-1">
- Your verified <span class="highlight">islandwide guide</span> to <span class="highlight-gold">Jamaica's best</span> destinations & transport.
- </h1>
- <p class="hero-sub reveal reveal-delay-2">
- Airport pickup • Festival transport • Curated excursions • Private drivers.
- <span class="hero-sub-secondary"> Professional, licensed, locally rooted — serving every corner of Jamaica.</span>
- </p>
- <div class="hero-features reveal reveal-delay-3">
- <span class="feature-badge"><span class="dot"></span>JUTA Licensed</span>
- <span class="feature-badge" style="color:var(--green);font-weight:700;"><span class="dot" style="background:var(--green);"></span>FREE Cancellation</span>
- <span class="feature-badge"><span class="dot"></span>24/7 WhatsApp</span>
- <span class="feature-badge"><span class="dot"></span>No payment upfront</span>
- <span class="feature-badge"><span class="dot"></span>Accessible vehicles</span>
- </div>
- <div class="hero-btns reveal reveal-delay-4">
- <a href="contact.html" class="btn btn-primary btn-lg">
- <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
- Build Your Trip
- </a>
- <a href="excursions.html" class="btn btn-secondary btn-lg">
- View Excursions
- <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
- </a>
- </div>
- </div>
+<section class="hero" aria-label="Hero section" style="position:relative;min-height:92vh;display:flex;align-items:center;overflow:hidden;padding:0;">
+ <!-- Video background -->
+ <video autoplay muted loop playsinline poster="assets/images/noel-group-vans.jpg"
+   style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(1.08) contrast(1.12) saturate(1.38);z-index:0;">
+   <source src="assets/videos/noel-tour-1.mp4" type="video/mp4" />
+ </video>
+ <!-- Color-graded overlay -->
+ <div style="position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,0.25) 0%,rgba(0,30,10,0.72) 100%);z-index:1;"></div>
 
- <!-- Hero image collage -->
- <div class="reveal reveal-delay-2 home-hero-collage" style="position:relative;display:grid;grid-template-columns:1fr 1fr;gap:0.85rem;">
- <div style="display:flex;flex-direction:column;gap:0.85rem;margin-top:2rem;">
- <div style="border-radius:16px;overflow:hidden;height:200px;box-shadow:0 8px 32px rgba(0,0,0,0.12);">
- <img src="assets/images/jamaica-beach.jpg" alt="Seven Mile Beach Negril — turquoise water and white sand" loading="eager" style="width:100%;height:100%;object-fit:cover;" />
+ <!-- Content -->
+ <div class="container" style="position:relative;z-index:2;padding-top:5rem;padding-bottom:5rem;text-align:center;">
+ <div style="display:inline-block;background:rgba(0,155,58,0.25);border:1px solid rgba(0,155,58,0.5);border-radius:50px;padding:0.35rem 1rem;margin-bottom:1.25rem;">
+   <span style="color:#6ee89a;font-size:0.78rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;">Live Tour Footage — Real Experiences</span>
  </div>
- <div style="border-radius:16px;overflow:hidden;height:150px;box-shadow:0 8px 32px rgba(0,0,0,0.12);">
- <img src="assets/images/jamaica-falls.jpg" alt="Dunn's River Falls guided climb" loading="eager" style="width:100%;height:100%;object-fit:cover;" />
+ <h1 style="color:white;font-size:clamp(2.2rem,6vw,4rem);font-weight:900;line-height:1.1;margin-bottom:1.25rem;text-shadow:0 2px 24px rgba(0,0,0,0.5);">
+   Your verified <span style="color:#6ee89a;">islandwide guide</span> to<br><span style="color:#F9B233;">Jamaica's best</span> destinations &amp; transport.
+ </h1>
+ <p style="color:rgba(255,255,255,0.88);font-size:clamp(1rem,2.2vw,1.25rem);max-width:640px;margin:0 auto 2rem;text-shadow:0 1px 8px rgba(0,0,0,0.4);">
+   Airport pickup &bull; Festival transport &bull; Curated excursions &bull; Private drivers.<br>
+   <span style="color:rgba(255,255,255,0.65);">Professional, licensed, locally rooted — serving every corner of Jamaica.</span>
+ </p>
+ <div style="display:flex;flex-wrap:wrap;gap:0.6rem;justify-content:center;margin-bottom:2rem;">
+   <span class="feature-badge" style="background:rgba(255,255,255,0.12);color:white;border:1px solid rgba(255,255,255,0.25);"><span class="dot"></span>JUTA Licensed</span>
+   <span class="feature-badge" style="background:rgba(0,155,58,0.2);color:#6ee89a;border:1px solid rgba(0,155,58,0.4);font-weight:700;"><span class="dot" style="background:#6ee89a;"></span>FREE Cancellation</span>
+   <span class="feature-badge" style="background:rgba(255,255,255,0.12);color:white;border:1px solid rgba(255,255,255,0.25);"><span class="dot"></span>24/7 WhatsApp</span>
+   <span class="feature-badge" style="background:rgba(255,255,255,0.12);color:white;border:1px solid rgba(255,255,255,0.25);"><span class="dot"></span>No payment upfront</span>
+ </div>
+ <div class="hero-btns" style="justify-content:center;margin-bottom:2.5rem;">
+   <a href="contact.html" class="btn btn-primary btn-lg">
+   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+   Build Your Trip
+   </a>
+   <a href="excursions.html" class="btn btn-lg" style="background:rgba(255,255,255,0.15);color:white;border:2px solid rgba(255,255,255,0.4);">
+   View Excursions
+   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+   </a>
+ </div>
+ <!-- Real photo strip -->
+ <div style="display:flex;gap:0.75rem;justify-content:center;flex-wrap:wrap;">
+   <div style="width:110px;height:75px;border-radius:12px;overflow:hidden;border:2px solid rgba(255,255,255,0.3);box-shadow:0 4px 16px rgba(0,0,0,0.4);">
+   <img src="assets/images/noel-airport-group.jpg" alt="Noel at airport with guests" style="width:100%;height:100%;object-fit:cover;" loading="eager" />
+   </div>
+   <div style="width:110px;height:75px;border-radius:12px;overflow:hidden;border:2px solid rgba(255,255,255,0.3);box-shadow:0 4px 16px rgba(0,0,0,0.4);">
+   <img src="assets/images/noel-bamboo-raft.jpg" alt="Bamboo rafting with Noel" style="width:100%;height:100%;object-fit:cover;" loading="eager" />
+   </div>
+   <div style="width:110px;height:75px;border-radius:12px;overflow:hidden;border:2px solid rgba(255,255,255,0.3);box-shadow:0 4px 16px rgba(0,0,0,0.4);">
+   <img src="assets/images/noel-horseback.jpg" alt="Horseback riding tour" style="width:100%;height:100%;object-fit:cover;" loading="eager" />
+   </div>
+   <div style="width:110px;height:75px;border-radius:12px;overflow:hidden;border:2px solid rgba(255,255,255,0.3);box-shadow:0 4px 16px rgba(0,0,0,0.4);">
+   <img src="assets/images/noel-mural-group.jpg" alt="Bob Marley mural group photo" style="width:100%;height:100%;object-fit:cover;" loading="eager" />
+   </div>
+   <div style="width:110px;height:75px;border-radius:12px;overflow:hidden;border:2px solid rgba(255,255,255,0.3);box-shadow:0 4px 16px rgba(0,0,0,0.4);">
+   <img src="assets/images/noel-coconut-stop.jpg" alt="Coconut stop on tour" style="width:100%;height:100%;object-fit:cover;" loading="eager" />
+   </div>
+ </div>
+ <!-- Rating badge -->
+ <div style="display:inline-flex;align-items:center;gap:0.6rem;background:white;border-radius:50px;padding:0.6rem 1.25rem;box-shadow:0 8px 32px rgba(0,0,0,0.3);margin-top:1.75rem;">
+   <span style="color:#F9B233;font-size:1rem;">★★★★★</span>
+   <a href="https://wa.me/18763929505?text=Hi%20Noel%2C%20I%20had%20a%20great%20experience%20and%20want%20to%20leave%20a%20review." target="_blank" rel="noopener noreferrer" style="font-size:0.82rem;font-weight:700;color:var(--green);text-decoration:none;">Leave us a review →</a>
  </div>
  </div>
- <div style="display:flex;flex-direction:column;gap:0.85rem;">
- <div style="border-radius:16px;overflow:hidden;height:150px;box-shadow:0 8px 32px rgba(0,0,0,0.12);">
- <img src="assets/images/jamaica-airport-pickup-group.jpg" alt="Noel's team greeting clients at Sangster International Airport, Montego Bay" loading="eager" style="width:100%;height:100%;object-fit:cover;" />
- </div>
- <div style="border-radius:16px;overflow:hidden;height:200px;box-shadow:0 8px 32px rgba(0,0,0,0.12);">
- <img src="assets/images/jamaica-transfer.jpg" alt="Jamaica transport vehicle — Noel's fleet serving guests island-wide" loading="eager" style="width:100%;height:100%;object-fit:cover;" />
- </div>
- </div>
- <!-- Floating review CTA badge -->
- <div class="home-hero-rating" style="position:absolute;bottom:-16px;left:50%;transform:translateX(-50%);background:white;border-radius:50px;padding:0.6rem 1.25rem;box-shadow:0 8px 32px rgba(0,0,0,0.15);display:flex;align-items:center;gap:0.6rem;white-space:nowrap;z-index:3;">
- <span style="color:#F9B233;font-size:1rem;">★★★★★</span>
- <a href="https://wa.me/18763929505?text=Hi%20Noel%2C%20I%20had%20a%20great%20experience%20and%20want%20to%20leave%20a%20review." target="_blank" rel="noopener noreferrer" style="font-size:0.82rem;font-weight:700;color:var(--green);text-decoration:none;">Leave us a review →</a>
- </div>
- </div>
- </div>
- <div class="hero-accent-line" aria-hidden="true"></div>
+ <div class="hero-accent-line" aria-hidden="true" style="position:absolute;bottom:0;left:0;right:0;z-index:3;"></div>
 </section>
 
 <!-- ===================== STATS ===================== -->
