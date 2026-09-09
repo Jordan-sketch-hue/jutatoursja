@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page Not Found — Noel's Jamaica Vibes Tour</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/global.css" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+  <link rel="manifest" href="manifest.json" />
+  <style>
+    .not-found-wrap {
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 4rem 1.5rem;
+      text-align: center;
+    }
+    .not-found-icon {
+      font-size: 5rem;
+      margin-bottom: 1rem;
+      line-height: 1;
+    }
+    .not-found-code {
+      font-size: 6rem;
+      font-weight: 800;
+      font-family: 'Poppins', sans-serif;
+      color: var(--green);
+      line-height: 1;
+      margin: 0;
+    }
+    .not-found-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin: 0.75rem 0 0.5rem;
+    }
+    .not-found-sub {
+      color: var(--gray-text);
+      max-width: 400px;
+      margin: 0 auto 2rem;
+      font-size: 0.95rem;
+    }
+    .not-found-actions {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 3rem;
+    }
+    .quick-links {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .quick-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.5rem 1rem;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      background: var(--gray-light);
+      color: var(--black);
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .quick-link:hover { background: var(--gray-mid); }
+  </style>
+</head>
+<body>
+
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="Noel's Jamaica Vibes Tour Home">
+      <div class="logo-badge" aria-hidden="true">NV</div>
+      <span>Noel's Jamaica Vibes Tour</span>
+    </a>
+    <ul class="nav-links" role="list">
+      <li><a href="excursions.html">Excursions</a></li>
+      <li><a href="cruise-excursions.html">Cruise Guests</a></li>
+      <li><a href="packages.html">Packages</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="https://wa.me/18763929505" class="nav-whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        WhatsApp
+      </a>
+      <a href="contact.html" class="nav-book-btn">Book Now</a>
+    </div>
+    <button class="nav-hamburger" id="menuBtn" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobileMenu">
+      <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
+    </button>
+  </div>
+  <div id="mobileMenu" class="mobile-menu" role="menu">
+    <a href="excursions.html">Excursions</a>
+    <a href="cruise-excursions.html">Cruise Guests</a>
+    <a href="packages.html">Packages</a>
+    <a href="about.html">About</a>
+    <a href="contact.html" class="mobile-book-btn">Book Your Trip</a>
+  </div>
+</nav>
+
+<main id="main-content">
+  <div class="not-found-wrap">
+    <div>
+      <div class="not-found-icon">🇯🇲</div>
+      <p class="not-found-code">404</p>
+      <h1 class="not-found-title">This page took a wrong turn in the Blue Mountains</h1>
+      <p class="not-found-sub">The page you're looking for doesn't exist or may have moved. Let us take you somewhere worth visiting.</p>
+
+      <div class="not-found-actions">
+        <a href="index.html" class="btn btn-primary btn-lg">Back to Homepage</a>
+        <a href="https://wa.me/18763929505?text=Hi%20Noel%2C%20I%20was%20looking%20for%20a%20tour%20and%20got%20a%20404%20error." class="btn btn-lg" style="background:var(--green);color:white;" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a>
+      </div>
+
+      <p style="font-size:0.8rem;color:var(--gray-text);margin-bottom:1rem;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;">Or explore directly:</p>
+      <div class="quick-links">
+        <a href="excursions.html" class="quick-link">🏝️ All Excursions</a>
+        <a href="cruise-excursions.html" class="quick-link">⛴️ Cruise Shore Excursions</a>
+        <a href="airport-transfer.html" class="quick-link">✈️ Airport Transfer</a>
+        <a href="packages.html" class="quick-link">🎁 Tour Packages</a>
+        <a href="contact.html" class="quick-link">📋 Book a Tour</a>
+        <a href="about.html" class="quick-link">👋 About Noel</a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-bottom">
+      <span>© 2026 Noel's Jamaica Vibes Tour. All rights reserved.</span>
+      <div class="footer-flag">🇯🇲 JUTA Licensed & Verified</div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js" type="module"></script>
+</body>
+</html>

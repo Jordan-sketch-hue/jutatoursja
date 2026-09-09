@@ -1,0 +1,50 @@
+{
+  "name": "Noel's Jamaica Vibes Tour",
+  "short_name": "Jamaica Vibes",
+  "description": "JUTA licensed Jamaica tour operator. Airport transfers, shore excursions, and island adventures. Book direct with Noel.",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#ffffff",
+  "theme_color": "#009b3a",
+  "lang": "en",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "assets/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["travel", "lifestyle"],
+  "shortcuts": [
+    {
+      "name": "Book Excursion",
+      "short_name": "Book",
+      "description": "Book a Jamaica excursion with Noel",
+      "url": "/contact.html?service=excursion",
+      "icons": [{ "src": "assets/icons/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Cruise Shore Excursions",
+      "short_name": "Cruise",
+      "description": "Shore excursions from Jamaica cruise ports",
+      "url": "/cruise-excursions.html",
+      "icons": [{ "src": "assets/icons/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Airport Transfer",
+      "short_name": "Transfer",
+      "description": "Book an airport transfer in Jamaica",
+      "url": "/airport-transfer.html",
+      "icons": [{ "src": "assets/icons/icon-192.png", "sizes": "192x192" }]
+    }
+  ]
+}

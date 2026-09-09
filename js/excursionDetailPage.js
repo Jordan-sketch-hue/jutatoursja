@@ -100,8 +100,24 @@ function init() {
           <p style="margin-top:0.65rem;">${escapeHtml(chosen.summary)}</p>
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.65rem;margin-top:1rem;">
             <div style="padding:0.7rem;background:var(--gray-light);border-radius:10px;"><strong style="font-size:0.8rem;">Duration</strong><p style="font-size:0.88rem;">${escapeHtml(chosen.duration)}</p></div>
-            <div style="padding:0.7rem;background:var(--gray-light);border-radius:10px;"><strong style="font-size:0.8rem;">Location</strong><p style="font-size:0.88rem;">${escapeHtml(chosen.location)}</p></div>
+            <div style="padding:0.7rem;background:var(--gray-light);border-radius:10px;"><strong style="font-size:0.8rem;">Departs</strong><p style="font-size:0.88rem;">${escapeHtml(chosen.times || 'Flexible')}</p></div>
           </div>
+          ${chosen.includes && chosen.includes.length ? `
+          <div style="margin-top:1rem;display:grid;grid-template-columns:1fr 1fr;gap:0.65rem;">
+            <div style="padding:0.85rem;background:rgba(0,155,58,0.05);border:1px solid rgba(0,155,58,0.15);border-radius:10px;">
+              <strong style="font-size:0.78rem;color:var(--green);text-transform:uppercase;letter-spacing:0.06em;display:block;margin-bottom:0.5rem;">What's Included</strong>
+              <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:0.3rem;">
+                ${chosen.includes.map(i => `<li style="font-size:0.82rem;color:var(--black);display:flex;gap:0.4rem;align-items:start;"><span style="color:var(--green);flex-shrink:0;font-weight:700;">✓</span>${escapeHtml(i)}</li>`).join('')}
+              </ul>
+            </div>
+            ${chosen.excludes && chosen.excludes.length ? `
+            <div style="padding:0.85rem;background:var(--gray-light);border-radius:10px;">
+              <strong style="font-size:0.78rem;color:var(--gray-text);text-transform:uppercase;letter-spacing:0.06em;display:block;margin-bottom:0.5rem;">Not Included</strong>
+              <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:0.3rem;">
+                ${chosen.excludes.map(e => `<li style="font-size:0.82rem;color:var(--gray-text);display:flex;gap:0.4rem;align-items:start;"><span style="flex-shrink:0;opacity:0.5;">✗</span>${escapeHtml(e)}</li>`).join('')}
+              </ul>
+            </div>` : ''}
+          </div>` : ''}
           <div style="display:flex;gap:0.6rem;flex-wrap:wrap;margin-top:1rem;">
             <a href="https://wa.me/18763929505?text=${encodeURIComponent(`Hi Noel, I'd like a quote for: ${chosen.title}`)}" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Request Quote on WhatsApp</a>
             <a href="contact.html?service=excursion&excursion=${encodeURIComponent(chosen.id)}" class="btn" style="background:var(--gray-light);color:var(--black);">Book via Form</a>

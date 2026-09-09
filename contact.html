@@ -16,6 +16,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/global.css" />
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+  <link rel="manifest" href="manifest.json" />
   <style>
     .contact-layout{display:grid;grid-template-columns:1fr 380px;gap:3rem;align-items:start;}
     .contact-sidebar{display:flex;flex-direction:column;gap:1.25rem;position:sticky;top:90px;}
@@ -60,6 +62,7 @@
       <li><a href="airport-transfer.html">Airport Transfer</a></li>
       <li><a href="festival-transport.html">Festivals</a></li>
       <li><a href="excursions.html">Excursions</a></li>
+      <li><a href="cruise-excursions.html">Cruise Guests</a></li>
       <li><a href="packages.html">Packages</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="blog.html">Blog</a></li>
@@ -68,7 +71,7 @@
     <button class="nav-hamburger" id="menuBtn" aria-label="Toggle mobile menu" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
   <div id="mobileMenu" class="mobile-menu">
-    <a href="airport-transfer.html">Airport Transfer</a><a href="festival-transport.html">Festival Transport</a><a href="excursions.html">Excursions</a><a href="packages.html">Packages</a><a href="about.html">About</a><a href="faq.html">FAQ</a><a href="blog.html">Blog</a>
+    <a href="airport-transfer.html">Airport Transfer</a><a href="festival-transport.html">Festival Transport</a><a href="excursions.html">Excursions</a><a href="cruise-excursions.html">Cruise Guests</a><a href="packages.html">Packages</a><a href="about.html">About</a><a href="faq.html">FAQ</a><a href="blog.html">Blog</a>
     <a href="contact.html" class="mobile-book-btn">Book Your Trip</a>
   </div>
 </nav>
@@ -650,6 +653,7 @@
     data.preferred_contact = data.preferred_contact || 'whatsapp';
     data._captcha = 'false';
     data._subject = 'New Booking Inquiry - Noel\'s Jamaica Vibes Tour';
+    data._autoresponse = `Hi ${data.first_name || 'there'},\n\nThank you for reaching out to Noel's Jamaica Vibes Tour!\n\nWe've received your booking request and Noel will personally review it and get back to you within 30 minutes via your preferred contact method.\n\nYour request summary:\n- Service: ${data.service_type_label || data.service_type || 'Not specified'}\n- Travel date: ${data.travel_date || 'Not specified'}\n- Group size: ${data.passengers_label || 'Not specified'}\n\nIn the meantime, you can reach us directly:\nWhatsApp: +1 876-392-9505 (fastest)\nPhone: +1 876-392-9505 (Digicel) | +1 876-344-2401 (FLOW)\n\nWe look forward to making your Jamaica experience unforgettable!\n\nNoel's Jamaica Vibes Tour\nJUTA Licensed & Verified`;
     try{
       const res=await fetch('https://formsubmit.co/ajax/noeltourservice@hotmail.com',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(data)});
       const result=await res.json().catch(()=>({}));
