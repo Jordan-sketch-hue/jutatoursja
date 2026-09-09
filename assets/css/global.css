@@ -1526,6 +1526,8 @@ body.large-text { font-size: 18px; }
     padding-top: 1.5rem !important;
     padding-bottom: 1.5rem !important;
   }
+  /* Kill forced line breaks inside hero — let text reflow naturally */
+  .hero br { display: none; }
   /* Feature badges — tighter on small screens */
   .feature-badge {
     font-size: 0.75rem;
